@@ -1,0 +1,22 @@
+DAZZLEA AGENCY - PAGE D'ATTENTE (COMING SOON)
+=============================================
+
+Contenu
+- index.html : la page complète (logo, police, motif zellige et code intégrés dans ce seul fichier).
+
+Mise en ligne
+1. Déposez index.html à la racine de votre hébergement (dossier public_html ou www),
+   via le gestionnaire de fichiers de l'hébergeur ou un client FTP (FileZilla).
+2. Ouvrez votre domaine : la page s'affiche.
+
+Activer le formulaire de contact (obligatoire pour recevoir les messages)
+1. Créez un formulaire gratuit sur https://formspree.io (ou Brevo, Getform…) avec l'adresse contact@dazzlea.agency.
+2. Copiez l'adresse fournie (ex. https://formspree.io/f/abcdwxyz).
+3. Ouvrez index.html avec un éditeur de texte, cherchez  const FORM_ENDPOINT="";
+   et collez l'adresse entre les guillemets :  const FORM_ENDPOINT="https://formspree.io/f/abcdwxyz";
+4. Enregistrez et redéposez le fichier.
+Tant que FORM_ENDPOINT est vide, le formulaire fonctionne en démonstration et n'envoie rien.
+
+Coordonnées affichées
+contact@dazzlea.agency · +212 6 61 51 22 83
+Instagram @dazzlea.ma · LinkedIn /company/dazzlea · TikTok @dazzlea.ma
