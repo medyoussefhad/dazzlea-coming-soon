@@ -216,7 +216,8 @@ export default function ComingSoon() {
       <footer>
         <span className="reach">
           <a href="mailto:contact@dazzlea.agency">contact@dazzlea.agency</a> ·{" "}
-          <a href="tel:+212661512283">+212 6 61 51 22 83</a>
+          <a href="tel:+212690097128">+212 690-097128</a> ·{" "}
+          <a href="tel:+212661512283">+212 661-512283</a>
         </span>
         <nav aria-label="Réseaux sociaux">
           <a href="https://www.instagram.com/dazzlea.ma" target="_blank" rel="noopener">
