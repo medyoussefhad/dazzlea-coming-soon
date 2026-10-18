@@ -63,8 +63,19 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     console.error("DB insert error:", err);
+    const debug = new URL(req.url).searchParams.get("debug") === "dz";
     return NextResponse.json(
-      { ok: false, error: "Could not save your message. Please try again." },
+      {
+        ok: false,
+        error: "Could not save your message. Please try again.",
+        ...(debug
+          ? {
+              detail: err instanceof Error ? err.message : String(err),
+              hasUri: Boolean(process.env.MONGODB_URI),
+              db: process.env.MONGODB_DB || null,
+            }
+          : {}),
+      },
       { status: 500 },
     );
   }
