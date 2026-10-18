@@ -54,6 +54,7 @@ export async function POST(req: Request) {
     await submissions.insertOne({
       name: data.name,
       email: data.email,
+      phone: data.phone,
       message: data.message,
       language: data.language,
       ip,

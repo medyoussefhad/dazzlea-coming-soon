@@ -24,6 +24,7 @@ export async function sendLeadNotification(lead: ContactInput): Promise<boolean>
       <h2 style="margin:0 0 12px">New enquiry from the Dazzlea site</h2>
       <p style="margin:4px 0"><strong>Name:</strong> ${safe(lead.name)}</p>
       <p style="margin:4px 0"><strong>Email:</strong> <a href="mailto:${safe(lead.email)}">${safe(lead.email)}</a></p>
+      <p style="margin:4px 0"><strong>Phone:</strong> ${lead.phone ? safe(lead.phone) : "—"}</p>
       <p style="margin:4px 0"><strong>Language:</strong> ${lead.language.toUpperCase()}</p>
       <p style="margin:12px 0 4px"><strong>Project:</strong></p>
       <p style="margin:0;white-space:pre-wrap">${safe(lead.message || "—")}</p>
@@ -32,6 +33,7 @@ export async function sendLeadNotification(lead: ContactInput): Promise<boolean>
   const text = `New enquiry from the Dazzlea site
 Name: ${lead.name}
 Email: ${lead.email}
+Phone: ${lead.phone || "—"}
 Language: ${lead.language.toUpperCase()}
 
 Project:

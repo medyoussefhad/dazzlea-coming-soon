@@ -24,6 +24,7 @@ export default function ComingSoon() {
   const spotRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const mailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
   const msgRef = useRef<HTMLInputElement>(null);
   const companyRef = useRef<HTMLInputElement>(null);
   const doneRef = useRef<HTMLDivElement>(null);
@@ -89,6 +90,7 @@ export default function ComingSoon() {
 
     const name = (nameRef.current?.value || "").trim();
     const mail = (mailRef.current?.value || "").trim();
+    const phone = (phoneRef.current?.value || "").trim();
     const message = (msgRef.current?.value || "").trim();
     const company = companyRef.current?.value || ""; // honeypot
 
@@ -108,7 +110,7 @@ export default function ComingSoon() {
       const r = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ name, email: mail, message, language: lang, company }),
+        body: JSON.stringify({ name, email: mail, phone, message, language: lang, company }),
       });
       if (!r.ok) throw new Error("bad status");
     } catch {
@@ -173,6 +175,12 @@ export default function ComingSoon() {
             <div className="fld">
               <label htmlFor="mail">Email</label>
               <input id="mail" ref={mailRef} type="email" autoComplete="email" required />
+            </div>
+            <div className="fld">
+              <label htmlFor="phone">
+                <Bi fr="Téléphone" en="Phone" />
+              </label>
+              <input id="phone" ref={phoneRef} type="tel" autoComplete="tel" inputMode="tel" />
             </div>
             <div className="fld full">
               <label htmlFor="msg">

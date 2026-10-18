@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 type Submission = {
   name: string;
   email: string;
+  phone: string;
   message: string;
   language: string;
   createdAt: Date;
@@ -31,13 +32,14 @@ export default async function AdminPage() {
     const db = await getDb();
     const docs = await db
       .collection("submissions")
-      .find({}, { projection: { name: 1, email: 1, message: 1, language: 1, createdAt: 1 } })
+      .find({}, { projection: { name: 1, email: 1, phone: 1, message: 1, language: 1, createdAt: 1 } })
       .sort({ createdAt: -1 })
       .limit(500)
       .toArray();
     rows = docs.map((d) => ({
       name: d.name ?? "",
       email: d.email ?? "",
+      phone: d.phone ?? "",
       message: d.message ?? "",
       language: d.language ?? "",
       createdAt: d.createdAt ?? new Date(0),
@@ -70,6 +72,7 @@ export default async function AdminPage() {
                 <th>Date</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Project</th>
                 <th>Lang</th>
               </tr>
@@ -81,6 +84,9 @@ export default async function AdminPage() {
                   <td>{r.name}</td>
                   <td>
                     <a href={`mailto:${r.email}`}>{r.email}</a>
+                  </td>
+                  <td className="nowrap">
+                    {r.phone ? <a href={`tel:${r.phone}`}>{r.phone}</a> : "—"}
                   </td>
                   <td className="msg">{r.message || "—"}</td>
                   <td>{(r.language || "").toUpperCase()}</td>
