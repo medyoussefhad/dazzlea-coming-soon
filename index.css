@@ -3340,3 +3340,21 @@ textarea.form-control {
 .adv-item p { color: var(--color-grey-light); font-size: .88rem; line-height: 1.6; }
 @media (max-width: 900px){ .advantage-grid { grid-template-columns: repeat(2,1fr); } .approach-grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px){ .advantage-grid { grid-template-columns: 1fr; } }
+
+/* =====================================================================
+   SERVICES — 3 Divisions (Dazzlea structure + GPJ service content)
+   ===================================================================== */
+.division-block { margin-bottom: clamp(60px,8vw,110px); position: relative; }
+.division-block:last-child { margin-bottom: 0; }
+.anchor-offset { position: absolute; top: calc(-1 * var(--nav-height) - 20px); }
+.division-header { display: grid; grid-template-columns: 120px 1fr; gap: 36px; align-items: start; margin-bottom: 44px; }
+.division-number { font-family: var(--font-head); font-size: clamp(3.5rem,7vw,6rem); font-weight: 800; color: rgba(228,32,42,0.18); line-height: .85; letter-spacing: -0.04em; }
+.division-tag { display: inline-block; font-family: var(--font-main); font-size: .72rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--color-green); margin-bottom: 14px; }
+.division-title { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: clamp(1.7rem,3.4vw,2.9rem); line-height: 1; letter-spacing: -0.015em; margin-bottom: 16px; }
+.division-desc { color: var(--color-grey-light); font-size: 1.05rem; line-height: 1.7; max-width: 640px; }
+.division-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+@media (max-width: 960px){ .division-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px){
+  .division-header { grid-template-columns: 1fr; gap: 10px; }
+  .division-grid { grid-template-columns: 1fr; }
+}
