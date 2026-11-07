@@ -316,6 +316,24 @@
   /* ── Language Toggle ─────────────────────────── */
   // (handled above in Language Switcher section)
 
+  /* ── What We Do: hover-reveal discipline images ── */
+  const discItems = document.querySelectorAll('.discipline-item');
+  const discVisual = document.querySelector('.discipline-visual-img');
+  if (discItems.length && discVisual) {
+    discItems.forEach(item => {
+      const activate = () => {
+        const img = item.dataset.img;
+        if (img && !discVisual.src.endsWith(img)) {
+          discVisual.style.opacity = '0';
+          setTimeout(() => { discVisual.src = img; discVisual.style.opacity = '1'; }, 180);
+        }
+        discItems.forEach(i => i.classList.toggle('is-active', i === item));
+      };
+      item.addEventListener('mouseenter', activate);
+      item.addEventListener('focusin', activate);
+    });
+  }
+
   /* ── Insights Filter ─────────────────────────── */
   const insightBtns = document.querySelectorAll('.insight-filter-btn');
   const insightCards = document.querySelectorAll('.article-card, .article-card-featured');
