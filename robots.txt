@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /privacy-policy.html
+Disallow: /cookie-policy.html
+Disallow: /terms-of-use.html
+
+Sitemap: https://www.dazzlea.ma/sitemap.xml

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#111111">
+  <title>Comment Mesurer le ROI de vos Activations de Marque : Guide Complet — Dazzlea</title>
+<link rel="canonical" href="https://www.dazzlea.ma/blog-roi-activations.html">
+<meta property="og:title" content="Comment Mesurer le ROI de vos Activations de Marque : Guide Complet — Dazzlea">
+<meta property="og:description" content="Découvrez les KPIs essentiels, les méthodes de mesure et le cadre analytique que Dazzlea utilise pour quantifier l'impact réel de chaque activation de marque.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.dazzlea.ma/blog-roi-activations.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Découvrez les KPIs essentiels, les méthodes de mesure et le cadre analytique que Dazzlea utilise pour quantifier l'impact réel de chaque activation de marque.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .article-hero {
+      background: #0a0a0a;
+      padding: 120px 24px 60px;
+      text-align: center;
+    }
+    .article-tag {
+      display: inline-block;
+      background: rgba(228,32,42,0.12);
+      color: #e4202a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(228,32,42,0.3);
+      margin-bottom: 24px;
+    }
+    .article-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: #888;
+      font-size: 0.85rem;
+    }
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .article-hero-img {
+      width: 100%;
+      max-width: 900px;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 48px auto 0;
+      display: block;
+    }
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      color: #ccc;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(228,32,42,0.2);
+    }
+    .article-body p {
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+    .article-body strong {
+      color: #fff;
+    }
+    .article-highlight {
+      background: rgba(228,32,42,0.06);
+      border-left: 3px solid #e4202a;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      color: #ccc;
+      font-style: italic;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .kpi-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .kpi-card .kpi-label {
+      color: #e4202a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .kpi-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 0;
+    }
+    .article-cta {
+      background: linear-gradient(135deg, rgba(228,32,42,0.08), rgba(228,32,42,0.02));
+      border: 1px solid rgba(228,32,42,0.2);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 60px 0 0;
+    }
+    .article-cta h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .article-cta p {
+      color: #aaa;
+      margin-bottom: 28px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #e4202a;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: gap 0.2s;
+    }
+    .back-link:hover { gap: 12px; }
+    body { background: #0a0a0a; }
+  </style>
+</head>
+<body>
+
+  <header class="banner scrolled" id="mainHeader">
+    <div class="navbar-container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo/dazzlea-logo.svg" alt="Dazzlea" class="navbar-logo-img" width="220" height="33">
+      </a>
+      <nav class="nav-primary">
+        <ul id="menu-primary" class="nav-links">
+          <li class="nav-has-mega">
+            <a href="portfolio.html" class="nav-item" data-fr="Work" data-en="Work">Work <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+            <div class="mega-menu-panel">
+              <div class="mega-menu-inner mega-cols-2">
+                <div class="mega-col">
+                  <span class="mega-col-title">Par Catégorie</span>
+                  <a href="portfolio.html?filter=events" class="mega-link">Événements & Galas</a>
+                  <a href="portfolio.html?filter=activation" class="mega-link">Activation</a>
+                  <a href="portfolio.html?filter=scenographie" class="mega-link">Scénographie & Stand</a>
+                  <a href="portfolio.html?filter=institutionnel" class="mega-link">Institutionnel</a>
+                </div>
+                <div class="mega-col">
+                  <span class="mega-col-title">Projets Récents</span>
+                  <a href="case-morocco-startup-awards.html" class="mega-link">Morocco Startup Awards</a>
+                  <a href="case-the-bridge.html" class="mega-link">The Bridge</a>
+                  <a href="case-dacia-bigster.html" class="mega-link">Dacia Bigster</a>
+                  <a href="case-pavillon-maroc.html" class="mega-link">Pavillon Maroc</a>
+                  <a href="case-soiree-de-gala.html" class="mega-link">Soirée de Gala</a>
+                </div>
+                <div class="mega-col">
+                  <span class="mega-col-title">En Chiffres</span>
+                  <div class="mega-stat"><strong>150+</strong><span>Événements réalisés</span></div>
+                  <div class="mega-stat"><strong>12</strong><span>Pays couverts</span></div>
+                  <a href="portfolio.html" class="btn btn-hero" style="font-size:0.7rem;padding:10px 22px;margin-top:16px;display:inline-block;">Voir tout</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-has-mega">
+            <a href="services.html" class="nav-item" data-fr="Services" data-en="Services">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+            <div class="mega-menu-panel">
+              <div class="mega-menu-inner mega-cols-4">
+                <div class="mega-col"><span class="mega-col-title">Insightful Strategy</span><a href="services.html#strategy" class="mega-link">Strategy &amp; Planning</a><a href="services.html#strategy" class="mega-link">Analytics &amp; Measurement</a><a href="services.html#strategy" class="mega-link">Media Planning</a><a href="services.html#strategy" class="mega-link">Sustainability</a></div>
+                <div class="mega-col"><span class="mega-col-title">Fearless Creativity</span><a href="services.html#creativity" class="mega-link">Creative &amp; Branding</a><a href="services.html#creativity" class="mega-link">Digital &amp; Web Design</a><a href="services.html#creativity" class="mega-link">Content Creation</a><a href="services.html#creativity" class="mega-link">Creative Technology</a></div>
+                <div class="mega-col"><span class="mega-col-title">Innovative Production</span><a href="services.html#production" class="mega-link">Event Production</a><a href="services.html#production" class="mega-link">Engineering &amp; Fabrication</a><a href="services.html#production" class="mega-link">Live Broadcast</a><a href="services.html#production" class="mega-link">Logistics</a></div>
+                <div class="mega-col"><span class="mega-col-title">Specialty Services</span><a href="services.html#specialty" class="mega-link">PR &amp; Communications</a><a href="services.html#specialty" class="mega-link">Sponsorship &amp; Partners</a><a href="services.html#specialty" class="mega-link">Portfolio Management</a></div>
+              </div>
+            </div>
+          </li>
+          <li><a href="insights.html" class="nav-item" data-fr="News &amp; Insights" data-en="News &amp; Insights">News &amp; Insights</a></li>
+          <li><a href="about.html" class="nav-item" data-fr="About" data-en="About">About</a></li>
+          <li><a href="contact.html" class="nav-item" data-fr="Contact" data-en="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="navbar-toggler" type="button" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <span class="toggler-line"></span>
+          <span class="toggler-line"></span>
+          <span class="toggler-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNavPanel">
+      <ul class="mobile-nav-links">
+        <li><a href="portfolio.html" class="mobile-nav-item">Work</a></li>
+        <li><a href="services.html" class="mobile-nav-item">Services</a></li>
+        <li><a href="insights.html" class="mobile-nav-item">News &amp; Insights</a></li>
+        <li><a href="about.html" class="mobile-nav-item">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-item">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="article-page">
+
+    <div class="article-hero">
+      <span class="article-tag" data-fr="Stratégie" data-en="Strategy">Stratégie</span>
+      <h1 class="article-hero-title" data-fr="Comment Mesurer le ROI de vos Activations de Marque : Guide Complet" data-en="How to Measure the ROI of Your Brand Activations: The Complete Guide">Comment Mesurer le ROI de vos Activations de Marque : Guide Complet</h1>
+      <div class="article-meta">
+        <span><i class="fa-regular fa-calendar"></i> <span data-fr="10 Juin 2026" data-en="June 10, 2026">10 Juin 2026</span></span>
+        <span><i class="fa-regular fa-clock"></i> <span data-fr="6 min de lecture" data-en="6 min read">6 min de lecture</span></span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" width="1200" height="800"
+        alt="Analyse des données marketing et ROI"
+        class="article-hero-img"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="article-body">
+      <a href="insights.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> <span data-fr="Retour aux Insights" data-en="Back to Insights">Retour aux Insights</span>
+      </a>
+
+      <p data-fr="Dans un contexte où les budgets marketing sont scrutés à la loupe et où chaque dirham investi doit se justifier, la question du retour sur investissement des activations de marque est devenue centrale. Pourtant, de nombreuses entreprises continuent d'organiser des événements, des pop-ups ou des expériences immersives sans avoir défini, en amont, les indicateurs qui leur permettront d'en mesurer l'efficacité réelle. Chez Dazzlea, nous avons développé un cadre de mesure structuré qui couvre l'ensemble du spectre — de l'engagement émotionnel immédiat aux conversions commerciales à long terme." data-en="In a context where marketing budgets are scrutinized closely and every dirham invested must be justified, the question of return on investment for brand activations has become central. Yet many companies continue to organize events, pop-ups or immersive experiences without having defined, upfront, the indicators that will let them measure their real effectiveness. At Dazzlea, we have developed a structured measurement framework that covers the whole spectrum — from immediate emotional engagement to long-term commercial conversions.">
+        Dans un contexte où les budgets marketing sont scrutés à la loupe et où chaque dirham investi doit se justifier, la question du retour sur investissement des activations de marque est devenue centrale. Pourtant, de nombreuses entreprises continuent d'organiser des événements, des pop-ups ou des expériences immersives sans avoir défini, en amont, les indicateurs qui leur permettront d'en mesurer l'efficacité réelle. Chez Dazzlea, nous avons développé un cadre de mesure structuré qui couvre l'ensemble du spectre — de l'engagement émotionnel immédiat aux conversions commerciales à long terme.
+      </p>
+
+      <h2 data-fr="Pourquoi le ROI des activations est difficile à mesurer" data-en="Why activation ROI is hard to measure">Pourquoi le ROI des activations est difficile à mesurer</h2>
+      <p data-fr="Contrairement à une campagne digitale où chaque clic, chaque impression et chaque conversion sont tracés en temps réel, une activation de marque produit des effets qui se manifestent sur plusieurs dimensions et à des horizons temporels différents. L'expérience vécue par un participant à un événement influence sa perception de la marque pendant des semaines, voire des mois. Cette nature diffuse du ROI expérientiel est souvent mal comprise par les équipes marketing, ce qui conduit soit à une sous-estimation de l'impact réel, soit à une incapacité à le défendre devant les directions financières." data-en="Unlike a digital campaign where every click, impression and conversion is tracked in real time, a brand activation produces effects that play out across multiple dimensions and different time horizons. The experience lived by an event attendee influences their perception of the brand for weeks, even months. This diffuse nature of experiential ROI is often poorly understood by marketing teams, which leads either to underestimating the real impact, or to an inability to defend it before finance departments.">
+        Contrairement à une campagne digitale où chaque clic, chaque impression et chaque conversion sont tracés en temps réel, une activation de marque produit des effets qui se manifestent sur plusieurs dimensions et à des horizons temporels différents. L'expérience vécue par un participant à un événement influence sa perception de la marque pendant des semaines, voire des mois. Cette nature diffuse du ROI expérientiel est souvent mal comprise par les équipes marketing, ce qui conduit soit à une sous-estimation de l'impact réel, soit à une incapacité à le défendre devant les directions financières.
+      </p>
+      <p data-fr="La première erreur consiste à n'évaluer que les métriques de surface : nombre de participants, mentions sur les réseaux sociaux, couverture médiatique immédiate. Si ces indicateurs sont nécessaires, ils sont loin d'être suffisants. Il faut articuler une architecture de mesure à trois niveaux : l'impact immédiat (pendant et juste après l'événement), l'impact à moyen terme (dans les 30 à 90 jours suivants) et l'impact à long terme sur la valeur de la marque." data-en="The first mistake is to evaluate only surface-level metrics: number of attendees, social media mentions, immediate media coverage. While these indicators are necessary, they are far from sufficient. A three-tier measurement architecture must be built: immediate impact (during and just after the event), medium-term impact (within the following 30 to 90 days), and long-term impact on brand value.">
+        La première erreur consiste à n'évaluer que les métriques de surface : nombre de participants, mentions sur les réseaux sociaux, couverture médiatique immédiate. Si ces indicateurs sont nécessaires, ils sont loin d'être suffisants. Il faut articuler une architecture de mesure à trois niveaux : l'impact immédiat (pendant et juste après l'événement), l'impact à moyen terme (dans les 30 à 90 jours suivants) et l'impact à long terme sur la valeur de la marque.
+      </p>
+
+      <h2 data-fr="Les KPIs fondamentaux à définir avant l'activation" data-en="The fundamental KPIs to define before the activation">Les KPIs fondamentaux à définir avant l'activation</h2>
+      <p data-fr="L'une des clés d'une mesure efficace est de définir les indicateurs de performance <strong>avant</strong> l'événement, et non pas après coup pour justifier des résultats. Chaque activation doit répondre à un ou plusieurs objectifs stratégiques précis, et chaque objectif doit être associé à au moins un KPI mesurable." data-en="One of the keys to effective measurement is defining performance indicators <strong>before</strong> the event, not after the fact to justify results. Every activation must answer one or more precise strategic objectives, and every objective must be tied to at least one measurable KPI.">
+        L'une des clés d'une mesure efficace est de définir les indicateurs de performance <strong>avant</strong> l'événement, et non pas après coup pour justifier des résultats. Chaque activation doit répondre à un ou plusieurs objectifs stratégiques précis, et chaque objectif doit être associé à au moins un KPI mesurable.
+      </p>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label" data-fr="Notoriété" data-en="Awareness">Notoriété</div>
+          <p data-fr="Reach médias, impressions earned, score de rappel spontané, couverture presse en équivalent publicitaire (AVE)" data-en="Media reach, earned impressions, unaided recall score, press coverage in advertising value equivalent (AVE)">Reach médias, impressions earned, score de rappel spontané, couverture presse en équivalent publicitaire (AVE)</p>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label" data-fr="Engagement" data-en="Engagement">Engagement</div>
+          <p data-fr="Taux d'interaction sur site, durée de l'expérience, NPS événementiel, taux de partage sur réseaux sociaux" data-en="On-site interaction rate, experience duration, event NPS, social media share rate">Taux d'interaction sur site, durée de l'expérience, NPS événementiel, taux de partage sur réseaux sociaux</p>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label" data-fr="Conversion" data-en="Conversion">Conversion</div>
+          <p data-fr="Leads qualifiés générés, taux de passage à l'acte dans les 30 jours, panier moyen des visiteurs post-activation" data-en="Qualified leads generated, conversion rate within 30 days, average basket of visitors post-activation">Leads qualifiés générés, taux de passage à l'acte dans les 30 jours, panier moyen des visiteurs post-activation</p>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label" data-fr="Fidélisation" data-en="Loyalty">Fidélisation</div>
+          <p data-fr="Taux de réachat, évolution du score de satisfaction client, augmentation de la fréquence d'achat" data-en="Repurchase rate, change in customer satisfaction score, increase in purchase frequency">Taux de réachat, évolution du score de satisfaction client, augmentation de la fréquence d'achat</p>
+        </div>
+      </div>
+
+      <h2 data-fr="Mesurer le reach digital et l'impact PR" data-en="Measuring digital reach and PR impact">Mesurer le reach digital et l'impact PR</h2>
+      <p data-fr="Toute activation bien conçue génère un rayonnement digital bien au-delà de l'audience physique présente. Les contenus produits — photos, vidéos, stories, témoignages — continuent de circuler sur les réseaux sociaux pendant plusieurs jours. Pour capturer cet effet, Dazzlea met en place des outils de social listening dès la phase de préparation : création d'un hashtag dédié et trackable, attribution de codes UTM à chaque point de contact digital, intégration d'un pixel de suivi sur les pages de destination associées à l'événement." data-en="Any well-designed activation generates a digital reach that extends far beyond the physical audience present. The content produced — photos, videos, stories, testimonials — keeps circulating on social media for several days. To capture this effect, Dazzlea sets up social listening tools from the preparation phase onward: creating a dedicated, trackable hashtag, assigning UTM codes to every digital touchpoint, and embedding a tracking pixel on the landing pages associated with the event.">
+        Toute activation bien conçue génère un rayonnement digital bien au-delà de l'audience physique présente. Les contenus produits — photos, vidéos, stories, témoignages — continuent de circuler sur les réseaux sociaux pendant plusieurs jours. Pour capturer cet effet, Dazzlea met en place des outils de social listening dès la phase de préparation : création d'un hashtag dédié et trackable, attribution de codes UTM à chaque point de contact digital, intégration d'un pixel de suivi sur les pages de destination associées à l'événement.
+      </p>
+      <p data-fr="Du côté des relations presse, nous utilisons un calcul d'équivalence publicitaire pondéré (ou Weighted Media Value) qui tient compte non seulement de la superficie rédactionnelle, mais aussi du niveau d'engagement des publications, du profil de l'audience du média et du sentiment associé à l'article. Un article de fond dans un magazine B2B lu par des décideurs peut valoir dix fois plus qu'une brève dans un tabloïd généraliste, même si sa surface est moindre." data-en="On the press relations side, we use a weighted media value calculation that accounts not only for editorial space, but also for the engagement level of the publication, the media outlet's audience profile, and the sentiment associated with the article. An in-depth feature in a B2B magazine read by decision-makers can be worth ten times more than a short piece in a general tabloid, even if it takes up less space.">
+        Du côté des relations presse, nous utilisons un calcul d'équivalence publicitaire pondéré (ou Weighted Media Value) qui tient compte non seulement de la superficie rédactionnelle, mais aussi du niveau d'engagement des publications, du profil de l'audience du média et du sentiment associé à l'article. Un article de fond dans un magazine B2B lu par des décideurs peut valoir dix fois plus qu'une brève dans un tabloïd généraliste, même si sa surface est moindre.
+      </p>
+
+      <div class="article-highlight" data-fr="&quot;Une activation de marque réussie génère en moyenne 3 à 5 fois son coût de production en valeur médiatique équivalente — à condition d'avoir conçu l'expérience avec le contenu en tête dès le départ.&quot;" data-en="&quot;A successful brand activation generates on average 3 to 5 times its production cost in equivalent media value — provided the experience was designed with content in mind from the very start.&quot;">
+        "Une activation de marque réussie génère en moyenne 3 à 5 fois son coût de production en valeur médiatique équivalente — à condition d'avoir conçu l'expérience avec le contenu en tête dès le départ."
+      </div>
+
+      <h2 data-fr="Le cadre de mesure Dazzlea : avant, pendant, après" data-en="The Dazzlea measurement framework: before, during, after">Le cadre de mesure Dazzlea : avant, pendant, après</h2>
+      <p data-fr="Notre méthodologie repose sur une approche en trois temps. <strong>Avant l'activation</strong>, nous établissons des benchmarks : quelle est la notoriété actuelle de la marque auprès de la cible ? Quel est son Net Promoter Score de départ ? Quels sont les volumes de recherche organique et de mentions sur les réseaux ? Ces données constituent la ligne de base contre laquelle nous mesurerons l'impact." data-en="Our methodology rests on a three-phase approach. <strong>Before the activation</strong>, we establish benchmarks: what is the brand's current awareness among the target audience? What is its starting Net Promoter Score? What are the volumes of organic search and social mentions? This data forms the baseline against which we will measure impact.">
+        Notre méthodologie repose sur une approche en trois temps. <strong>Avant l'activation</strong>, nous établissons des benchmarks : quelle est la notoriété actuelle de la marque auprès de la cible ? Quel est son Net Promoter Score de départ ? Quels sont les volumes de recherche organique et de mentions sur les réseaux ? Ces données constituent la ligne de base contre laquelle nous mesurerons l'impact.
+      </p>
+      <p data-fr="<strong>Pendant l'activation</strong>, nous déployons des outils de collecte en temps réel : bornes d'enregistrement digitales qui capturent les données des participants, QR codes intégrés aux expériences pour suivre les parcours, équipes dédiées à la captation de contenu et au monitoring des réseaux sociaux. Un tableau de bord en temps réel permet à l'équipe client de suivre les KPIs clés au fur et à mesure de l'événement." data-en="<strong>During the activation</strong>, we deploy real-time collection tools: digital check-in kiosks that capture attendee data, QR codes embedded in the experiences to track journeys, and dedicated teams for content capture and social media monitoring. A real-time dashboard lets the client team track key KPIs as the event unfolds.">
+        <strong>Pendant l'activation</strong>, nous déployons des outils de collecte en temps réel : bornes d'enregistrement digitales qui capturent les données des participants, QR codes intégrés aux expériences pour suivre les parcours, équipes dédiées à la captation de contenu et au monitoring des réseaux sociaux. Un tableau de bord en temps réel permet à l'équipe client de suivre les KPIs clés au fur et à mesure de l'événement.
+      </p>
+      <p data-fr="<strong>Après l'activation</strong>, nous produisons un rapport d'impact complet dans les deux semaines suivant l'événement. Ce rapport intègre l'ensemble des données collectées, une analyse de l'évolution des métriques par rapport aux benchmarks, une estimation du ROI global et des recommandations pour les activations futures. C'est ce rapport qui permet aux équipes marketing de défendre leurs investissements en interne et d'affiner leur stratégie." data-en="<strong>After the activation</strong>, we produce a complete impact report within two weeks of the event. This report brings together all the data collected, an analysis of how metrics evolved against the benchmarks, an estimate of overall ROI, and recommendations for future activations. It is this report that lets marketing teams defend their investments internally and refine their strategy.">
+        <strong>Après l'activation</strong>, nous produisons un rapport d'impact complet dans les deux semaines suivant l'événement. Ce rapport intègre l'ensemble des données collectées, une analyse de l'évolution des métriques par rapport aux benchmarks, une estimation du ROI global et des recommandations pour les activations futures. C'est ce rapport qui permet aux équipes marketing de défendre leurs investissements en interne et d'affiner leur stratégie.
+      </p>
+
+      <h2 data-fr="Intégrer les données qualitatives dans le calcul" data-en="Integrating qualitative data into the calculation">Intégrer les données qualitatives dans le calcul</h2>
+      <p data-fr="Les données quantitatives ne racontent qu'une partie de l'histoire. L'expérience vécue par les participants — l'émotion ressentie, la connexion avec la marque, la perception de la qualité — est tout aussi déterminante pour la valeur à long terme de l'activation. C'est pourquoi nous intégrons systématiquement des enquêtes de satisfaction post-événement, des entretiens qualitatifs avec un échantillon de participants, et une analyse sémantique des commentaires sur les réseaux sociaux." data-en="Quantitative data only tells part of the story. The experience lived by attendees — the emotion felt, the connection with the brand, the perceived quality — is just as decisive for the activation's long-term value. That is why we systematically incorporate post-event satisfaction surveys, qualitative interviews with a sample of attendees, and semantic analysis of social media comments.">
+        Les données quantitatives ne racontent qu'une partie de l'histoire. L'expérience vécue par les participants — l'émotion ressentie, la connexion avec la marque, la perception de la qualité — est tout aussi déterminante pour la valeur à long terme de l'activation. C'est pourquoi nous intégrons systématiquement des enquêtes de satisfaction post-événement, des entretiens qualitatifs avec un échantillon de participants, et une analyse sémantique des commentaires sur les réseaux sociaux.
+      </p>
+      <p data-fr="Ces données qualitatives permettent de comprendre <em>pourquoi</em> certains KPIs ont performé ou sous-performé, et d'identifier les leviers sur lesquels agir lors des prochaines activations. Elles constituent également une matière précieuse pour les équipes créatives qui conçoivent les futures expériences de marque." data-en="This qualitative data helps us understand <em>why</em> certain KPIs over- or under-performed, and identify the levers to act on for future activations. It is also valuable material for the creative teams designing future brand experiences.">
+        Ces données qualitatives permettent de comprendre <em>pourquoi</em> certains KPIs ont performé ou sous-performé, et d'identifier les leviers sur lesquels agir lors des prochaines activations. Elles constituent également une matière précieuse pour les équipes créatives qui conçoivent les futures expériences de marque.
+      </p>
+
+      <div class="article-cta">
+        <h3 data-fr="Prêt à mesurer l'impact réel de vos activations ?" data-en="Ready to measure the real impact of your activations?">Prêt à mesurer l'impact réel de vos activations ?</h3>
+        <p data-fr="Notre équipe Stratégie & Analytics vous accompagne de la définition des KPIs jusqu'au rapport d'impact final." data-en="Our Strategy & Analytics team supports you from KPI definition through to the final impact report.">Notre équipe Stratégie & Analytics vous accompagne de la définition des KPIs jusqu'au rapport d'impact final.</p>
+        <a href="contact.html" class="btn btn-hero" data-fr="Parler à un expert" data-en="Talk to an expert">Parler à un expert</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer-info">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3 class="footer-col-title">À Propos</h3><ul class="footer-links"><li><a href="about.html">Qui Sommes-Nous</a></li><li><a href="services.html">Nos Services</a></li><li><a href="portfolio.html">Nos Réalisations</a></li><li><a href="insights.html">News &amp; Insights</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Legal</h3><ul class="footer-links"><li><a href="privacy-policy.html">Politique de Confidentialité</a></li><li><a href="cookie-policy.html">Politique Cookies</a></li><li><a href="terms-of-use.html">Conditions d'Utilisation</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Contact</h3><ul class="footer-links"><li><a href="contact.html">Nous Contacter</a></li><li><a href="contact.html">Casablanca, Maroc</a></li><li><a href="contact.html">Soumettre un Brief</a></li></ul></div>
+        <div class="footer-col footer-about-col"><h3 class="footer-col-title">Dazzlea</h3><p class="footer-tagline">L'agence de marketing expérientiel de référence au Maroc. Votre pont stratégique entre les marques internationales et l'Afrique.</p><div class="social-icons"><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><hr class="footer-divider"><div class="footer-copyright"><p>&copy; 2026 Dazzlea. Tous droits réservés. Agence de Marketing Expérientiel — Casablanca, Maroc.</p></div></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
