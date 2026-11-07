@@ -380,4 +380,48 @@
     }
   }
 
+  /* ── Scroll progress bar ─────────────────────── */
+  const progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  /* ── Generic counters ([data-count]) ─────────── */
+  const countEls = document.querySelectorAll('[data-count]');
+  if (countEls.length) {
+    const fmt = (n) => n.toLocaleString('en-US');
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        countObserver.unobserve(el);
+        const target = parseInt(el.dataset.count, 10);
+        if (prefersReduced.matches) { el.textContent = fmt(target); return; }
+        const start = performance.now();
+        const step = (now) => {
+          const p = Math.min((now - start) / 1600, 1);
+          el.textContent = fmt(Math.round((1 - Math.pow(1 - p, 3)) * target));
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    countEls.forEach(el => countObserver.observe(el));
+  }
+
+  /* ── Mouse-follow glow on brand cards ────────── */
+  document.querySelectorAll('.brand-card').forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+
 })();
