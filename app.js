@@ -415,6 +415,110 @@
     countEls.forEach(el => countObserver.observe(el));
   }
 
+  /* ── Site entry: curtain intro + spotlight hero ── */
+  const hx = document.querySelector('.hx');
+  if (hx) {
+    const intro = document.getElementById('intro');
+    const root = document.documentElement;
+    const startHero = () => hx.classList.add('is-in');
+    let seen = false;
+    try { seen = sessionStorage.getItem('dzzIntro') === '1'; } catch (e) {}
+
+    if (!intro || seen || prefersReduced.matches) {
+      if (intro) intro.remove();
+      root.classList.remove('intro-lock');
+      requestAnimationFrame(startHero);
+    } else {
+      root.classList.add('intro-lock');
+      const countEl = intro.querySelector('.intro-count span');
+      const t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - t0) / 1600, 1);
+        countEl.textContent = String(Math.round((1 - Math.pow(1 - p, 2)) * 100)).padStart(2, '0');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      const finish = () => {
+        if (intro.classList.contains('is-open')) return;
+        intro.classList.add('is-open');
+        try { sessionStorage.setItem('dzzIntro', '1'); } catch (e) {}
+        setTimeout(startHero, 380);
+        setTimeout(() => { intro.remove(); root.classList.remove('intro-lock'); }, 1300);
+      };
+      setTimeout(finish, 2000);
+      intro.addEventListener('click', finish);
+    }
+
+    // Spotlight: follows the mouse, drifts on its own otherwise
+    let cx = 0, cy = 0, tx = 0, ty = 0, following = false;
+    const sizeNow = () => hx.getBoundingClientRect();
+    { const r = sizeNow(); cx = tx = r.width * 0.68; cy = ty = r.height * 0.42; }
+    hx.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      const r = sizeNow();
+      following = true;
+      tx = e.clientX - r.left; ty = e.clientY - r.top;
+      hx.style.setProperty('--tx', `${((tx / r.width) - 0.5) * -14}px`);
+      hx.style.setProperty('--ty', `${((ty / r.height) - 0.5) * -10}px`);
+    });
+    hx.addEventListener('pointerleave', () => {
+      following = false;
+      hx.style.setProperty('--tx', '0px'); hx.style.setProperty('--ty', '0px');
+    });
+    if (!prefersReduced.matches) {
+      const loop = (t) => {
+        if (window.scrollY < window.innerHeight) {
+          if (!following) {
+            const r = sizeNow();
+            tx = r.width * (0.66 + 0.2 * Math.sin(t / 2700));
+            ty = r.height * (0.42 + 0.17 * Math.sin(t / 1900));
+          }
+          cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+          hx.style.setProperty('--sx', `${cx.toFixed(1)}px`);
+          hx.style.setProperty('--sy', `${cy.toFixed(1)}px`);
+        }
+        requestAnimationFrame(loop);
+      };
+      requestAnimationFrame(loop);
+    }
+
+    // Rotating word (language-aware)
+    const rot = hx.querySelector('.hx-rotator');
+    const word = rot && rot.querySelector('.hx-word');
+    if (rot && word && !prefersReduced.matches) {
+      const en = rot.dataset.wordsEn.split('|');
+      const fr = rot.dataset.wordsFr.split('|');
+      let i = 0;
+      setInterval(() => {
+        i = (i + 1) % en.length;
+        word.classList.remove('in');
+        word.classList.add('out');
+        setTimeout(() => {
+          const isFr = root.getAttribute('lang') === 'fr';
+          word.dataset.en = en[i]; word.dataset.fr = fr[i];
+          word.textContent = isFr ? fr[i] : en[i];
+          word.classList.remove('out');
+          word.classList.add('in');
+        }, 460);
+      }, 2700);
+    }
+
+    // Dazzle sparkles
+    const sp = hx.querySelector('.hx-sparkles');
+    if (sp && !prefersReduced.matches) {
+      for (let k = 0; k < 22; k++) {
+        const s = document.createElement('span');
+        if (k % 4 === 0) s.className = 'star';
+        s.style.left = `${38 + Math.random() * 60}%`;
+        s.style.top = `${8 + Math.random() * 74}%`;
+        s.style.setProperty('--s', `${2 + Math.random() * 3}px`);
+        s.style.setProperty('--d', `${2.4 + Math.random() * 3}s`);
+        s.style.setProperty('--dl', `${Math.random() * 4}s`);
+        sp.appendChild(s);
+      }
+    }
+  }
+
   /* ── Mouse-follow glow on brand cards ────────── */
   document.querySelectorAll('.brand-card').forEach(card => {
     card.addEventListener('pointermove', (e) => {
