@@ -132,14 +132,14 @@
     });
   });
 
-  // Apply saved or default language on load
-  const savedLang = localStorage.getItem('dzzLang') || 'fr';
+  // Apply saved or default language on load (English-first)
+  const savedLang = localStorage.getItem('dzzLang') || 'en';
   if (langBtns.length > 0) {
     applyLang(savedLang);
   }
 
   /* ── Scroll Reveal (IntersectionObserver) ──── */
-  const revealEls = document.querySelectorAll('.reveal-fade-up');
+  const revealEls = document.querySelectorAll('.reveal-fade-up, .stacked-statement');
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -245,6 +245,29 @@
     bgVideos.forEach(video => videoObserver.observe(video));
   }
 
+  /* ── Parallax on scroll (subtle depth) ──────── */
+  if (!prefersReduced.matches) {
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    if (parallaxEls.length) {
+      let ticking = false;
+      const update = () => {
+        const vh = window.innerHeight;
+        parallaxEls.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > vh) return;
+          const speed = parseFloat(el.dataset.parallax) || 0.12;
+          const offset = (rect.top + rect.height / 2 - vh / 2) * -speed;
+          el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+        });
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+      update();
+    }
+  }
+
   /* ── Counter Animation ───────────────────────── */
   const statsSection = document.querySelector('.stats-section');
 
@@ -292,6 +315,22 @@
 
   /* ── Language Toggle ─────────────────────────── */
   // (handled above in Language Switcher section)
+
+  /* ── Insights Filter ─────────────────────────── */
+  const insightBtns = document.querySelectorAll('.insight-filter-btn');
+  const insightCards = document.querySelectorAll('.article-card, .article-card-featured');
+  if (insightBtns.length) {
+    insightBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        insightBtns.forEach(b => b.classList.toggle('active', b === btn));
+        insightCards.forEach(card => {
+          const match = cat === 'all' || card.dataset.cat === cat;
+          card.classList.toggle('hidden', !match);
+        });
+      });
+    });
+  }
 
   /* ── Portfolio Filter ────────────────────────── */
   const filterBtns  = document.querySelectorAll('.filter-btn');

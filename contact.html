@@ -117,82 +117,80 @@
       <div class="contact-body-inner">
 
         <!-- Form -->
-        <div>
-          <span class="section-label">Formulaire de Contact</span>
-          <p class="form-title">Soumettez votre brief</p>
+        <div class="contact-form-panel">
+          <span class="section-label" data-fr="Formulaire de Contact" data-en="Contact Form">Contact Form</span>
+          <p class="form-title" data-fr="Soumettez votre brief" data-en="Drop us a line">Drop us a line</p>
 
           <div data-fs-success style="display:none" class="form-success">
             <i class="fa-solid fa-circle-check"></i>
-            <h3>Brief envoyé !</h3>
-            <p>Nous vous répondons sous 24h ouvrées.</p>
+            <h3 data-fr="Brief envoyé !" data-en="Brief sent!">Brief sent!</h3>
+            <p data-fr="Nous vous répondons sous 24h ouvrées." data-en="We will reply within 24 business hours.">We will reply within 24 business hours.</p>
           </div>
           <div data-fs-error style="display:none" class="form-error-banner"></div>
 
           <form id="contact-form" method="post">
 
             <div class="form-group">
-              <label class="form-label" for="profile">Je suis un(e)...</label>
+              <label data-fr="Je suis un(e)..." data-en="I am a..." class="form-label" for="profile">I am a...</label>
               <select class="form-select" id="profile" name="profile" required data-fs-field>
-                <option value="" disabled selected>Sélectionnez votre profil</option>
-                <option value="marque">Marque / Entreprise privée</option>
-                <option value="institution">Institution / Organisme public</option>
-                <option value="partenaire">Partenaire stratégique / Agence</option>
-                <option value="media">Média / Journaliste</option>
-                <option value="autre">Autre</option>
+                <option data-fr="Sélectionnez votre profil" data-en="Select your profile" value="" disabled selected>Select your profile</option>
+                <option data-fr="Marque / Entreprise privée" data-en="Brand / Private company" value="marque">Brand / Private company</option>
+                <option data-fr="Institution / Organisme public" data-en="Institution / Public body" value="institution">Institution / Public body</option>
+                <option data-fr="Partenaire stratégique / Agence" data-en="Strategic partner / Agency" value="partenaire">Strategic partner / Agency</option>
+                <option data-fr="Média / Journaliste" data-en="Media / Journalist" value="media">Media / Journalist</option>
+                <option data-fr="Autre" data-en="Other" value="autre">Other</option>
               </select>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="firstname">Prénom</label>
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom" required data-fs-field>
+                <label data-fr="Prénom" data-en="First name" class="form-label" for="firstname">First name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Your first name" required data-fs-field>
               </div>
               <div class="form-group">
-                <label class="form-label" for="lastname">Nom</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Votre nom" required data-fs-field>
+                <label data-fr="Nom" data-en="Last name" class="form-label" for="lastname">Last name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Your last name" required data-fs-field>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="email">Email professionnel</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="nom@organisation.com" required data-fs-field>
+                <label data-fr="Email professionnel" data-en="Work email" class="form-label" for="email">Work email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@organization.com" required data-fs-field>
                 <span data-fs-error="email" class="form-field-error"></span>
               </div>
               <div class="form-group">
-                <label class="form-label" for="phone">Téléphone</label>
+                <label data-fr="Téléphone" data-en="Phone" class="form-label" for="phone">Phone</label>
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="+212 6 00 00 00 00" data-fs-field>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="organization">Organisation / Marque</label>
-              <input type="text" class="form-control" id="organization" name="organization" placeholder="Nom de votre organisation" data-fs-field>
+              <label data-fr="Organisation / Marque" data-en="Organization / Brand" class="form-label" for="organization">Organization / Brand</label>
+              <input type="text" class="form-control" id="organization" name="organization" placeholder="Your organization name" data-fs-field>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="service">Type de prestation</label>
+              <label data-fr="Type de prestation" data-en="Service needed" class="form-label" for="service">Service needed</label>
               <select class="form-select" id="service" name="service" data-fs-field>
-                <option value="" disabled selected>Sélectionnez un service</option>
-                <option value="evenement">Organisation d'événement</option>
+                <option data-fr="Sélectionnez un service" data-en="Select a service" value="" disabled selected>Select a service</option>
+                <option data-fr="Organisation d'événement" data-en="Event management" value="evenement">Event management</option>
                 <option value="activation">Activation & Brand Experience</option>
-                <option value="scenographie">Scénographie & Stand</option>
-                <option value="digital">Digital & Contenu</option>
-                <option value="strategie">Stratégie & Conseil</option>
-                <option value="pr">PR & Relations Presse</option>
+                <option data-fr="Scénographie & Stand" data-en="Scenography & Booth" value="scenographie">Scenography & Booth</option>
+                <option data-fr="Digital & Contenu" data-en="Digital & Content" value="digital">Digital & Content</option>
+                <option data-fr="Stratégie & Conseil" data-en="Strategy & Consulting" value="strategie">Strategy & Consulting</option>
+                <option data-fr="PR & Relations Presse" data-en="PR & Media Relations" value="pr">PR & Media Relations</option>
                 <option value="media">Media Planning</option>
-                <option value="autre">Autre / À définir</option>
+                <option data-fr="Autre / À définir" data-en="Other / To define" value="autre">Other / To define</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="message">Décrivez votre projet</label>
-              <textarea class="form-control" id="message" name="message" placeholder="Contexte, objectifs, budget indicatif, délais..." data-fs-field></textarea>
+              <label data-fr="Décrivez votre projet" data-en="Describe your project" class="form-label" for="message">Describe your project</label>
+              <textarea class="form-control" id="message" name="message" placeholder="Context, goals, indicative budget, timeline..." data-fs-field></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-fs-submit-btn>
-              Envoyer le Brief
-            </button>
+            <button data-fr="Envoyer le Brief" data-en="Send Brief" type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-fs-submit-btn>Send Brief</button>
 
           </form>
         </div>
@@ -200,14 +198,14 @@
         <!-- Info Card -->
         <div>
           <div class="contact-info-card">
-            <h3>Informations de Contact</h3>
+            <h3 data-fr="Informations de Contact" data-en="Contact Information">Contact Information</h3>
 
             <div class="contact-detail">
               <div class="contact-detail-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <div class="contact-detail-text">
-                <p class="detail-label">Adresse</p>
+                <p class="detail-label" data-fr="Adresse" data-en="Address">Address</p>
                 <p class="detail-value">123 Boulevard Zerktouni<br>Casablanca 20100, Maroc</p>
               </div>
             </div>
@@ -217,7 +215,7 @@
                 <i class="fa-solid fa-phone"></i>
               </div>
               <div class="contact-detail-text">
-                <p class="detail-label">Téléphone</p>
+                <p class="detail-label" data-fr="Téléphone" data-en="Phone">Phone</p>
                 <p class="detail-value">+212 5 22 00 00 00</p>
               </div>
             </div>
@@ -227,7 +225,7 @@
                 <i class="fa-solid fa-envelope"></i>
               </div>
               <div class="contact-detail-text">
-                <p class="detail-label">Email</p>
+                <p class="detail-label" data-fr="Email" data-en="Email">Email</p>
                 <p class="detail-value">hello@dazzlea.ma</p>
               </div>
             </div>
@@ -237,13 +235,13 @@
                 <i class="fa-solid fa-clock"></i>
               </div>
               <div class="contact-detail-text">
-                <p class="detail-label">Horaires</p>
-                <p class="detail-value">Lundi – Vendredi<br>9h00 – 18h00</p>
+                <p class="detail-label" data-fr="Horaires" data-en="Hours">Hours</p>
+                <p class="detail-value">Monday – Friday<br>9:00 – 18:00</p>
               </div>
             </div>
 
             <div class="contact-socials">
-              <p class="contact-socials-label">Suivez-nous</p>
+              <p class="contact-socials-label" data-fr="Suivez-nous" data-en="Follow us">Follow us</p>
               <div class="contact-social-links">
                 <a href="#" class="contact-social-link">
                   <i class="fa-brands fa-linkedin-in"></i> LinkedIn

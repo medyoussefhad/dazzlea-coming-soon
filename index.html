@@ -161,7 +161,9 @@
         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070" alt="Expérience événementielle Dazzlea" class="hero-img" width="2070" height="1380" fetchpriority="high">
         <div class="hero-gradient-overlay"></div>
       </div>
-      <div class="hero-content">
+      <div class="hero-frame" aria-hidden="true"></div>
+      <div class="hero-content" data-parallax="0.16">
+        <span class="kicker reveal-fade-up" data-fr="Agence de Marketing Expérientiel" data-en="Experience Marketing Agency">Agence de Marketing Expérientiel</span>
         <h1 class="hero-title reveal-fade-up" data-fr="NOUS CRÉONS DES EXPÉRIENCES<br><span class='highlight'>CLÉ EN MAIN</span>" data-en="WE BUILD<br><span class='highlight'>END-TO-END</span> EXPERIENCES">WE BUILD<br><span class="highlight">END-TO-END</span> EXPERIENCES</h1>
         <p class="hero-subtitle reveal-fade-up" data-fr="Dazzlea est l'agence de marketing expérientiel de référence au Maroc — de la stratégie au reporting, nous déployons chaque expérience de bout en bout." data-en="Dazzlea is Morocco's leading experience marketing agency — from strategy to reporting, we deliver every experience end to end.">Dazzlea est l'agence de marketing expérientiel de référence au Maroc — de la stratégie au reporting, nous déployons chaque expérience de bout en bout.</p>
         <a href="portfolio.html" class="btn btn-hero reveal-fade-up" data-fr="Découvrir nos Projets" data-en="Explore Our Work">Découvrir nos Projets</a>
@@ -173,7 +175,7 @@
 
     <!-- Press Bar -->
     <div class="press-bar">
-      <span class="press-bar-label">Ils parlent de nous</span>
+      <span data-fr="Ils parlent de nous" data-en="As featured in" class="press-bar-label">As featured in</span>
       <div class="press-track-wrap">
         <div class="press-track">
           <span class="press-name">L'Économiste</span>
@@ -201,8 +203,25 @@
       </div>
     </div>
 
+    <!-- GPJ-style stacked statement -->
+    <section class="stacked-statement">
+      <div class="stacked-inner">
+        <h2 class="stacked-headline">
+          <span class="stacked-line"><span data-fr="NOUS CRÉONS" data-en="WE CREATE">NOUS CRÉONS</span></span>
+          <span class="stacked-line"><span class="accent" data-fr="DES MOMENTS" data-en="MOMENTS">DES MOMENTS</span></span>
+          <span class="stacked-line"><span class="outline" data-fr="QUI MARQUENT" data-en="THAT MATTER">QUI MARQUENT</span></span>
+        </h2>
+        <p class="stacked-lede" data-fr="De la stratégie à la production, Dazzlea orchestre des expériences de marque <strong>de bout en bout</strong> — pensées pour le Maroc, déployées à travers l'Afrique." data-en="From strategy to production, Dazzlea orchestrates brand experiences <strong>end to end</strong> — built for Morocco, deployed across Africa.">De la stratégie à la production, Dazzlea orchestre des expériences de marque <strong>de bout en bout</strong> — pensées pour le Maroc, déployées à travers l'Afrique.</p>
+      </div>
+    </section>
+
     <!-- Content Grid Section (Work Portfolio) -->
     <section class="portfolio-grid-section" id="work">
+      <div class="section-intro">
+        <span class="kicker" data-fr="Réalisations" data-en="Selected Work">Réalisations</span>
+        <h2 class="section-intro-title" data-fr="Un aperçu de notre travail" data-en="A glimpse of our work">Un aperçu de notre travail</h2>
+        <p class="section-intro-text" data-fr="Scénographies grand format, activations de marque et soirées institutionnelles — chaque projet, conçu et produit par Dazzlea." data-en="Large-format scenography, brand activations and institutional galas — every project designed and produced by Dazzlea.">Scénographies grand format, activations de marque et soirées institutionnelles — chaque projet, conçu et produit par Dazzlea.</p>
+      </div>
       <div class="grid-container">
         
         <!-- Morocco Startup Awards Card -->
@@ -215,7 +234,7 @@
             </div>
             <div class="card-caption">
               <div class="card-text-container">
-                <h3 class="card-title">Morocco Startup Awards : Une Scénographie Grand Format</h3>
+                <h3 data-fr="Morocco Startup Awards : Une Scénographie Grand Format" data-en="Morocco Startup Awards: Large-Format Scenography" class="card-title">Morocco Startup Awards: Large-Format Scenography</h3>
               </div>
               <div class="client-logo-badge amd-badge">
                 <span class="logo-badge-text">MSA</span>
@@ -234,7 +253,7 @@
             </div>
             <div class="card-caption">
               <div class="card-text-container">
-                <h3 class="card-title">The Bridge : Connecter les Marques à l'Afrique</h3>
+                <h3 data-fr="The Bridge : Connecter les Marques à l'Afrique" data-en="The Bridge: Connecting Brands to Africa" class="card-title">The Bridge: Connecting Brands to Africa</h3>
               </div>
               <div class="client-logo-badge ibm-badge">
                 <span class="logo-badge-text">THE BRIDGE</span>
@@ -253,7 +272,7 @@
             </div>
             <div class="card-caption">
               <div class="card-text-container">
-                <h3 class="card-title"><span class="text-brand">DACIA</span>Bigster : Une Activation qui Marque les Esprits</h3>
+                <h3 class="card-title" data-fr="<span class=&quot;text-brand&quot;>DACIA</span>Bigster : Une Activation qui Marque les Esprits" data-en="<span class=&quot;text-brand&quot;>DACIA</span>Bigster: An Activation That Leaves a Mark"><span class="text-brand">DACIA</span>Bigster: An Activation That Leaves a Mark</h3>
               </div>
               <div class="client-logo-badge jeep-badge">
                 <span class="logo-badge-text">DACIA</span>
@@ -272,7 +291,7 @@
             </div>
             <div class="card-caption">
               <div class="card-text-container">
-                <h3 class="card-title">Pavillon Maroc : Conception & Scénographie Internationale</h3>
+                <h3 data-fr="Pavillon Maroc : Conception & Scénographie Internationale" data-en="Morocco Pavilion: International Design & Scenography" class="card-title">Morocco Pavilion: International Design & Scenography</h3>
               </div>
               <div class="client-logo-badge cisco-badge">
                 <span class="logo-badge-text">PAVILLON</span>
@@ -291,7 +310,7 @@
             </div>
             <div class="card-caption">
               <div class="card-text-container">
-                <h3 class="card-title">Soirée de Gala Institutionnelle : Excellence et Prestige</h3>
+                <h3 data-fr="Soirée de Gala Institutionnelle : Excellence et Prestige" data-en="Institutional Gala Evening: Excellence & Prestige" class="card-title">Institutional Gala Evening: Excellence & Prestige</h3>
               </div>
               <div class="client-logo-badge dp-badge">
                 <span class="logo-badge-text">GALA</span>
@@ -303,7 +322,7 @@
         <!-- Explore Work Card -->
         <div class="grid-card explore-card reveal-fade-up">
           <div class="explore-content-wrap">
-            <h2 class="experience-title">Nos<br><strong>Réalisations</strong></h2>
+            <h2 data-fr="Nos<br><strong>Réalisations</strong>" data-en="Our<br><strong>Work</strong>" class="experience-title">Our<br><strong>Work</strong></h2>
             <a href="portfolio.html" class="btn btn-outline-white">Voir le Portfolio</a>
           </div>
         </div>
@@ -312,34 +331,34 @@
     </section>
 
     <!-- Stats / En Chiffres -->
-    <section class="stats-section">
+    <section class="stats-section theme-light">
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-value-wrap">
             <span class="stat-number" data-target="150">0</span>
             <span class="stat-suffix">+</span>
           </div>
-          <span class="stat-label">Événements réalisés</span>
+          <span data-fr="Événements réalisés" data-en="Events delivered" class="stat-label">Events delivered</span>
         </div>
         <div class="stat-item">
           <div class="stat-value-wrap">
             <span class="stat-number" data-target="12">0</span>
           </div>
-          <span class="stat-label">Pays couverts</span>
+          <span data-fr="Pays couverts" data-en="Countries covered" class="stat-label">Countries covered</span>
         </div>
         <div class="stat-item">
           <div class="stat-value-wrap">
             <span class="stat-number" data-target="200">0</span>
             <span class="stat-suffix">+</span>
           </div>
-          <span class="stat-label">Collaborateurs mobilisés</span>
+          <span data-fr="Collaborateurs mobilisés" data-en="Team members mobilized" class="stat-label">Team members mobilized</span>
         </div>
         <div class="stat-item">
           <div class="stat-value-wrap">
             <span class="stat-number" data-target="98">0</span>
             <span class="stat-suffix">%</span>
           </div>
-          <span class="stat-label">Clients satisfaits</span>
+          <span data-fr="Clients satisfaits" data-en="Satisfied clients" class="stat-label">Satisfied clients</span>
         </div>
       </div>
     </section>
@@ -348,7 +367,7 @@
     <section class="marquee-section" id="clients">
       <div class="marquee-container-wrapper">
         <div class="statement-col">
-          <h2 class="section-heading">DAZZLEA, VOTRE PONT STRATÉGIQUE ENTRE LES <strong>MARQUES INTERNATIONALES</strong> ET L’AFRIQUE</h2>
+          <h2 class="section-heading" data-fr="DAZZLEA, VOTRE PONT STRATÉGIQUE ENTRE LES <strong>MARQUES INTERNATIONALES</strong> ET L’AFRIQUE" data-en="DAZZLEA, YOUR STRATEGIC BRIDGE BETWEEN <strong>INTERNATIONAL BRANDS</strong> AND AFRICA">DAZZLEA, YOUR STRATEGIC BRIDGE BETWEEN <strong>INTERNATIONAL BRANDS</strong> AND AFRICA</h2>
         </div>
         
         <!-- Vertical Scrolling Logo Columns -->
@@ -440,7 +459,12 @@
     </section>
 
     <!-- Services / Timeline Back and Forth Section -->
-    <section class="services-timeline-section" id="services">
+    <section class="services-timeline-section theme-light" id="services">
+      <div class="section-intro">
+        <span class="kicker" data-fr="Nos Expertises" data-en="What We Do">Nos Expertises</span>
+        <h2 class="section-intro-title" data-fr="Une agence, chaque discipline" data-en="One agency, every discipline">Une agence, chaque discipline</h2>
+        <p class="section-intro-text" data-fr="Stratégie, création, production et relations presse réunies sous un même toit pour livrer l'expérience complète." data-en="Strategy, creative, production and PR under one roof to deliver the complete experience.">Stratégie, création, production et relations presse réunies sous un même toit pour livrer l'expérience complète.</p>
+      </div>
       <div class="timeline-container">
 
         <!-- Block 1 -->
@@ -449,9 +473,9 @@
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070" width="2070" height="1380" loading="lazy" alt="Insightful Strategy" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Insightful Strategy</h3>
-            <p class="timeline-description">Nous pilotez chaque projet avec une rigueur stratégique complète : conseil en communication 360°, stratégie de marque, ingénierie de projet (PERT, WBS, gestion des risques), media planning national et international, et stratégies RSE. De l'analyse de marché au reporting de performance, nous transformons vos objectifs en résultats mesurables.</p>
-            <a href="#services" class="btn btn-timeline">Découvrir la Stratégie</a>
+            <h3 data-fr="Insightful Strategy" data-en="Insightful Strategy" class="timeline-heading">Insightful Strategy</h3>
+            <p data-fr="Nous pilotez chaque projet avec une rigueur stratégique complète : conseil en communication 360°, stratégie de marque, ingénierie de projet (PERT, WBS, gestion des risques), media planning national et international, et stratégies RSE. De l'analyse de marché au reporting de performance, nous transformons vos objectifs en résultats mesurables." data-en="We steer every project with complete strategic rigor: 360° communications consulting, brand strategy, project engineering (PERT, WBS, risk management), national and international media planning, and CSR strategies. From market analysis to performance reporting, we turn your objectives into measurable results." class="timeline-description">We steer every project with complete strategic rigor: 360° communications consulting, brand strategy, project engineering (PERT, WBS, risk management), national and international media planning, and CSR strategies. From market analysis to performance reporting, we turn your objectives into measurable results.</p>
+            <a data-fr="Découvrir la Stratégie" data-en="Explore Strategy" href="#services" class="btn btn-timeline">Explore Strategy</a>
           </div>
         </div>
 
@@ -461,9 +485,9 @@
             <img src="https://images.unsplash.com/photo-1556761175-b813d53a962e?q=80&w=2074" width="2070" height="1380" loading="lazy" alt="Fearless Creativity" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Fearless Creativity</h3>
-            <p class="timeline-description">De l'identité visuelle au brand content, nos équipes créatives conçoivent des univers qui marquent les esprits. Sites web institutionnels et marchands, stratégie de contenus digitaux, community management, production vidéo, web TV, streaming et applications interactives — nous déployons la créativité sans frontières.</p>
-            <a href="#services" class="btn btn-timeline">Explorer la Création</a>
+            <h3 data-fr="Fearless Creativity" data-en="Fearless Creativity" class="timeline-heading">Fearless Creativity</h3>
+            <p data-fr="De l'identité visuelle au brand content, nos équipes créatives conçoivent des univers qui marquent les esprits. Sites web institutionnels et marchands, stratégie de contenus digitaux, community management, production vidéo, web TV, streaming et applications interactives — nous déployons la créativité sans frontières." data-en="From visual identity to brand content, our creative teams craft worlds that leave a lasting mark. Institutional and e-commerce websites, digital content strategy, community management, video production, web TV, streaming and interactive apps — we deploy creativity without borders." class="timeline-description">From visual identity to brand content, our creative teams craft worlds that leave a lasting mark. Institutional and e-commerce websites, digital content strategy, community management, video production, web TV, streaming and interactive apps — we deploy creativity without borders.</p>
+            <a data-fr="Explorer la Création" data-en="Explore Creative" href="#services" class="btn btn-timeline">Explore Creative</a>
           </div>
         </div>
 
@@ -473,9 +497,9 @@
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070" width="2070" height="1380" loading="lazy" alt="Innovative Production" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Innovative Production</h3>
-            <p class="timeline-description">Conférences, salons, soirées de gala, roadshows, événements B2B, team building — nous orchestrons chaque détail. Notre maîtrise de la scénographie, de la conception de stands et pavillons, de la logistique globale et de la direction artistique garantit une exécution irréprochable sur chaque continent.</p>
-            <a href="#services" class="btn btn-timeline">Voir nos Productions</a>
+            <h3 data-fr="Innovative Production" data-en="Innovative Production" class="timeline-heading">Innovative Production</h3>
+            <p data-fr="Conférences, salons, soirées de gala, roadshows, événements B2B, team building — nous orchestrons chaque détail. Notre maîtrise de la scénographie, de la conception de stands et pavillons, de la logistique globale et de la direction artistique garantit une exécution irréprochable sur chaque continent." data-en="Conferences, trade shows, gala evenings, roadshows, B2B events, team building — we orchestrate every detail. Our command of scenography, booth and pavilion design, global logistics and art direction guarantees flawless execution on every continent." class="timeline-description">Conferences, trade shows, gala evenings, roadshows, B2B events, team building — we orchestrate every detail. Our command of scenography, booth and pavilion design, global logistics and art direction guarantees flawless execution on every continent.</p>
+            <a data-fr="Voir nos Productions" data-en="See Our Productions" href="#services" class="btn btn-timeline">See Our Productions</a>
           </div>
         </div>
 
@@ -485,9 +509,9 @@
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" width="2070" height="1380" loading="lazy" alt="Specialty Services" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Specialty Services</h3>
-            <p class="timeline-description">Relations presse, gestion de crise, veille média et e-reputation, conférences de presse, gestion des journalistes et interviews — notre pôle PR & Communications protège et amplifie votre image. Nous gérons également la recherche de partenariats stratégiques et le pilotage de portfolios d'événements hybrides et institutionnels.</p>
-            <a href="#services" class="btn btn-timeline">PR & Communications</a>
+            <h3 data-fr="Specialty Services" data-en="Specialty Services" class="timeline-heading">Specialty Services</h3>
+            <p data-fr="Relations presse, gestion de crise, veille média et e-reputation, conférences de presse, gestion des journalistes et interviews — notre pôle PR & Communications protège et amplifie votre image. Nous gérons également la recherche de partenariats stratégiques et le pilotage de portfolios d'événements hybrides et institutionnels." data-en="Press relations, crisis management, media monitoring and e-reputation, press conferences, journalist and interview management — our PR & Communications team protects and amplifies your image. We also handle strategic partnership scouting and the management of hybrid and institutional event portfolios." class="timeline-description">Press relations, crisis management, media monitoring and e-reputation, press conferences, journalist and interview management — our PR & Communications team protects and amplifies your image. We also handle strategic partnership scouting and the management of hybrid and institutional event portfolios.</p>
+            <a data-fr="PR & Communications" data-en="PR & Communications" href="#services" class="btn btn-timeline">PR & Communications</a>
           </div>
         </div>
 
@@ -497,9 +521,9 @@
             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072" width="2070" height="1380" loading="lazy" alt="Le Hub de Casablanca" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Le Hub de Casablanca</h3>
-            <p class="timeline-description">Basée à Casablanca, Dazzlea est le pont stratégique idéal pour les marques internationales souhaitant s'implanter ou rayonner en Afrique. Notre connaissance approfondie des codes locaux, des réseaux médiatiques et des marchés publics marocains et africains est votre avantage concurrentiel décisif.</p>
-            <a href="#about" class="btn btn-timeline">Notre Positionnement</a>
+            <h3 data-fr="Le Hub de Casablanca" data-en="The Casablanca Hub" class="timeline-heading">The Casablanca Hub</h3>
+            <p data-fr="Basée à Casablanca, Dazzlea est le pont stratégique idéal pour les marques internationales souhaitant s'implanter ou rayonner en Afrique. Notre connaissance approfondie des codes locaux, des réseaux médiatiques et des marchés publics marocains et africains est votre avantage concurrentiel décisif." data-en="Based in Casablanca, Dazzlea is the ideal strategic bridge for international brands looking to establish themselves or shine across Africa. Our deep knowledge of local codes, media networks and Moroccan and African public markets is your decisive competitive advantage." class="timeline-description">Based in Casablanca, Dazzlea is the ideal strategic bridge for international brands looking to establish themselves or shine across Africa. Our deep knowledge of local codes, media networks and Moroccan and African public markets is your decisive competitive advantage.</p>
+            <a data-fr="Notre Positionnement" data-en="Our Positioning" href="#about" class="btn btn-timeline">Our Positioning</a>
           </div>
         </div>
 
@@ -509,9 +533,9 @@
             <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070" width="2070" height="1380" loading="lazy" alt="Analytics & Media Planning" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Analytics & Media Planning</h3>
-            <p class="timeline-description">Nous mesurons ce qui compte : analyse des campagnes, KPIs d'activation (reach TikTok, Facebook, Instagram), couverture PR et évaluation du ROI. Notre expertise en achat d'espace publicitaire et en media planning sur les réseaux nationaux et internationaux amplifie chaque message au bon endroit, au bon moment.</p>
-            <a href="#insights" class="btn btn-timeline">Voir les Insights</a>
+            <h3 data-fr="Analytics & Media Planning" data-en="Analytics & Media Planning" class="timeline-heading">Analytics & Media Planning</h3>
+            <p data-fr="Nous mesurons ce qui compte : analyse des campagnes, KPIs d'activation (reach TikTok, Facebook, Instagram), couverture PR et évaluation du ROI. Notre expertise en achat d'espace publicitaire et en media planning sur les réseaux nationaux et internationaux amplifie chaque message au bon endroit, au bon moment." data-en="We measure what matters: campaign analysis, activation KPIs (TikTok, Facebook, Instagram reach), PR coverage and ROI evaluation. Our expertise in media buying and media planning across national and international networks amplifies every message in the right place, at the right time." class="timeline-description">We measure what matters: campaign analysis, activation KPIs (TikTok, Facebook, Instagram reach), PR coverage and ROI evaluation. Our expertise in media buying and media planning across national and international networks amplifies every message in the right place, at the right time.</p>
+            <a data-fr="Voir les Insights" data-en="See Insights" href="#insights" class="btn btn-timeline">See Insights</a>
           </div>
         </div>
 
@@ -521,9 +545,9 @@
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" width="2070" height="1380" loading="lazy" alt="Content & Digital" class="timeline-img">
           </div>
           <div class="timeline-text">
-            <h3 class="timeline-heading">Content Creation & Digital</h3>
-            <p class="timeline-description">La production de contenu est au cœur de notre offre créative : capsules vidéo, motion design, rédaction éditoriale, stratégie de contenus et community management. Nous concevons aussi des expériences digitales immersives — applications interactives, Web TV et plateformes de streaming — pour prolonger l'expérience bien au-delà de l'événement.</p>
-            <a href="#services" class="btn btn-timeline">Explorer le Digital</a>
+            <h3 data-fr="Content Creation & Digital" data-en="Content Creation & Digital" class="timeline-heading">Content Creation & Digital</h3>
+            <p data-fr="La production de contenu est au cœur de notre offre créative : capsules vidéo, motion design, rédaction éditoriale, stratégie de contenus et community management. Nous concevons aussi des expériences digitales immersives — applications interactives, Web TV et plateformes de streaming — pour prolonger l'expérience bien au-delà de l'événement." data-en="Content production sits at the heart of our creative offering: video capsules, motion design, editorial copywriting, content strategy and community management. We also design immersive digital experiences — interactive apps, Web TV and streaming platforms — to extend the experience well beyond the event itself." class="timeline-description">Content production sits at the heart of our creative offering: video capsules, motion design, editorial copywriting, content strategy and community management. We also design immersive digital experiences — interactive apps, Web TV and streaming platforms — to extend the experience well beyond the event itself.</p>
+            <a data-fr="Explorer le Digital" data-en="Explore Digital" href="#services" class="btn btn-timeline">Explore Digital</a>
           </div>
         </div>
 
@@ -534,9 +558,9 @@
     <section class="careers-cta-section" id="insights">
       <div class="cta-container reveal-fade-up">
         <div class="cta-inner">
-          <h2 class="cta-title">Travaillons Ensemble</h2>
-          <p class="cta-description">Vous êtes une marque, une institution ou un partenaire stratégique ? Partagez-nous votre vision — nous la transformons en expérience mémorable, de A à Z.</p>
-          <a href="#contact" class="btn btn-primary text-uppercase">Nous Contacter</a>
+          <h2 data-fr="Travaillons Ensemble" data-en="Let's Work Together" class="cta-title">Let's Work Together</h2>
+          <p data-fr="Vous êtes une marque, une institution ou un partenaire stratégique ? Partagez-nous votre vision — nous la transformons en expérience mémorable, de A à Z." data-en="Are you a brand, an institution or a strategic partner? Share your vision with us — we'll turn it into a memorable experience, from A to Z." class="cta-description">Are you a brand, an institution or a strategic partner? Share your vision with us — we'll turn it into a memorable experience, from A to Z.</p>
+          <a data-fr="Nous Contacter" data-en="Contact Us" href="#contact" class="btn btn-primary text-uppercase">Contact Us</a>
         </div>
       </div>
     </section>
