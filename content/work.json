@@ -1,0 +1,944 @@
+[
+  {
+    "slug": "morocco-startup-awards",
+    "name": "Morocco Startup Awards",
+    "client": "Ministère de l'Industrie & du Commerce",
+    "badge": "MSA",
+    "featured": true,
+    "cardTitle": {
+      "fr": "Morocco Startup Awards : Une Scénographie Grand Format",
+      "en": "Morocco Startup Awards: Large-Format Scenography"
+    },
+    "tag": {
+      "fr": "Institutionnel",
+      "en": "Institutional"
+    },
+    "categories": [
+      "institutionnel",
+      "events"
+    ],
+    "media": {
+      "video": "https://assets.mixkit.co/videos/45907/45907-720.mp4",
+      "poster": "",
+      "image": ""
+    },
+    "hero": {
+      "image": "assets/usecases/morocco-startup-awards.jpg",
+      "tags": [
+        {
+          "fr": "Événement",
+          "en": "Event"
+        },
+        {
+          "fr": "Scénographie",
+          "en": "Set Design"
+        },
+        {
+          "fr": "Institutionnel",
+          "en": "Institutional"
+        }
+      ],
+      "subtitle": {
+        "fr": "Conception et orchestration de la grande cérémonie nationale dédiée à l'écosystème startup marocain — une scénographie grand format pour une soirée d'exception.",
+        "en": "Design and orchestration of the major national ceremony dedicated to Morocco's startup ecosystem — a large-scale stage design for an exceptional evening."
+      }
+    },
+    "intro": {
+      "label": {
+        "fr": "Contexte & Enjeux",
+        "en": "Context & Challenges"
+      },
+      "heading": {
+        "fr": "Donner une scène nationale à l'innovation marocaine",
+        "en": "Giving Moroccan innovation a national stage"
+      },
+      "paragraphs": [
+        {
+          "fr": "Les Morocco Startup Awards sont la cérémonie de référence qui réunit chaque année les acteurs majeurs de l'écosystème entrepreneurial marocain : startups, investisseurs, institutionnels et médias. L'événement exige un niveau de production irréprochable pour refléter l'ambition et le dynamisme du Maroc tech.",
+          "en": "The Morocco Startup Awards is the flagship ceremony that brings together, every year, the major players of Morocco's entrepreneurial ecosystem: startups, investors, institutions and media. The event demands flawless production to reflect the ambition and momentum of Morocco's tech scene."
+        },
+        {
+          "fr": "Dazzlea a été mandatée pour assurer la conception scénographique complète, la production technique et la coordination logistique de bout en bout — depuis les premiers plans 3D jusqu'à la nuit de la cérémonie.",
+          "en": "Dazzlea was appointed to handle the complete stage design, technical production and end-to-end logistics coordination — from the first 3D concepts to the night of the ceremony."
+        }
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "fr": "Client",
+          "en": "Client"
+        },
+        "value": {
+          "fr": "Ministère de l'Industrie & du Commerce",
+          "en": "Ministère de l'Industrie & du Commerce"
+        }
+      },
+      {
+        "label": {
+          "fr": "Lieu",
+          "en": "Location"
+        },
+        "value": {
+          "fr": "Casablanca, Maroc",
+          "en": "Casablanca, Maroc"
+        }
+      },
+      {
+        "label": {
+          "fr": "Périmètre",
+          "en": "Scope"
+        },
+        "value": {
+          "fr": "Scénographie · Production · Logistique",
+          "en": "Set Design · Production · Logistics"
+        }
+      },
+      {
+        "label": {
+          "fr": "Capacité",
+          "en": "Capacity"
+        },
+        "value": {
+          "fr": "1 200 invités",
+          "en": "1,200 guests"
+        }
+      },
+      {
+        "label": {
+          "fr": "Équipe Dazzlea",
+          "en": "Dazzlea Team"
+        },
+        "value": {
+          "fr": "28 collaborateurs mobilisés",
+          "en": "28 team members mobilized"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/45907/45907-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Design & Concept",
+          "en": "Design & Concept"
+        },
+        "heading": {
+          "fr": "Une scénographie immersive à l'image de l'innovation",
+          "en": "An immersive stage design reflecting innovation"
+        },
+        "text": {
+          "fr": "Le brief demandait un décor sobre et technologique, capable de mettre en lumière les lauréats sans écraser le contenu. Nos équipes de design 3D ont développé une scénographie modulaire avec une scène principale LED plein format, des pods interactifs pour chaque catégorie de prix, et une identité visuelle motion cohérente sur l'ensemble des surfaces.",
+          "en": "The brief called for a sleek, technological setting able to showcase the winners without overwhelming the content. Our 3D design teams developed a modular stage design with a full-format LED main stage, interactive pods for each award category, and a consistent motion visual identity across every surface."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/22193/22193-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Ingénierie & Production",
+          "en": "Engineering & Production"
+        },
+        "heading": {
+          "fr": "Une coordination technique millimétrée",
+          "en": "Precision technical coordination"
+        },
+        "text": {
+          "fr": "Montage en 48h, coordination de 12 prestataires techniques, gestion du son, de l'éclairage et de la régie vidéo en temps réel. Notre chef de projet a supervisé chaque corps de métier selon un planning PERT rigoureux, permettant d'absorber les aléas de dernière minute sans impacter le déroulé de la soirée.",
+          "en": "Build-out in 48 hours, coordination of 12 technical vendors, and real-time management of sound, lighting and video control. Our project manager oversaw every trade against a rigorous PERT schedule, allowing last-minute contingencies to be absorbed without affecting the evening's proceedings."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/26781/26781-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Exécution Terrain",
+          "en": "On-the-Ground Execution"
+        },
+        "heading": {
+          "fr": "La nuit de la cérémonie : zéro faille",
+          "en": "The night of the ceremony: flawless execution"
+        },
+        "text": {
+          "fr": "1 200 invités, une couverture presse nationale, une diffusion en direct sur les chaînes partenaires et une gestion VIP sans accroc. L'équipe terrain Dazzlea a assuré l'accueil, le protocole, la coordination des interventions scéniques et la logistique catering — un dispositif opérationnel total pour que le client n'ait qu'à se concentrer sur ses invités.",
+          "en": "1,200 guests, national press coverage, a live broadcast on partner channels and seamless VIP management. Dazzlea's on-site team handled guest reception, protocol, coordination of on-stage moments and catering logistics — a fully operational setup so the client could simply focus on their guests."
+        }
+      }
+    ],
+    "kpis": [],
+    "seo": {
+      "description": {
+        "fr": "Morocco Startup Awards : conception et production d'une scénographie grand format par Dazzlea pour la cérémonie nationale dédiée aux startups marocaines.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "the-bridge",
+    "name": "The Bridge",
+    "client": "",
+    "badge": "THE BRIDGE",
+    "featured": true,
+    "cardTitle": {
+      "fr": "The Bridge : Connecter les Marques à l'Afrique",
+      "en": "The Bridge: Connecting Brands to Africa"
+    },
+    "tag": {
+      "fr": "Forum B2B",
+      "en": "B2B Forum"
+    },
+    "categories": [
+      "events",
+      "institutionnel"
+    ],
+    "media": {
+      "video": "assets/bridge-best-of.mp4",
+      "poster": "assets/bridge-best-of-poster.jpg",
+      "image": ""
+    },
+    "hero": {
+      "image": "assets/bridge-best-of-poster.jpg",
+      "tags": [
+        {
+          "fr": "B2B",
+          "en": "B2B"
+        },
+        {
+          "fr": "Networking",
+          "en": "Networking"
+        },
+        {
+          "fr": "International",
+          "en": "International"
+        }
+      ],
+      "subtitle": {
+        "fr": "La plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain — conçue, produite et animée par Dazzlea depuis Casablanca.",
+        "en": "The strategic exchange platform between international brands and the African economic ecosystem — designed, produced and hosted by Dazzlea from Casablanca."
+      }
+    },
+    "intro": {
+      "label": {
+        "fr": "Vision & Contexte",
+        "en": "Vision & Context"
+      },
+      "heading": {
+        "fr": "Créer le carrefour stratégique entre le monde et l'Afrique",
+        "en": "Creating the strategic crossroads between the world and Africa"
+      },
+      "paragraphs": [
+        {
+          "fr": "The Bridge est né d'un constat : les grandes marques internationales souhaitent s'implanter ou rayonner en Afrique, mais manquent de passerelles concrètes avec les acteurs locaux. Dazzlea a conçu et produit ce forum B2B annuel pour combler ce gap — un espace de rencontre, de pitch et de deal-making à haute valeur ajoutée.",
+          "en": "The Bridge was born from an observation: major international brands want to establish or expand their presence in Africa, but lack concrete bridges with local players. Dazzlea designed and produced this annual B2B forum to close that gap — a space for meetings, pitching and high-value deal-making."
+        },
+        {
+          "fr": "De la stratégie de contenu à la logistique complète, en passant par la curation des intervenants et l'expérience des participants, Dazzlea a piloté chaque dimension de cet événement phare.",
+          "en": "From content strategy to full logistics, including speaker curation and the attendee experience, Dazzlea steered every dimension of this flagship event."
+        }
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "fr": "Format",
+          "en": "Format"
+        },
+        "value": {
+          "fr": "Forum B2B annuel",
+          "en": "Annual B2B forum"
+        }
+      },
+      {
+        "label": {
+          "fr": "Lieu",
+          "en": "Location"
+        },
+        "value": {
+          "fr": "Casablanca Finance City",
+          "en": "Casablanca Finance City"
+        }
+      },
+      {
+        "label": {
+          "fr": "Participants",
+          "en": "Attendees"
+        },
+        "value": {
+          "fr": "800+ décideurs & investisseurs",
+          "en": "800+ decision-makers & investors"
+        }
+      },
+      {
+        "label": {
+          "fr": "Partenaires",
+          "en": "Partners"
+        },
+        "value": {
+          "fr": "50+ organisations représentées",
+          "en": "50+ organizations represented"
+        }
+      },
+      {
+        "label": {
+          "fr": "Périmètre",
+          "en": "Scope"
+        },
+        "value": {
+          "fr": "Stratégie · Contenu · Production · PR",
+          "en": "Strategy · Content · Production · PR"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/36817/36817-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Stratégie & Format",
+          "en": "Strategy & Format"
+        },
+        "heading": {
+          "fr": "Un format innovant pensé pour le business réel",
+          "en": "An innovative format designed for real business"
+        },
+        "text": {
+          "fr": "Panels d'experts, sessions de pitch accéléré, networking dînatoire et rendez-vous B2B pré-arrangés : The Bridge alterne formats inspirants et moments concrets de mise en relation. Chaque édition est construite autour d'une thématique sectorielle — Tech, Retail, Green Economy — pour concentrer les audiences pertinentes.",
+          "en": "Expert panels, rapid-pitch sessions, networking dinners and pre-arranged B2B meetings: The Bridge alternates between inspiring formats and concrete matchmaking moments. Each edition is built around a sector theme — Tech, Retail, Green Economy — to bring together the most relevant audiences."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/13192/13192-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Curation & Contenu",
+          "en": "Curation & Content"
+        },
+        "heading": {
+          "fr": "Des intervenants de premier plan, une programmation exigeante",
+          "en": "Top-tier speakers, a demanding program"
+        },
+        "text": {
+          "fr": "Dazzlea prend en charge la curation complète des speakers : identification, négociation, préparation des prises de parole et coaching. Chaque intervenant est briefé sur le positionnement de l'édition pour garantir une cohérence éditoriale forte et une expérience de qualité pour les participants.",
+          "en": "Dazzlea handles the complete speaker curation: identification, negotiation, talk preparation and coaching. Each speaker is briefed on the edition's positioning to ensure strong editorial consistency and a quality experience for attendees."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/26781/26781-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Impact & Résultats",
+          "en": "Impact & Results"
+        },
+        "heading": {
+          "fr": "Des connexions qui durent bien après l'événement",
+          "en": "Connections that last well beyond the event"
+        },
+        "text": {
+          "fr": "The Bridge génère des partenariats concrets : accords de distribution, co-investissements et engagements RSE signés dans les semaines suivant chaque édition. La couverture presse nationale et la diffusion des keynotes en streaming ont étendu la portée de l'événement à plusieurs milliers de professionnels supplémentaires.",
+          "en": "The Bridge generates concrete partnerships: distribution agreements, co-investments and CSR commitments signed within weeks of each edition. National press coverage and streamed keynotes extended the event's reach to several thousand additional professionals."
+        }
+      }
+    ],
+    "kpis": [],
+    "seo": {
+      "description": {
+        "fr": "The Bridge : la plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain, conçue et produite par Dazzlea.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "dacia-bigster",
+    "name": "Dacia Bigster",
+    "client": "Dacia Maroc",
+    "badge": "DACIA",
+    "featured": true,
+    "cardTitle": {
+      "fr": "<span class=\"text-brand\">DACIA</span>Bigster : Une Activation qui Marque les Esprits",
+      "en": "<span class=\"text-brand\">DACIA</span>Bigster: An Activation That Leaves a Mark"
+    },
+    "tag": {
+      "fr": "Activation",
+      "en": "Activation"
+    },
+    "categories": [
+      "activation"
+    ],
+    "media": {
+      "video": "https://assets.mixkit.co/videos/44545/44545-720.mp4",
+      "poster": "",
+      "image": ""
+    },
+    "hero": {
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=2070",
+      "tags": [
+        {
+          "fr": "Activation",
+          "en": "Activation"
+        },
+        {
+          "fr": "Automobile",
+          "en": "Automotive"
+        },
+        {
+          "fr": "Digital 360°",
+          "en": "Digital 360°"
+        }
+      ],
+      "subtitle": {
+        "fr": "Un lancement expérientiel 360° déployé dans trois villes marocaines, générant un reach digital record et une couverture presse nationale massive.",
+        "en": "A 360° experiential launch rolled out across three Moroccan cities, generating record digital reach and massive national press coverage."
+      }
+    },
+    "intro": {
+      "label": {
+        "fr": "Contexte & Objectifs",
+        "en": "Context & Objectives"
+      },
+      "heading": {
+        "fr": "Lancer le Bigster avec l'impact qu'il mérite",
+        "en": "Launching the Bigster with the impact it deserves"
+      },
+      "paragraphs": [
+        {
+          "fr": "Dacia Maroc souhaitait lancer son nouveau SUV phare avec un dispositif à la hauteur de ses ambitions : toucher un large public, générer du contenu viral et installer durablement la perception \"grand espace, grand style\". Un brief ambitieux qui nécessitait une activation terrain multi-villes couplée à une stratégie digitale agressive.",
+          "en": "Dacia Morocco wanted to launch its new flagship SUV with a program worthy of its ambitions: reach a broad audience, generate viral content and lastingly establish the perception of \"big space, big style\". An ambitious brief that called for a multi-city on-the-ground activation paired with an aggressive digital strategy."
+        },
+        {
+          "fr": "Dazzlea a conçu un concept clé en main : trois pop-up immersifs à Casablanca, Rabat et Marrakech, chacun pensé pour être instagrammable et générateur de contenu organique, relayé par une campagne de paid media ciblée sur TikTok, Facebook et Instagram.",
+          "en": "Dazzlea designed a turnkey concept: three immersive pop-ups in Casablanca, Rabat and Marrakech, each built to be Instagrammable and to generate organic content, amplified by a paid media campaign targeted on TikTok, Facebook and Instagram."
+        }
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "fr": "Client",
+          "en": "Client"
+        },
+        "value": {
+          "fr": "Dacia Maroc",
+          "en": "Dacia Maroc"
+        }
+      },
+      {
+        "label": {
+          "fr": "Type",
+          "en": "Type"
+        },
+        "value": {
+          "fr": "Brand Activation 360°",
+          "en": "Brand Activation 360°"
+        }
+      },
+      {
+        "label": {
+          "fr": "Villes",
+          "en": "Cities"
+        },
+        "value": {
+          "fr": "Casablanca · Rabat · Marrakech",
+          "en": "Casablanca · Rabat · Marrakech"
+        }
+      },
+      {
+        "label": {
+          "fr": "Durée",
+          "en": "Duration"
+        },
+        "value": {
+          "fr": "3 jours par ville · 9 jours total",
+          "en": "3 days per city · 9 days total"
+        }
+      },
+      {
+        "label": {
+          "fr": "Périmètre",
+          "en": "Scope"
+        },
+        "value": {
+          "fr": "Concept · Production · Paid Media · PR",
+          "en": "Concept · Production · Paid Media · PR"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/44545/44545-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Concept Créatif",
+          "en": "Creative Concept"
+        },
+        "heading": {
+          "fr": "L'expérience \"Grand Territoire\" : vivre le Bigster avant de l'acheter",
+          "en": "The \"Big Territory\" experience: living the Bigster before buying it"
+        },
+        "text": {
+          "fr": "Chaque pop-up recréait un univers aventure autour du Bigster : piste off-road simulée, zone photo premium, espace configurateur interactif et lounge brand. Les visiteurs étaient invités à \"vivre\" la promesse du véhicule — espace, robustesse, modernité — avant même de s'asseoir au volant. Des influenceurs locaux ont été intégrés dès le jour 1 de chaque ville pour amplifier la diffusion organique.",
+          "en": "Each pop-up recreated an adventure universe around the Bigster: a simulated off-road track, a premium photo zone, an interactive configurator space and a brand lounge. Visitors were invited to \"live\" the vehicle's promise — space, ruggedness, modernity — before even sitting behind the wheel. Local influencers were involved from day 1 in every city to amplify organic reach."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/52427/52427-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Stratégie Digitale",
+          "en": "Digital Strategy"
+        },
+        "heading": {
+          "fr": "Une campagne paid media multi-canal pour maximiser le reach",
+          "en": "A multi-channel paid media campaign to maximize reach"
+        },
+        "text": {
+          "fr": "En parallèle de l'activation terrain, Dazzlea a piloté une campagne paid media calibrée sur TikTok Ads, Facebook Lead Ads et Instagram Reels sponsorisés. Le ciblage géographique et démographique a permis d'atteindre les profils d'acheteurs potentiels avec des créas vidéo produites in-house — adaptées à chaque format de plateforme pour maximiser l'engagement.",
+          "en": "Alongside the on-the-ground activation, Dazzlea ran a paid media campaign calibrated across TikTok Ads, Facebook Lead Ads and sponsored Instagram Reels. Geographic and demographic targeting reached potential buyer profiles with in-house-produced video creatives — adapted to each platform's format to maximize engagement."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/35540/35540-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Relations Presse",
+          "en": "Press Relations"
+        },
+        "heading": {
+          "fr": "48 retombées presse pour une visibilité nationale",
+          "en": "48 press mentions for nationwide visibility"
+        },
+        "text": {
+          "fr": "Notre pôle PR a orchestré les invitations journalistes, les dossiers de presse et les accréditées médias sur chaque ville. Les journées presse dédiées ont généré des retombées dans les principaux titres généralistes, économiques et auto du Maroc, ainsi qu'une couverture TV sur deux chaînes nationales partenaires.",
+          "en": "Our PR team orchestrated journalist invitations, press kits and media accreditations in every city. The dedicated press days generated coverage in Morocco's leading general-interest, business and automotive outlets, as well as TV coverage on two partner national channels."
+        }
+      }
+    ],
+    "kpis": [
+      {
+        "number": "25K+",
+        "text": {
+          "fr": "Participants sur les trois pop-ups en 9 jours d'activation terrain",
+          "en": "Visitors across the three pop-ups over 9 days of on-the-ground activation"
+        }
+      },
+      {
+        "number": "2.4M",
+        "text": {
+          "fr": "Reach TikTok généré par les créas sponsorisées et les contenus influenceurs",
+          "en": "TikTok reach generated by sponsored creatives and influencer content"
+        }
+      },
+      {
+        "number": "1.8M",
+        "text": {
+          "fr": "Impressions Instagram (organique + paid) sur la durée de la campagne",
+          "en": "Instagram impressions (organic + paid) over the course of the campaign"
+        }
+      },
+      {
+        "number": "48",
+        "text": {
+          "fr": "Retombées presse nationales dont 2 passages TV sur des chaînes partenaires",
+          "en": "National press mentions, including 2 TV appearances on partner channels"
+        }
+      }
+    ],
+    "seo": {
+      "description": {
+        "fr": "Dacia Bigster : une activation qui marque les esprits, conçue et produite par Dazzlea pour le marché automobile marocain.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "pavillon-maroc",
+    "name": "Pavillon Maroc",
+    "client": "",
+    "badge": "PAVILLON",
+    "featured": true,
+    "cardTitle": {
+      "fr": "Pavillon Maroc : Conception & Scénographie Internationale",
+      "en": "Morocco Pavilion: International Design & Scenography"
+    },
+    "tag": {
+      "fr": "Scénographie",
+      "en": "Scenography"
+    },
+    "categories": [
+      "scenographie"
+    ],
+    "media": {
+      "video": "https://assets.mixkit.co/videos/22193/22193-720.mp4",
+      "poster": "",
+      "image": ""
+    },
+    "hero": {
+      "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070",
+      "tags": [
+        {
+          "fr": "Scénographie",
+          "en": "Set Design"
+        },
+        {
+          "fr": "Stand & Pavillon",
+          "en": "Stand & Pavilion"
+        },
+        {
+          "fr": "International",
+          "en": "International"
+        }
+      ],
+      "subtitle": {
+        "fr": "Conception, engineering et réalisation du pavillon marocain pour une exposition internationale — 400 m² au standard de l'excellence diplomatique et commerciale.",
+        "en": "Design, engineering and construction of the Moroccan pavilion for an international exhibition — 400 m² built to the standard of diplomatic and commercial excellence."
+      }
+    },
+    "intro": {
+      "label": {
+        "fr": "Brief & Contexte",
+        "en": "Brief & Context"
+      },
+      "heading": {
+        "fr": "Projeter l'image du Maroc à l'international avec prestige",
+        "en": "Projecting Morocco's image internationally with prestige"
+      },
+      "paragraphs": [
+        {
+          "fr": "Dans le cadre d'une exposition internationale de référence, le Maroc devait présenter un pavillon à la hauteur de son ambition économique et diplomatique. La mission confiée à Dazzlea : concevoir un espace de 400 m² alliant identité culturelle marocaine, modernité architecturale et efficacité commerciale.",
+          "en": "For a landmark international exhibition, Morocco needed to present a pavilion worthy of its economic and diplomatic ambition. The mission entrusted to Dazzlea: design a 400 m² space combining Moroccan cultural identity, architectural modernity and commercial effectiveness."
+        },
+        {
+          "fr": "De la première esquisse 3D à la remise des clés sur site, Dazzlea a piloté l'intégralité du cycle : design, engineering, fabrication, transport international, montage et gestion opérationnelle pendant toute la durée de l'exposition.",
+          "en": "From the first 3D sketch to the on-site handover, Dazzlea managed the entire cycle: design, engineering, fabrication, international transport, assembly and operational management throughout the exhibition."
+        }
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "fr": "Surface",
+          "en": "Surface Area"
+        },
+        "value": {
+          "fr": "400 m²",
+          "en": "400 m²"
+        }
+      },
+      {
+        "label": {
+          "fr": "Équipe mobilisée",
+          "en": "Team Mobilized"
+        },
+        "value": {
+          "fr": "35 collaborateurs & artisans",
+          "en": "35 team members & artisans"
+        }
+      },
+      {
+        "label": {
+          "fr": "Délai de fabrication",
+          "en": "Fabrication Time"
+        },
+        "value": {
+          "fr": "6 semaines",
+          "en": "6 weeks"
+        }
+      },
+      {
+        "label": {
+          "fr": "Périmètre",
+          "en": "Scope"
+        },
+        "value": {
+          "fr": "Design 3D · Fabrication · Logistique · Montage",
+          "en": "3D Design · Fabrication · Logistics · Assembly"
+        }
+      },
+      {
+        "label": {
+          "fr": "Standard",
+          "en": "Standard"
+        },
+        "value": {
+          "fr": "Niveau exposition internationale",
+          "en": "International exhibition standard"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/22193/22193-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Design & Architecture",
+          "en": "Design & Architecture"
+        },
+        "heading": {
+          "fr": "Un langage architectural qui fusionne tradition et modernité",
+          "en": "An architectural language merging tradition and modernity"
+        },
+        "text": {
+          "fr": "Nos designers ont développé un concept inspiré des moucharabiehs marocains, réinterprétés en aluminium perforé et rétroéclairés par LED. La circulation intérieure guide le visiteur à travers trois espaces distincts : accueil institutionnel, galerie produits et espace networking VIP. Chaque surface est pensée pour raconter une histoire et générer de l'engagement.",
+          "en": "Our designers developed a concept inspired by Moroccan moucharabieh screens, reinterpreted in perforated aluminum and backlit with LEDs. The interior flow guides visitors through three distinct spaces: institutional welcome area, product gallery and VIP networking space. Every surface is designed to tell a story and drive engagement."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/49294/49294-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Engineering & Fabrication",
+          "en": "Engineering & Fabrication"
+        },
+        "heading": {
+          "fr": "Fabriqué au Maroc, assemblé aux standards internationaux",
+          "en": "Made in Morocco, assembled to international standards"
+        },
+        "text": {
+          "fr": "La totalité de la fabrication a été réalisée dans nos ateliers partenaires à Casablanca — une décision stratégique qui a permis de maîtriser la qualité, les délais et les coûts. Les modules ont été conçus pour un transport containerisé optimisé et un montage sur site en 5 jours par une équipe de 12 techniciens Dazzlea déployés à l'international.",
+          "en": "All fabrication was carried out in our partner workshops in Casablanca — a strategic decision that ensured control over quality, timelines and costs. The modules were designed for optimized containerized transport and on-site assembly in 5 days by a team of 12 Dazzlea technicians deployed internationally."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/26781/26781-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Résultat & Reconnaissance",
+          "en": "Result & Recognition"
+        },
+        "heading": {
+          "fr": "Un pavillon salué par les délégations internationales",
+          "en": "A pavilion praised by international delegations"
+        },
+        "text": {
+          "fr": "Le Pavillon Maroc a reçu des retours unanimement positifs de la part des visiteurs, délégations étrangères et organisateurs de l'exposition. Il a servi de cadre à plus de 40 rencontres B2B officielles et a généré plusieurs partenariats économiques dans les secteurs du tourisme, de l'agro-industrie et des énergies renouvelables.",
+          "en": "The Pavillon Maroc received unanimously positive feedback from visitors, foreign delegations and exhibition organizers. It hosted more than 40 official B2B meetings and generated several economic partnerships in tourism, agro-industry and renewable energy."
+        }
+      }
+    ],
+    "kpis": [],
+    "seo": {
+      "description": {
+        "fr": "Pavillon Maroc : conception et scénographie internationale signées Dazzlea pour représenter le Royaume sur la scène mondiale.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "soiree-de-gala",
+    "name": "Soirée de Gala",
+    "client": "",
+    "badge": "GALA",
+    "featured": true,
+    "cardTitle": {
+      "fr": "Soirée de Gala Institutionnelle : Excellence et Prestige",
+      "en": "Institutional Gala Evening: Excellence & Prestige"
+    },
+    "tag": {
+      "fr": "VIP & Prestige",
+      "en": "VIP & Prestige"
+    },
+    "categories": [
+      "events",
+      "institutionnel"
+    ],
+    "media": {
+      "video": "https://assets.mixkit.co/videos/5227/5227-720.mp4",
+      "poster": "",
+      "image": ""
+    },
+    "hero": {
+      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070",
+      "tags": [
+        {
+          "fr": "Gala",
+          "en": "Gala"
+        },
+        {
+          "fr": "Institutionnel",
+          "en": "Institutional"
+        },
+        {
+          "fr": "VIP & Prestige",
+          "en": "VIP & Prestige"
+        }
+      ],
+      "subtitle": {
+        "fr": "Organisation complète d'une soirée de gala pour 500 invités VIP — direction artistique, logistique, protocole et expérience sensorielle de bout en bout.",
+        "en": "Full organization of a gala evening for 500 VIP guests — art direction, logistics, protocol and an end-to-end sensory experience."
+      }
+    },
+    "intro": {
+      "label": {
+        "fr": "Contexte & Ambition",
+        "en": "Context & Ambition"
+      },
+      "heading": {
+        "fr": "Une soirée unique pour marquer les esprits des 500 invités les plus importants",
+        "en": "A unique evening to leave a lasting impression on 500 of the most important guests"
+      },
+      "paragraphs": [
+        {
+          "fr": "Notre client, un grand groupe institutionnel marocain, souhaitait organiser sa soirée annuelle de gala dans un format entièrement repensé : exit les banquets classiques, place à une expérience immersive et mémorable qui reflète le niveau d'excellence de l'organisation et fidélise ses partenaires stratégiques.",
+          "en": "Our client, a major Moroccan institutional group, wanted to reinvent its annual gala evening entirely: out with classic banquets, in with an immersive, memorable experience that reflects the organization's level of excellence and builds loyalty among its strategic partners."
+        },
+        {
+          "fr": "Dazzlea a pris en charge la direction artistique complète de l'événement, de la conception du thème à la gestion du protocole VIP, en passant par la sélection du lieu, la scénographie, le catering et la coordination de tous les prestataires le soir J.",
+          "en": "Dazzlea took full ownership of the event's art direction, from theme design to VIP protocol management, including venue selection, stage design, catering and coordination of every vendor on the night itself."
+        }
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "fr": "Invités",
+          "en": "Guests"
+        },
+        "value": {
+          "fr": "500 VIP & décideurs",
+          "en": "500 VIPs & decision-makers"
+        }
+      },
+      {
+        "label": {
+          "fr": "Lieu",
+          "en": "Location"
+        },
+        "value": {
+          "fr": "Grand Hôtel, Casablanca",
+          "en": "Grand Hôtel, Casablanca"
+        }
+      },
+      {
+        "label": {
+          "fr": "Direction artistique",
+          "en": "Art Direction"
+        },
+        "value": {
+          "fr": "Dazzlea (full ownership)",
+          "en": "Dazzlea (full ownership)"
+        }
+      },
+      {
+        "label": {
+          "fr": "Prestataires coordonnés",
+          "en": "Vendors Coordinated"
+        },
+        "value": {
+          "fr": "20+ corps de métier",
+          "en": "20+ trades"
+        }
+      },
+      {
+        "label": {
+          "fr": "Périmètre",
+          "en": "Scope"
+        },
+        "value": {
+          "fr": "Concept · DA · Logistique · Protocole",
+          "en": "Concept · Art Direction · Logistics · Protocol"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/5227/5227-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Concept & Direction Artistique",
+          "en": "Concept & Art Direction"
+        },
+        "heading": {
+          "fr": "Un univers sensoriel pensé dans le moindre détail",
+          "en": "A sensory world designed down to the smallest detail"
+        },
+        "text": {
+          "fr": "Le thème \"Racines & Horizons\" a guidé chaque décision créative : floriculture luxuriante mêlant plantes marocaines et orchidées exotiques, tables habillées de lin brut et d'or, lighting d'ambiance programmé en trois actes (cocktail, dîner, célébration). Chaque table racontait une région du Maroc à travers les arts de la table sélectionnés par nos soins.",
+          "en": "The theme \"Roots & Horizons\" guided every creative decision: lush floral arrangements blending Moroccan plants with exotic orchids, tables dressed in raw linen and gold, and ambient lighting programmed across three acts (cocktail, dinner, celebration). Each table told the story of a region of Morocco through the tableware we selected."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/4632/4632-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Protocole & Gestion VIP",
+          "en": "Protocol & VIP Management"
+        },
+        "heading": {
+          "fr": "L'excellence du détail pour chaque invité",
+          "en": "Excellence in every detail, for every guest"
+        },
+        "text": {
+          "fr": "Notre équipe protocole a géré l'accueil personnalisé des 500 invités, le placement selon les exigences diplomatiques du client, la coordination avec la sécurité privée et la gestion des intervenants officiels. Un système de badges NFC a permis une gestion fluide des accès et une collecte de données précieuse pour le client.",
+          "en": "Our protocol team managed personalized welcome for all 500 guests, seating according to the client's diplomatic requirements, coordination with private security, and management of official speakers. An NFC badge system enabled smooth access control and valuable data collection for the client."
+        }
+      },
+      {
+        "media": {
+          "video": "https://assets.mixkit.co/videos/4026/4026-720.mp4",
+          "poster": "",
+          "image": ""
+        },
+        "label": {
+          "fr": "Production & Animation",
+          "en": "Production & Entertainment"
+        },
+        "heading": {
+          "fr": "Un programme live coordonné à la minute",
+          "en": "A live program coordinated to the minute"
+        },
+        "text": {
+          "fr": "Régie son & lumière en temps réel, performance artistique surprise, discours officiels et remise de distinctions : le conducteur de soirée a été scripté, répété et exécuté avec une précision horlogère. L'équipe Dazzlea présente sur place a assuré la coordination de 20 prestataires simultanément — sans que les invités ne perçoivent le moindre accroc.",
+          "en": "Real-time sound and lighting control, a surprise artistic performance, official speeches and award presentations: the evening's run-of-show was scripted, rehearsed and executed with clockwork precision. The Dazzlea team on site coordinated 20 vendors simultaneously — without guests noticing a single hitch."
+        }
+      }
+    ],
+    "kpis": [],
+    "seo": {
+      "description": {
+        "fr": "Soirée de Gala Institutionnelle : une production Dazzlea alliant excellence et prestige pour un événement institutionnel d'exception.",
+        "en": ""
+      }
+    }
+  }
+]

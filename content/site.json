@@ -1,0 +1,53 @@
+{
+  "contact": {
+    "phone": "+212661512283",
+    "phoneDisplay": "+212 6 61 51 22 83",
+    "whatsapp": "212661512283",
+    "email": "contact@dazzlea.ma",
+    "email2": "contact@dazzlea.agency",
+    "address": {
+      "fr": "506, 5ème étage, B Living Offices<br>Rond-Point Bachkou, Casablanca",
+      "en": "506, 5th floor, B Living Offices<br>Rond-Point Bachkou, Casablanca, Morocco"
+    },
+    "hours": {
+      "fr": "Lundi – Vendredi<br>9h00 – 18h00",
+      "en": "Monday – Friday<br>9:00 – 18:00"
+    },
+    "instagram": "https://www.instagram.com/dazzlea.ma",
+    "linkedin": "https://www.linkedin.com/company/dazzlea"
+  },
+  "stats": [
+    {
+      "value": 30,
+      "suffix": "+",
+      "label": {
+        "fr": "Événements réalisés",
+        "en": "Events delivered"
+      }
+    },
+    {
+      "value": 5,
+      "suffix": "+",
+      "label": {
+        "fr": "Années d'expérience",
+        "en": "Years of experience"
+      }
+    },
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": {
+        "fr": "Marques & institutions",
+        "en": "Brands & institutions"
+      }
+    },
+    {
+      "value": 98,
+      "suffix": "%",
+      "label": {
+        "fr": "Satisfaction client",
+        "en": "Satisfaction"
+      }
+    }
+  ]
+}

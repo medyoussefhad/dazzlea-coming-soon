@@ -1,28 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#111111">
-  <title>The Bridge — Dazzlea</title>
-<meta name="description" content="The Bridge : la plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain, conçue et produite par Dazzlea.">
-<link rel="canonical" href="https://www.dazzlea.ma/case-the-bridge.html">
-<meta property="og:title" content="The Bridge — Dazzlea">
-<meta property="og:description" content="The Bridge : la plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain, conçue et produite par Dazzlea.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.dazzlea.ma/case-the-bridge.html">
-<meta property="og:image" content="https://www.dazzlea.ma/assets/bridge-best-of-poster.jpg">
+  <title>Comment Mesurer le ROI de vos Activations de Marque : Guide Complet — Dazzlea</title>
+<link rel="canonical" href="https://www.dazzlea.ma/blog-roi-activations.html">
+<meta property="og:title" content="Comment Mesurer le ROI de vos Activations de Marque : Guide Complet — Dazzlea">
+<meta property="og:description" content="Découvrez les KPIs essentiels, les méthodes de mesure et le cadre analytique que Dazzlea utilise pour quantifier l'impact réel de chaque activation de marque.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.dazzlea.ma/blog-roi-activations.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80">
 <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Découvrez les KPIs essentiels, les méthodes de mesure et le cadre analytique que Dazzlea utilise pour quantifier l'impact réel de chaque activation de marque.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="index.css">
+  <style>
+    .article-hero {
+      background: #0a0a0a;
+      padding: 120px 24px 60px;
+      text-align: center;
+    }
+    .article-tag {
+      display: inline-block;
+      background: rgba(228,32,42,0.12);
+      color: #e4202a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(228,32,42,0.3);
+      margin-bottom: 24px;
+    }
+    .article-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: #888;
+      font-size: 0.85rem;
+    }
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .article-hero-img {
+      width: 100%;
+      max-width: 900px;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 48px auto 0;
+      display: block;
+    }
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      color: #ccc;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(228,32,42,0.2);
+    }
+    .article-body p {
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+    .article-body strong {
+      color: #fff;
+    }
+    .article-highlight {
+      background: rgba(228,32,42,0.06);
+      border-left: 3px solid #e4202a;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      color: #ccc;
+      font-style: italic;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .kpi-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .kpi-card .kpi-label {
+      color: #e4202a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .kpi-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 0;
+    }
+    .article-cta {
+      background: linear-gradient(135deg, rgba(228,32,42,0.08), rgba(228,32,42,0.02));
+      border: 1px solid rgba(228,32,42,0.2);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 60px 0 0;
+    }
+    .article-cta h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .article-cta p {
+      color: #aaa;
+      margin-bottom: 28px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #e4202a;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: gap 0.2s;
+    }
+    .back-link:hover { gap: 12px; }
+    body { background: #0a0a0a; }
+  </style>
 </head>
 <body>
 
@@ -142,134 +279,7 @@
     </div>
   </header>
 
-  <main>
-
-    <section class="page-hero">
-      <div class="page-hero-img-wrap">
-        <video
-          class="page-hero-img"
-          src="assets/bridge-best-of.mp4"
-          poster="assets/bridge-best-of-poster.jpg"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="none"
-          aria-label="The Bridge — Best Of Video"
-        ></video>
-        <div class="page-hero-overlay"></div>
-      </div>
-      <div class="page-hero-content">
-        <div class="page-tags">
-          <span class="page-tag">B2B</span>
-          <span class="page-tag">Networking</span>
-          <span class="page-tag">International</span>
-        </div>
-        <h1 class="page-hero-title">The Bridge</h1>
-        <p class="page-hero-subtitle" data-fr="La plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain — conçue, produite et animée par Dazzlea depuis Casablanca." data-en="The strategic exchange platform between international brands and the African economic ecosystem — designed, produced and hosted by Dazzlea from Casablanca.">La plateforme d'échange stratégique entre marques internationales et l'écosystème économique africain — conçue, produite et animée par Dazzlea depuis Casablanca.</p>
-      </div>
-    </section>
-
-    <div class="breadcrumb-bar">
-      <div class="breadcrumb-inner">
-        <a href="index" data-fr="Accueil" data-en="Home">Accueil</a>
-        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
-        <a href="index#work" data-fr="Work" data-en="Work">Work</a>
-        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
-        <span>The Bridge</span>
-      </div>
-    </div>
-
-    <div class="case-intro">
-      <div class="case-intro-grid">
-        <div class="case-intro-text">
-          <span class="section-label" data-fr="Vision & Contexte" data-en="Vision & Context">Vision & Contexte</span>
-          <h2 data-fr="Créer le carrefour stratégique entre le monde et l'Afrique" data-en="Creating the strategic crossroads between the world and Africa">Créer le carrefour stratégique entre le monde et l'Afrique</h2>
-          <p data-fr="The Bridge est né d'un constat : les grandes marques internationales souhaitent s'implanter ou rayonner en Afrique, mais manquent de passerelles concrètes avec les acteurs locaux. Dazzlea a conçu et produit ce forum B2B annuel pour combler ce gap — un espace de rencontre, de pitch et de deal-making à haute valeur ajoutée." data-en="The Bridge was born from an observation: major international brands want to establish or expand their presence in Africa, but lack concrete bridges with local players. Dazzlea designed and produced this annual B2B forum to close that gap — a space for meetings, pitching and high-value deal-making.">The Bridge est né d'un constat : les grandes marques internationales souhaitent s'implanter ou rayonner en Afrique, mais manquent de passerelles concrètes avec les acteurs locaux. Dazzlea a conçu et produit ce forum B2B annuel pour combler ce gap — un espace de rencontre, de pitch et de deal-making à haute valeur ajoutée.</p>
-          <p data-fr="De la stratégie de contenu à la logistique complète, en passant par la curation des intervenants et l'expérience des participants, Dazzlea a piloté chaque dimension de cet événement phare." data-en="From content strategy to full logistics, including speaker curation and the attendee experience, Dazzlea steered every dimension of this flagship event.">De la stratégie de contenu à la logistique complète, en passant par la curation des intervenants et l'expérience des participants, Dazzlea a piloté chaque dimension de cet événement phare.</p>
-        </div>
-        <aside class="case-quick-facts">
-          <h4 data-fr="Fiche Projet" data-en="Project Sheet">Fiche Projet</h4>
-          <div class="quick-fact-item">
-            <div class="quick-fact-label" data-fr="Format" data-en="Format">Format</div>
-            <div class="quick-fact-value" data-fr="Forum B2B annuel" data-en="Annual B2B forum">Forum B2B annuel</div>
-          </div>
-          <div class="quick-fact-item">
-            <div class="quick-fact-label" data-fr="Lieu" data-en="Location">Lieu</div>
-            <div class="quick-fact-value">Casablanca Finance City</div>
-          </div>
-          <div class="quick-fact-item">
-            <div class="quick-fact-label" data-fr="Participants" data-en="Attendees">Participants</div>
-            <div class="quick-fact-value" data-fr="800+ décideurs & investisseurs" data-en="800+ decision-makers & investors">800+ décideurs & investisseurs</div>
-          </div>
-          <div class="quick-fact-item">
-            <div class="quick-fact-label" data-fr="Partenaires" data-en="Partners">Partenaires</div>
-            <div class="quick-fact-value" data-fr="50+ organisations représentées" data-en="50+ organizations represented">50+ organisations représentées</div>
-          </div>
-          <div class="quick-fact-item">
-            <div class="quick-fact-label" data-fr="Périmètre" data-en="Scope">Périmètre</div>
-            <div class="quick-fact-value" data-fr="Stratégie · Contenu · Production · PR" data-en="Strategy · Content · Production · PR">Stratégie · Contenu · Production · PR</div>
-          </div>
-        </aside>
-      </div>
-    </div>
-
-    <div class="case-sections">
-
-      <div class="case-row">
-        <div class="case-row-media">
-          <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
-            <source src="https://assets.mixkit.co/videos/36817/36817-720.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="case-row-text">
-          <span class="section-label" data-fr="Stratégie & Format" data-en="Strategy & Format">Stratégie & Format</span>
-          <h3 data-fr="Un format innovant pensé pour le business réel" data-en="An innovative format designed for real business">Un format innovant pensé pour le business réel</h3>
-          <p data-fr="Panels d'experts, sessions de pitch accéléré, networking dînatoire et rendez-vous B2B pré-arrangés : The Bridge alterne formats inspirants et moments concrets de mise en relation. Chaque édition est construite autour d'une thématique sectorielle — Tech, Retail, Green Economy — pour concentrer les audiences pertinentes." data-en="Expert panels, rapid-pitch sessions, networking dinners and pre-arranged B2B meetings: The Bridge alternates between inspiring formats and concrete matchmaking moments. Each edition is built around a sector theme — Tech, Retail, Green Economy — to bring together the most relevant audiences.">Panels d'experts, sessions de pitch accéléré, networking dînatoire et rendez-vous B2B pré-arrangés : The Bridge alterne formats inspirants et moments concrets de mise en relation. Chaque édition est construite autour d'une thématique sectorielle — Tech, Retail, Green Economy — pour concentrer les audiences pertinentes.</p>
-        </div>
-      </div>
-
-      <div class="case-row case-row-reverse">
-        <div class="case-row-media">
-          <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
-            <source src="https://assets.mixkit.co/videos/13192/13192-720.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="case-row-text">
-          <span class="section-label" data-fr="Curation & Contenu" data-en="Curation & Content">Curation & Contenu</span>
-          <h3 data-fr="Des intervenants de premier plan, une programmation exigeante" data-en="Top-tier speakers, a demanding program">Des intervenants de premier plan, une programmation exigeante</h3>
-          <p data-fr="Dazzlea prend en charge la curation complète des speakers : identification, négociation, préparation des prises de parole et coaching. Chaque intervenant est briefé sur le positionnement de l'édition pour garantir une cohérence éditoriale forte et une expérience de qualité pour les participants." data-en="Dazzlea handles the complete speaker curation: identification, negotiation, talk preparation and coaching. Each speaker is briefed on the edition's positioning to ensure strong editorial consistency and a quality experience for attendees.">Dazzlea prend en charge la curation complète des speakers : identification, négociation, préparation des prises de parole et coaching. Chaque intervenant est briefé sur le positionnement de l'édition pour garantir une cohérence éditoriale forte et une expérience de qualité pour les participants.</p>
-        </div>
-      </div>
-
-      <div class="case-row">
-        <div class="case-row-media">
-          <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
-            <source src="https://assets.mixkit.co/videos/26781/26781-720.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="case-row-text">
-          <span class="section-label" data-fr="Impact & Résultats" data-en="Impact & Results">Impact & Résultats</span>
-          <h3 data-fr="Des connexions qui durent bien après l'événement" data-en="Connections that last well beyond the event">Des connexions qui durent bien après l'événement</h3>
-          <p data-fr="The Bridge génère des partenariats concrets : accords de distribution, co-investissements et engagements RSE signés dans les semaines suivant chaque édition. La couverture presse nationale et la diffusion des keynotes en streaming ont étendu la portée de l'événement à plusieurs milliers de professionnels supplémentaires." data-en="The Bridge generates concrete partnerships: distribution agreements, co-investments and CSR commitments signed within weeks of each edition. National press coverage and streamed keynotes extended the event's reach to several thousand additional professionals.">The Bridge génère des partenariats concrets : accords de distribution, co-investissements et engagements RSE signés dans les semaines suivant chaque édition. La couverture presse nationale et la diffusion des keynotes en streaming ont étendu la portée de l'événement à plusieurs milliers de professionnels supplémentaires.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="next-project">
-      <div class="next-project-inner">
-        <div>
-          <p class="next-project-label" data-fr="Projet Suivant" data-en="Next Project">Projet Suivant</p>
-          <p class="next-project-title" data-fr="Dacia Bigster : Une Activation qui Marque les Esprits" data-en="Dacia Bigster: An Activation That Leaves a Mark">Dacia Bigster : Une Activation qui Marque les Esprits</p>
-        </div>
-        <a href="case-dacia-bigster" style="display:flex;align-items:center;gap:16px;text-decoration:none;">
-          <div class="next-project-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        </a>
-      </div>
-    </div>
-
-  </main>
+  {{MAIN}}
 
   <footer class="footer-info">
     <div class="footer-container">

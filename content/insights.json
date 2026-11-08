@@ -1,0 +1,468 @@
+[
+  {
+    "slug": "tendances-evenementiel",
+    "featured": true,
+    "category": "trends",
+    "tag": {
+      "fr": "Tendances",
+      "en": "Trends"
+    },
+    "title": {
+      "fr": "Les 5 Tendances du Marketing Expérientiel B2B qui Transformeront 2026 au Maroc",
+      "en": "The 5 B2B Experience Marketing Trends That Will Transform 2026 in Morocco"
+    },
+    "excerpt": {
+      "fr": "De l'intelligence artificielle aux expériences hybrides en passant par l'hyper-personnalisation, voici ce qui va redéfinir le marketing expérientiel au Maroc cette année.",
+      "en": "From artificial intelligence to hybrid experiences and hyper-personalization, here's what will redefine experience marketing in Morocco this year."
+    },
+    "date": "2026-06-15",
+    "readMinutes": 8,
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800",
+    "imageAlt": "Tendances événementiel",
+    "heroImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1400",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Le secteur de l'événementiel B2B ne ressemble plus à ce qu'il était il y a cinq ans. Sous l'effet conjugué des nouvelles technologies, des attentes croissantes des décideurs et d'un marché marocain en pleine maturité, les règles du jeu se réécrivent. Pour les marques qui souhaitent rester compétitives, anticiper ces mutations n'est plus une option — c'est une nécessité stratégique. Voici les cinq grandes tendances qui definiront le marketing expérientiel B2B au Maroc et au-delà en 2026.",
+          "en": "The B2B events sector no longer looks like it did five years ago. Under the combined effect of new technologies, decision-makers' rising expectations and an increasingly mature Moroccan market, the rules of the game are being rewritten. For brands that want to stay competitive, anticipating these shifts is no longer optional — it's a strategic necessity. Here are the five major trends that will define B2B experiential marketing in Morocco and beyond in 2026."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "1. Expériences hyper-personnalisées grâce à la data",
+          "en": "1. Hyper-personalized experiences powered by data"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "L'ère des événements uniformes est révolue. En 2026, les décideurs B2B s'attendent à vivre une expérience conçue spécifiquement pour leurs enjeux, leur secteur et même leur parcours individuel au sein de l'organisation. Cette hyper-personnalisation n'est possible qu'à travers une exploitation intelligente de la data : historique d'interactions, préférences déclarées, comportements digitaux et signaux d'intention d'achat.",
+          "en": "The era of one-size-fits-all events is over. In 2026, B2B decision-makers expect an experience designed specifically for their challenges, their sector, and even their individual journey within the organization. This hyper-personalization is only possible through intelligent use of data: interaction history, stated preferences, digital behaviors and purchase-intent signals."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Les agences qui maîtrisent la collecte et l'analyse de ces données en amont d'un événement peuvent moduler les contenus, les ateliers et même les rencontres one-to-one en fonction du profil de chaque participant. Au Maroc, où les écosystèmes sectoriels restent relativement concentrés, cette connaissance fine des audiences constitue un avantage compétitif décisif pour les organisateurs capables de la mobiliser.",
+          "en": "Agencies that master the collection and analysis of this data ahead of an event can tailor content, workshops and even one-to-one meetings according to each attendee's profile. In Morocco, where sector ecosystems remain relatively concentrated, this fine-grained audience knowledge is a decisive competitive advantage for organizers able to leverage it."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Pour Dazzlea, cela se traduit par la mise en place de stratégies de segmentation avancées dès la phase de conception, permettant de sculpter chaque point de contact de l'événement autour des attentes réelles — et non supposées — des participants.",
+          "en": "For Dazzlea, this translates into advanced segmentation strategies from the design phase onward, allowing every touchpoint of the event to be shaped around attendees' real expectations — not assumed ones."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "2. La montée du phygital : le présentiel augmenté",
+          "en": "2. The rise of phygital: augmented in-person events"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Le débat entre événement présentiel et événement virtuel appartient désormais au passé. Ce qui s'impose en 2026 est une approche radicalement hybride, que l'on appelle le phygital : une expérience physique enrichie par des couches digitales qui en décuplent la portée, la profondeur et la longévité.",
+          "en": "The debate between in-person and virtual events now belongs to the past. What is taking hold in 2026 is a radically hybrid approach known as phygital: a physical experience enriched by digital layers that multiply its reach, depth and longevity."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Concrètement, cela signifie des installations interactives pilotées en temps réel, des contenus diffusés simultanément sur des plateformes propriétaires, des espaces de networking virtuel qui prolongent les rencontres opérées sur le terrain. Le lieu physique devient un studio de production autant qu'un espace d'expérience, et l'audience présente n'est plus que la partie visible d'une communauté bien plus large.",
+          "en": "In practical terms, this means interactive installations driven in real time, content streamed simultaneously on proprietary platforms, and virtual networking spaces that extend the connections made on site. The physical venue becomes a production studio as much as an experience space, and the audience present is now just the visible part of a much larger community."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "fr": "\"En 2026, un événement B2B réussi ne se mesure plus seulement au nombre de personnes présentes dans la salle — mais à l'empreinte digitale durable qu'il génère sur l'ensemble de l'écosystème de la marque.\"",
+          "en": "\"In 2026, a successful B2B event is no longer measured only by the number of people in the room — but by the lasting digital footprint it generates across the brand's entire ecosystem.\""
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Cette approche phygitale ouvre également de nouvelles perspectives pour les marques internationales souhaitant toucher simultanément des audiences à Casablanca, Dakar et Paris depuis un seul dispositif événementiel central.",
+          "en": "This phygital approach also opens new perspectives for international brands wanting to simultaneously reach audiences in Casablanca, Dakar and Paris from a single central event setup."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "3. Durabilité comme argument de différenciation",
+          "en": "3. Sustainability as a differentiator"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "La responsabilité environnementale est passée du statut de posture cosmétique à celui de critère de sélection réel dans les appels d'offres événementiels. En 2026, les directions achats et RSE des grandes entreprises marocaines et multinationales présentes au Maroc intègrent systématiquement des indicateurs d'impact environnemental dans leur évaluation des prestataires.",
+          "en": "Environmental responsibility has moved from a cosmetic stance to a genuine selection criterion in event tenders. In 2026, procurement and CSR departments at large Moroccan companies and multinationals operating in Morocco systematically factor environmental-impact indicators into their evaluation of vendors."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Pour les agences, cela implique de repenser l'intégralité de la chaîne de valeur événementielle : choix des matériaux scénographiques recyclables ou réutilisables, gestion des déchets, calcul de l'empreinte carbone des déplacements, sélection de traiteurs locaux et engagés. La durabilité devient ainsi une composante créative à part entière, capable de générer des prises de parole fortes et mémorables.",
+          "en": "For agencies, this means rethinking the entire event value chain: choosing recyclable or reusable set-design materials, managing waste, calculating the carbon footprint of travel, and selecting local, committed caterers. Sustainability thus becomes a creative component in its own right, capable of generating strong, memorable statements."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Au Maroc, cette tendance s'articule également avec le contexte de la COP et des ambitions climatiques du Royaume, créant un terrain particulièrement fertile pour les marques qui souhaitent afficher une cohérence entre leurs valeurs affichées et leurs pratiques événementielles concrètes.",
+          "en": "In Morocco, this trend also connects with the context of COP and the Kingdom's climate ambitions, creating especially fertile ground for brands wanting to show consistency between their stated values and their actual event practices."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "4. Le contenu généré par les participants comme amplificateur organique",
+          "en": "4. Attendee-generated content as an organic amplifier"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "L'UGC — User Generated Content — n'est plus l'apanage du B2C. En 2026, les événements B2B les plus performants sont ceux qui transforment leurs participants en créateurs de contenu actifs, générant une amplification organique qui dépasse de loin les investissements médias traditionnels.",
+          "en": "UGC — User Generated Content — is no longer the sole preserve of B2C. In 2026, the best-performing B2B events are those that turn their attendees into active content creators, generating organic amplification that far outstrips traditional media spend."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Cette dynamique s'opère en concevant des moments visuellement forts et émotionnellement chargés : installations scénographiques iconiques, révélations de produits orchestrées, moments de partage entre pairs dont la valeur perçue pousse naturellement au partage. Sur LinkedIn notamment, un événement B2B bien conçu peut générer plusieurs centaines de posts spontanés de la part de participants influents dans leur secteur.",
+          "en": "This dynamic is built by designing visually striking, emotionally charged moments: iconic set-design installations, orchestrated product reveals, peer-to-peer sharing moments whose perceived value naturally drives sharing. On LinkedIn in particular, a well-designed B2B event can generate several hundred spontaneous posts from attendees who are influential in their sector."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "La clé réside dans l'architecture de l'expérience elle-même : chaque séquence doit être pensée non seulement pour son impact immédiat sur les présents, mais aussi pour sa capacité à voyager au-delà des murs du lieu. Chez Dazzlea, nous intégrons systématiquement cette dimension \"shareable\" dans notre processus de conception créative.",
+          "en": "The key lies in the architecture of the experience itself: every sequence must be designed not only for its immediate impact on those present, but also for its ability to travel beyond the venue's walls. At Dazzlea, we systematically build this \"shareable\" dimension into our creative design process."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "5. L'IA dans la personnalisation des expériences",
+          "en": "5. AI in personalizing experiences"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "L'intelligence artificielle s'impose progressivement comme un outil de production et de personnalisation événementielle à part entière. En 2026, ses applications vont bien au-delà de la simple génération de contenus : l'IA permet de créer des parcours adaptatifs au sein d'un même événement, de prédire les comportements de participation pour optimiser la logistique en temps réel, ou encore de générer des synthèses personnalisées pour chaque participant à l'issue du dispositif.",
+          "en": "Artificial intelligence is steadily establishing itself as a genuine event production and personalization tool in its own right. In 2026, its applications go well beyond simple content generation: AI makes it possible to create adaptive journeys within a single event, predict attendance behaviors to optimize logistics in real time, and even generate personalized summaries for each attendee at the end of the event."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Dans le domaine de la scénographie, les outils de génération visuelle permettent de prototyper des concepts en quelques heures plutôt qu'en plusieurs jours, accélérant considérablement les cycles créatifs et permettant de présenter des variantes plus nombreuses aux clients pour affiner ensemble la vision.",
+          "en": "In set design, visual generation tools make it possible to prototype concepts in a few hours rather than several days, considerably speeding up creative cycles and allowing more variations to be presented to clients so the vision can be refined together."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Pour les marques B2B, l'IA représente surtout une opportunité de rendre chaque touchpoint de l'événement plus pertinent et plus mémorable, en s'adaptant en temps réel aux signaux émis par les participants. Cette capacité à personnaliser l'expérience à grande échelle constitue l'un des leviers les plus puissants de différenciation événementielle pour les années à venir.",
+          "en": "For B2B brands, AI represents above all an opportunity to make every touchpoint of the event more relevant and more memorable, by adapting in real time to signals from attendees. This ability to personalize the experience at scale is one of the most powerful levers for event differentiation in the years ahead."
+        }
+      }
+    ],
+    "cta": {
+      "title": {
+        "fr": "Prêt à anticiper les tendances avec Dazzlea ?",
+        "en": "Ready to get ahead of the trends with Dazzlea?"
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "button": {
+        "fr": "Soumettre un Brief",
+        "en": "Submit a Brief"
+      }
+    },
+    "seo": {
+      "description": {
+        "fr": "Quelles tendances vont redéfinir les événements B2B au Maroc en 2026 ? Dazzlea décrypte les 5 grandes évolutions à anticiper pour créer des expériences mémorables et impactantes.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "roi-activations",
+    "featured": false,
+    "category": "strategy",
+    "tag": {
+      "fr": "Stratégie",
+      "en": "Strategy"
+    },
+    "title": {
+      "fr": "Comment Mesurer le ROI de vos Activations de Marque : Guide Complet",
+      "en": "How to Measure the ROI of Your Brand Activations: The Complete Guide"
+    },
+    "excerpt": {
+      "fr": "KPIs terrain, reach digital, retombées PR — le cadre d'évaluation que Dazzlea utilise pour chaque activation.",
+      "en": "On-site KPIs, digital reach, PR coverage — the evaluation framework Dazzlea uses for every activation."
+    },
+    "date": "2026-06-10",
+    "readMinutes": 6,
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600",
+    "imageAlt": "ROI Activations de marque",
+    "heroImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Dans un contexte où les budgets marketing sont scrutés à la loupe et où chaque dirham investi doit se justifier, la question du retour sur investissement des activations de marque est devenue centrale. Pourtant, de nombreuses entreprises continuent d'organiser des événements, des pop-ups ou des expériences immersives sans avoir défini, en amont, les indicateurs qui leur permettront d'en mesurer l'efficacité réelle. Chez Dazzlea, nous avons développé un cadre de mesure structuré qui couvre l'ensemble du spectre — de l'engagement émotionnel immédiat aux conversions commerciales à long terme.",
+          "en": "In a context where marketing budgets are scrutinized closely and every dirham invested must be justified, the question of return on investment for brand activations has become central. Yet many companies continue to organize events, pop-ups or immersive experiences without having defined, upfront, the indicators that will let them measure their real effectiveness. At Dazzlea, we have developed a structured measurement framework that covers the whole spectrum — from immediate emotional engagement to long-term commercial conversions."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Pourquoi le ROI des activations est difficile à mesurer",
+          "en": "Why activation ROI is hard to measure"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Contrairement à une campagne digitale où chaque clic, chaque impression et chaque conversion sont tracés en temps réel, une activation de marque produit des effets qui se manifestent sur plusieurs dimensions et à des horizons temporels différents. L'expérience vécue par un participant à un événement influence sa perception de la marque pendant des semaines, voire des mois. Cette nature diffuse du ROI expérientiel est souvent mal comprise par les équipes marketing, ce qui conduit soit à une sous-estimation de l'impact réel, soit à une incapacité à le défendre devant les directions financières.",
+          "en": "Unlike a digital campaign where every click, impression and conversion is tracked in real time, a brand activation produces effects that play out across multiple dimensions and different time horizons. The experience lived by an event attendee influences their perception of the brand for weeks, even months. This diffuse nature of experiential ROI is often poorly understood by marketing teams, which leads either to underestimating the real impact, or to an inability to defend it before finance departments."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "La première erreur consiste à n'évaluer que les métriques de surface : nombre de participants, mentions sur les réseaux sociaux, couverture médiatique immédiate. Si ces indicateurs sont nécessaires, ils sont loin d'être suffisants. Il faut articuler une architecture de mesure à trois niveaux : l'impact immédiat (pendant et juste après l'événement), l'impact à moyen terme (dans les 30 à 90 jours suivants) et l'impact à long terme sur la valeur de la marque.",
+          "en": "The first mistake is to evaluate only surface-level metrics: number of attendees, social media mentions, immediate media coverage. While these indicators are necessary, they are far from sufficient. A three-tier measurement architecture must be built: immediate impact (during and just after the event), medium-term impact (within the following 30 to 90 days), and long-term impact on brand value."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Les KPIs fondamentaux à définir avant l'activation",
+          "en": "The fundamental KPIs to define before the activation"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "L'une des clés d'une mesure efficace est de définir les indicateurs de performance <strong>avant</strong> l'événement, et non pas après coup pour justifier des résultats. Chaque activation doit répondre à un ou plusieurs objectifs stratégiques précis, et chaque objectif doit être associé à au moins un KPI mesurable.",
+          "en": "One of the keys to effective measurement is defining performance indicators <strong>before</strong> the event, not after the fact to justify results. Every activation must answer one or more precise strategic objectives, and every objective must be tied to at least one measurable KPI."
+        }
+      },
+      {
+        "type": "cards",
+        "items": [
+          {
+            "title": {
+              "fr": "Notoriété",
+              "en": "Awareness"
+            },
+            "text": {
+              "fr": "Reach médias, impressions earned, score de rappel spontané, couverture presse en équivalent publicitaire (AVE)",
+              "en": "Media reach, earned impressions, unaided recall score, press coverage in advertising value equivalent (AVE)"
+            }
+          },
+          {
+            "title": {
+              "fr": "Engagement",
+              "en": "Engagement"
+            },
+            "text": {
+              "fr": "Taux d'interaction sur site, durée de l'expérience, NPS événementiel, taux de partage sur réseaux sociaux",
+              "en": "On-site interaction rate, experience duration, event NPS, social media share rate"
+            }
+          },
+          {
+            "title": {
+              "fr": "Conversion",
+              "en": "Conversion"
+            },
+            "text": {
+              "fr": "Leads qualifiés générés, taux de passage à l'acte dans les 30 jours, panier moyen des visiteurs post-activation",
+              "en": "Qualified leads generated, conversion rate within 30 days, average basket of visitors post-activation"
+            }
+          },
+          {
+            "title": {
+              "fr": "Fidélisation",
+              "en": "Loyalty"
+            },
+            "text": {
+              "fr": "Taux de réachat, évolution du score de satisfaction client, augmentation de la fréquence d'achat",
+              "en": "Repurchase rate, change in customer satisfaction score, increase in purchase frequency"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Mesurer le reach digital et l'impact PR",
+          "en": "Measuring digital reach and PR impact"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Toute activation bien conçue génère un rayonnement digital bien au-delà de l'audience physique présente. Les contenus produits — photos, vidéos, stories, témoignages — continuent de circuler sur les réseaux sociaux pendant plusieurs jours. Pour capturer cet effet, Dazzlea met en place des outils de social listening dès la phase de préparation : création d'un hashtag dédié et trackable, attribution de codes UTM à chaque point de contact digital, intégration d'un pixel de suivi sur les pages de destination associées à l'événement.",
+          "en": "Any well-designed activation generates a digital reach that extends far beyond the physical audience present. The content produced — photos, videos, stories, testimonials — keeps circulating on social media for several days. To capture this effect, Dazzlea sets up social listening tools from the preparation phase onward: creating a dedicated, trackable hashtag, assigning UTM codes to every digital touchpoint, and embedding a tracking pixel on the landing pages associated with the event."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Du côté des relations presse, nous utilisons un calcul d'équivalence publicitaire pondéré (ou Weighted Media Value) qui tient compte non seulement de la superficie rédactionnelle, mais aussi du niveau d'engagement des publications, du profil de l'audience du média et du sentiment associé à l'article. Un article de fond dans un magazine B2B lu par des décideurs peut valoir dix fois plus qu'une brève dans un tabloïd généraliste, même si sa surface est moindre.",
+          "en": "On the press relations side, we use a weighted media value calculation that accounts not only for editorial space, but also for the engagement level of the publication, the media outlet's audience profile, and the sentiment associated with the article. An in-depth feature in a B2B magazine read by decision-makers can be worth ten times more than a short piece in a general tabloid, even if it takes up less space."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "fr": "\"Une activation de marque réussie génère en moyenne 3 à 5 fois son coût de production en valeur médiatique équivalente — à condition d'avoir conçu l'expérience avec le contenu en tête dès le départ.\"",
+          "en": "\"A successful brand activation generates on average 3 to 5 times its production cost in equivalent media value — provided the experience was designed with content in mind from the very start.\""
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Le cadre de mesure Dazzlea : avant, pendant, après",
+          "en": "The Dazzlea measurement framework: before, during, after"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Notre méthodologie repose sur une approche en trois temps. <strong>Avant l'activation</strong>, nous établissons des benchmarks : quelle est la notoriété actuelle de la marque auprès de la cible ? Quel est son Net Promoter Score de départ ? Quels sont les volumes de recherche organique et de mentions sur les réseaux ? Ces données constituent la ligne de base contre laquelle nous mesurerons l'impact.",
+          "en": "Our methodology rests on a three-phase approach. <strong>Before the activation</strong>, we establish benchmarks: what is the brand's current awareness among the target audience? What is its starting Net Promoter Score? What are the volumes of organic search and social mentions? This data forms the baseline against which we will measure impact."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "<strong>Pendant l'activation</strong>, nous déployons des outils de collecte en temps réel : bornes d'enregistrement digitales qui capturent les données des participants, QR codes intégrés aux expériences pour suivre les parcours, équipes dédiées à la captation de contenu et au monitoring des réseaux sociaux. Un tableau de bord en temps réel permet à l'équipe client de suivre les KPIs clés au fur et à mesure de l'événement.",
+          "en": "<strong>During the activation</strong>, we deploy real-time collection tools: digital check-in kiosks that capture attendee data, QR codes embedded in the experiences to track journeys, and dedicated teams for content capture and social media monitoring. A real-time dashboard lets the client team track key KPIs as the event unfolds."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "<strong>Après l'activation</strong>, nous produisons un rapport d'impact complet dans les deux semaines suivant l'événement. Ce rapport intègre l'ensemble des données collectées, une analyse de l'évolution des métriques par rapport aux benchmarks, une estimation du ROI global et des recommandations pour les activations futures. C'est ce rapport qui permet aux équipes marketing de défendre leurs investissements en interne et d'affiner leur stratégie.",
+          "en": "<strong>After the activation</strong>, we produce a complete impact report within two weeks of the event. This report brings together all the data collected, an analysis of how metrics evolved against the benchmarks, an estimate of overall ROI, and recommendations for future activations. It is this report that lets marketing teams defend their investments internally and refine their strategy."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Intégrer les données qualitatives dans le calcul",
+          "en": "Integrating qualitative data into the calculation"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Les données quantitatives ne racontent qu'une partie de l'histoire. L'expérience vécue par les participants — l'émotion ressentie, la connexion avec la marque, la perception de la qualité — est tout aussi déterminante pour la valeur à long terme de l'activation. C'est pourquoi nous intégrons systématiquement des enquêtes de satisfaction post-événement, des entretiens qualitatifs avec un échantillon de participants, et une analyse sémantique des commentaires sur les réseaux sociaux.",
+          "en": "Quantitative data only tells part of the story. The experience lived by attendees — the emotion felt, the connection with the brand, the perceived quality — is just as decisive for the activation's long-term value. That is why we systematically incorporate post-event satisfaction surveys, qualitative interviews with a sample of attendees, and semantic analysis of social media comments."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Ces données qualitatives permettent de comprendre <em>pourquoi</em> certains KPIs ont performé ou sous-performé, et d'identifier les leviers sur lesquels agir lors des prochaines activations. Elles constituent également une matière précieuse pour les équipes créatives qui conçoivent les futures expériences de marque.",
+          "en": "This qualitative data helps us understand <em>why</em> certain KPIs over- or under-performed, and identify the levers to act on for future activations. It is also valuable material for the creative teams designing future brand experiences."
+        }
+      }
+    ],
+    "cta": {
+      "title": {
+        "fr": "Prêt à mesurer l'impact réel de vos activations ?",
+        "en": "Ready to measure the real impact of your activations?"
+      },
+      "text": {
+        "fr": "Notre équipe Stratégie & Analytics vous accompagne de la définition des KPIs jusqu'au rapport d'impact final.",
+        "en": "Our Strategy & Analytics team supports you from KPI definition through to the final impact report."
+      },
+      "button": {
+        "fr": "Parler à un expert",
+        "en": "Talk to an expert"
+      }
+    },
+    "seo": {
+      "description": {
+        "fr": "Découvrez les KPIs essentiels, les méthodes de mesure et le cadre analytique que Dazzlea utilise pour quantifier l'impact réel de chaque activation de marque.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "hub-casablanca",
+    "featured": false,
+    "category": "africa",
+    "tag": {
+      "fr": "Afrique & International",
+      "en": "Africa & International"
+    },
+    "title": {
+      "fr": "Pourquoi Casablanca est le Hub Stratégique Idéal pour les Marques Internationales en Afrique",
+      "en": "Why Casablanca Is the Ideal Strategic Hub for International Brands in Africa"
+    },
+    "excerpt": {
+      "fr": "Géographie, infrastructure, expertise locale et réseaux médiatiques — les raisons qui font de Casablanca le point d'entrée incontournable.",
+      "en": "Geography, infrastructure, local expertise and media networks — the reasons that make Casablanca the essential gateway."
+    },
+    "date": "2026-06-03",
+    "readMinutes": 7,
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600",
+    "imageAlt": "Hub Casablanca",
+    "heroImage": "",
+    "blocks": [],
+    "cta": null,
+    "seo": {
+      "description": {
+        "fr": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "slug": "b2b-vs-b2c-event-strategy",
+    "featured": false,
+    "category": "events",
+    "tag": {
+      "fr": "Événementiel",
+      "en": "Events"
+    },
+    "title": {
+      "fr": "B2B vs B2C : Les Clés d'une Stratégie Événementielle Réussie au Maroc",
+      "en": "B2B vs B2C: The Keys to a Successful Event Strategy in Morocco"
+    },
+    "excerpt": {
+      "fr": "Les codes diffèrent radicalement entre un événement institutionnel et une activation grand public. Notre guide pour ne pas se tromper.",
+      "en": "The rules differ radically between an institutional event and a mass-market activation. Our guide to getting it right."
+    },
+    "date": "2026-05-28",
+    "readMinutes": 5,
+    "image": "https://images.unsplash.com/photo-1556761175-b813d53a962e?q=80&w=600",
+    "imageAlt": "Événementiel B2B vs B2C",
+    "heroImage": "",
+    "blocks": [],
+    "cta": null,
+    "seo": {
+      "description": {
+        "fr": "",
+        "en": ""
+      }
+    }
+  }
+]

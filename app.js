@@ -126,18 +126,31 @@
     });
   }
 
+  // Each language has its own URL (/ = English, /fr/ = French). The page is already
+  // rendered in its language; the switch goes to the other version of the same page.
+  const pageLang = document.documentElement.getAttribute('lang') === 'fr' ? 'fr' : 'en';
+  const storeLang = (l) => { try { localStorage.setItem('dzzLang', l); } catch (e) {} };
+
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
-      localStorage.setItem('dzzLang', lang);
+      storeLang(lang);
+      if (btn.dataset.href && lang !== pageLang) {
+        window.location.href = btn.dataset.href + window.location.hash;
+        return;
+      }
       applyLang(lang);
     });
   });
 
-  // Apply saved or default language on load (English-first)
-  const savedLang = localStorage.getItem('dzzLang') || 'en';
   if (langBtns.length > 0) {
-    applyLang(savedLang);
+    langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === pageLang));
+    // pages without a generated alternate (e.g. local preview of source files) fall back to in-place swap
+    if (!document.querySelector('.lang-btn[data-href]')) {
+      let saved = 'en';
+      try { saved = localStorage.getItem('dzzLang') || 'en'; } catch (e) {}
+      applyLang(saved);
+    }
   }
 
   /* ── Scroll Reveal (IntersectionObserver) ──── */
