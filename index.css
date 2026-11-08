@@ -3228,6 +3228,7 @@ textarea.form-control {
 .contact-detail-text .detail-label { color: var(--color-green); letter-spacing:.14em; }
 .contact-detail-text .detail-value { font-size: 1.02rem; }
 .contact-body-inner { grid-template-columns: 1.4fr 1fr; }
+@media (max-width: 1024px) { .contact-body-inner { grid-template-columns: 1fr; } .contact-info-card { padding: 0; } }
 
 /* =====================================================================
    WHAT WE DO — hover-reveal discipline list
@@ -3695,3 +3696,158 @@ html.intro-lock, html.intro-lock body { overflow: hidden; }
 .footer-contact-list .wa-link { width: 24px; height: 24px; font-size: .82rem; margin-left: 8px; }
 
 @media (max-width: 760px) { .hx-title { font-size: 14vw; } .hx-kicker { letter-spacing: .22em; } }
+
+/* =====================================================================
+   RESPONSIVE LAYER — phones, tablets, laptops, large & landscape screens
+   (appended last so it wins over the earlier page-specific blocks)
+   ===================================================================== */
+img, video { max-width: 100%; }
+h1, h2, h3, h4 { overflow-wrap: break-word; }
+.agency-item > *, .discipline-item a > *, .cap-row > *, .agency-grid > *, .universe-grid > *,
+.contact-body-inner > *, .disciplines-layout > *, .division-header > *, .footer-grid > * { min-width: 0; }
+.cap-section .cap-inner { margin-top: clamp(44px, 6vw, 80px); }
+.footer-address { font-size: .87rem; line-height: 1.65; color: rgba(255,255,255,.55); }
+
+/* ---------- Tablets & below: hamburger nav (mega menus are hover-only) ---------- */
+@media (max-width: 1024px) {
+  :root { --nav-height: 64px; }
+  .nav-primary { display: none; }
+  .navbar-toggler { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; }
+  .mega-menu-panel { display: none !important; }
+  .navbar-container { padding: 0 clamp(16px, 4vw, 32px); }
+  html.menu-open .banner { background: #0b0b0b; box-shadow: none; }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+
+  .mobile-nav {
+    display: flex; position: fixed; top: var(--nav-height); left: 0; right: 0;
+    height: calc(100vh - var(--nav-height)); height: calc(100dvh - var(--nav-height));
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    flex-direction: column; justify-content: space-between; gap: 32px;
+    padding: 12px clamp(20px, 6vw, 48px) calc(28px + env(safe-area-inset-bottom));
+    background: #0b0b0b; border-top: 1px solid var(--color-grey-dark);
+    opacity: 0; visibility: hidden; transform: translateY(-10px);
+    transition: opacity .35s ease, transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear .45s;
+  }
+  .mobile-nav.open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .mobile-nav-links li { opacity: 0; transform: translateY(18px);
+    transition: opacity .45s ease, transform .6s cubic-bezier(.16,1,.3,1); }
+  .mobile-nav.open .mobile-nav-links li { opacity: 1; transform: none; transition-delay: calc(.06s * var(--i, 0) + .1s); }
+  .mobile-nav-item { display: flex; align-items: baseline; gap: 16px; padding: 16px 0;
+    font-family: var(--font-head); font-weight: 800; font-size: clamp(1.8rem, 7.5vw, 2.8rem);
+    letter-spacing: -.01em; line-height: 1; text-transform: uppercase; }
+  .mn-n { font-family: var(--font-main); font-size: .7rem; font-weight: 700; letter-spacing: .2em; color: var(--color-green); }
+  .mobile-nav-foot { display: flex; flex-direction: column; gap: 20px; }
+  .mobile-nav-cta { display: flex; justify-content: center; padding: 17px 24px; border-radius: 999px; background: var(--color-green);
+    color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; }
+  .mobile-nav-contact { display: flex; flex-direction: column; gap: 12px; }
+  .mobile-nav-contact a { display: flex; align-items: center; gap: 12px; color: var(--color-grey-light); font-size: .95rem; }
+  .mobile-nav-contact i { width: 18px; text-align: center; color: var(--color-green); }
+  .mobile-nav-social { display: flex; gap: 10px; }
+  .mobile-nav-social a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-grey-dark);
+    display: grid; place-items: center; color: #fff; transition: background .3s, border-color .3s; }
+  .mobile-nav-social a:hover { background: var(--color-green); border-color: var(--color-green); }
+}
+@media (min-width: 1025px) { .mobile-nav { display: none !important; } }
+
+/* ---------- Touch screens: show what desktop reveals on hover ---------- */
+@media (hover: none) {
+  .block-items { max-height: 220px; opacity: 1; }
+  .block-panel::before { opacity: .55; }
+  .ag-arrow, .d-arrow { opacity: .55; transform: none; }
+  .portfolio-card-overlay::before { width: 56px; }
+  .portfolio-card-title { transform: none; }
+  .portfolio-card-img { filter: none; }
+  .grid-card:hover, .brand-card:hover, .value-card:hover { transform: none; }
+}
+
+/* ---------- Tablets (portrait) ---------- */
+@media (max-width: 900px) {
+  .stats-container { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 28px; }
+  .division-header { grid-template-columns: 90px 1fr; gap: 20px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px) {
+  :root { --nav-height: 60px; }
+  .form-control, .form-select { font-size: 16px; }            /* stops iOS zoom-on-focus */
+  .footer-grid { grid-template-columns: 1fr; gap: 34px; }
+  .contact-info-card h3 { font-size: 1.3rem; letter-spacing: .04em; margin-bottom: 26px; }
+  .contact-form-panel { border-radius: 18px; padding: 26px 20px; }
+  .wa-link { width: 34px; height: 34px; }
+
+  .services-page-hero h1, .portfolio-page-hero h1, .insights-hero h1, .contact-hero-simple h1 { font-size: clamp(2.2rem, 11.5vw, 3rem); }
+  .about-hero-text h1 { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+  .stacked-headline { font-size: clamp(2.3rem, 12.5vw, 3.2rem); }
+  .section-intro .section-intro-title, .sv-title, .disciplines-title, .events-deliver .section-intro-title { font-size: clamp(1.9rem, 9.5vw, 2.5rem); }
+  .cap-title { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+  .division-header { grid-template-columns: 1fr; gap: 8px; }
+  .division-number { font-size: 3.2rem; }
+
+  .discipline-item a { gap: 14px; padding: 20px 4px; }
+  .d-name { font-size: clamp(1.1rem, 5.6vw, 1.4rem); }
+  .agency-item { grid-template-columns: 34px 1fr 18px; gap: 10px; padding: 20px 6px; }
+  .block-panel { padding: 28px 22px; min-height: 0; gap: 34px; }
+  .block-num { font-size: 3.6rem; }
+  .block-arrow { top: 24px; right: 22px; width: 40px; height: 40px; }
+  .event-card { min-height: 130px; }
+  .brand-card { border-radius: 20px; }
+  .brand-stats { gap: 6px; }
+  .brand-stat strong { font-size: 1.4rem; }
+  .adv-item { padding: 24px 20px; }
+  .portfolio-card-overlay { padding: 22px; }
+  .kpi-grid { gap: 12px; }
+  .hx-badge { width: 96px; height: 96px; }
+  .badge-core { width: 46px; height: 46px; }
+  .badge-core svg { width: 24px; }
+}
+
+/* ---------- Small phones (iPhone SE, Galaxy mini…) ---------- */
+@media (max-width: 380px) {
+  .navbar-logo-img { height: 24px; }
+  .lang-btn { padding: 4px 8px; }
+  .hx-kicker { font-size: .64rem; letter-spacing: .16em; }
+  .hx-kicker::before { width: 28px; }
+  .hx-markets { font-size: .6rem; letter-spacing: .14em; gap: 6px 12px; }
+  .hx-badge { width: 84px; height: 84px; }
+  .section-intro .section-intro-title, .sv-title, .disciplines-title { font-size: 1.75rem; }
+  .stat-number { font-size: 2.2rem; }
+}
+
+/* ---------- Phones in landscape / short screens ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hx { height: auto; min-height: 100vh; min-height: 100svh; }
+  .hx-inner { height: auto; min-height: 100svh; padding: calc(var(--nav-height) + 24px) clamp(20px, 6vw, 90px) 96px; }
+  .hx-title { font-size: clamp(2.2rem, 7.5vw, 4.2rem); }
+  .hx-kicker { margin-bottom: 14px; }
+  .hx-sub { margin-top: 14px; max-width: 60%; }
+  .hx-badge { width: 84px; height: 84px; }
+  .badge-core { width: 40px; height: 40px; }
+  .hx-scroll { display: none; }
+  .intro-mark { width: 70px; }
+  .intro-word { margin-top: 12px; }
+  .mobile-nav-links { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+  .mobile-nav-item { font-size: 1.4rem; padding: 10px 0; }
+  .block-panel { min-height: 0; }
+  .discipline-visual { display: none; }
+}
+
+/* ---------- Large & ultra-wide screens ---------- */
+@media (min-width: 1800px) {
+  html { font-size: 17px; }
+  .navbar-container { max-width: 1680px; }
+  .section-intro, .stacked-inner, .cap-inner, .sv-inner, .disciplines-inner, .events-deliver-inner,
+  .approach-inner, .advantage-inner, .universe-inner { max-width: 1480px; }
+}
+@media (min-width: 2400px) { html { font-size: 20px; } }
+
+/* Hero: scale the title with screen HEIGHT too, so short laptops / landscape phones never collide with the footer row */
+@media (min-width: 761px) {
+  .hx-title { font-size: clamp(2.7rem, min(10.5vw, 14vh), 10.5rem); }
+  .hx-inner { padding-bottom: 190px; }
+}
+@media (max-height: 520px) and (orientation: landscape) {
+  .hx-title { font-size: clamp(2rem, min(7.5vw, 13vh), 4rem); }
+  .hx-inner { padding-bottom: 150px; }
+  .hx-sub { font-size: .92rem; line-height: 1.55; }
+}

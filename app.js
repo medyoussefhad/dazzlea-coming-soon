@@ -32,18 +32,20 @@
     mobileToggle.setAttribute('aria-expanded', 'false');
     mobileToggle.setAttribute('aria-controls', mobileNav.id);
 
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
+    const setMenu = (isOpen) => {
+      mobileNav.classList.toggle('open', isOpen);
       mobileToggle.classList.toggle('open', isOpen);
       mobileToggle.setAttribute('aria-expanded', isOpen);
-    });
+      document.documentElement.classList.toggle('menu-open', isOpen);
+    };
 
-    document.querySelectorAll('.mobile-nav-item').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        mobileToggle.classList.remove('open');
-      });
+    mobileToggle.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
     });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 1024) setMenu(false); });
   }
 
   /* ── Mega-menu ─────────────────────────────── */
