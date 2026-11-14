@@ -266,6 +266,7 @@
         <h2 class="section-intro-title" data-fr="Un aperçu de notre travail" data-en="A glimpse of our work">Un aperçu de notre travail</h2>
         <p class="section-intro-text" data-fr="Scénographies grand format, activations de marque et soirées institutionnelles — chaque projet, conçu et produit par Dazzlea." data-en="Large-format scenography, brand activations and institutional galas — every project designed and produced by Dazzlea.">Scénographies grand format, activations de marque et soirées institutionnelles — chaque projet, conçu et produit par Dazzlea.</p>
       </div>
+      <div class="work-locked-area">
       <div class="grid-container">
         
         <!-- Morocco Startup Awards Card -->
@@ -371,6 +372,24 @@
           </div>
         </div>
 
+      </div>
+      <div class="work-gate" id="workGate" role="region" aria-labelledby="workGateTitle">
+        <div class="work-gate-card">
+          <span class="work-gate-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
+          <span class="work-gate-kicker" data-fr="Accès privé" data-en="Private access">Private access</span>
+          <h3 id="workGateTitle" class="work-gate-title" data-fr="Nos références sont réservées aux professionnels" data-en="Our references are reserved for professionals">Our references are reserved for professionals</h3>
+          <p class="work-gate-text" data-fr="Entrez votre email professionnel pour découvrir nos projets, clients et coulisses." data-en="Enter your work email to unlock our projects, clients and behind-the-scenes.">Enter your work email to unlock our projects, clients and behind-the-scenes.</p>
+          <form class="work-gate-form" id="workGateForm" novalidate>
+            <label for="workGateEmail" class="visually-hidden" data-fr="Email professionnel" data-en="Work email">Work email</label>
+            <input type="email" id="workGateEmail" name="email" autocomplete="email" inputmode="email" required placeholder="name@company.com">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+            <button type="submit" class="work-gate-btn"><span data-fr="Voir les références" data-en="View references">View references</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <p class="work-gate-error" id="workGateError" role="alert" aria-live="polite"></p>
+          <p class="work-gate-note" data-fr="Emails professionnels uniquement (pas de Gmail, Hotmail, Yahoo…). Voir notre &lt;a href=&quot;privacy-policy&quot;&gt;politique de confidentialité&lt;/a&gt;." data-en="Work emails only (no Gmail, Hotmail, Yahoo…). See our &lt;a href=&quot;privacy-policy&quot;&gt;privacy policy&lt;/a&gt;.">Work emails only (no Gmail, Hotmail, Yahoo…). See our <a href="privacy-policy">privacy policy</a>.</p>
+        </div>
+      </div>
+      <script>try{if(localStorage.getItem('dzzWorkAccess')!=='1')document.getElementById('work').classList.add('is-locked')}catch(e){document.getElementById('work').classList.add('is-locked')}</script>
       </div>
     </section>
 

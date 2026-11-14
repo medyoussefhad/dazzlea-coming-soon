@@ -543,4 +543,57 @@
     });
   });
 
+  /* ── Selected Work gate: professional email only ── */
+  const workSec = document.getElementById('work');
+  const gateForm = document.getElementById('workGateForm');
+  if (workSec && gateForm) {
+    const FREE = new Set(('gmail googlemail yahoo ymail rocketmail hotmail outlook live msn passport icloud me mac aol gmx mail email yandex ya '
+      + 'protonmail proton pm tutanota tuta tutamail zoho yopmail mailinator guerrillamail sharklasers 10minutemail tempmail temp-mail '
+      + 'trashmail dispostable getnada maildrop laposte orange wanadoo free sfr neuf bbox numericable caramail club-internet aliceadsl '
+      + 'libero virgilio tiscali web t-online freenet menara iam inwi qq 163 126 sina naver daum hanmail rediffmail fastmail hushmail '
+      + 'mail2world inbox lycos excite seznam wp o2 interia onet btinternet sky virginmedia talktalk comcast verizon att sbcglobal cox').split(' '));
+    const isFr = () => document.documentElement.getAttribute('lang') === 'fr';
+    const msg = {
+      invalid: ['Entrez une adresse email valide.', 'Please enter a valid email address.'],
+      free: ['Merci d’utiliser votre email professionnel (pas Gmail, Hotmail, Yahoo…).', 'Please use your work email (not Gmail, Hotmail, Yahoo…).'],
+    };
+    const t = (k) => msg[k][isFr() ? 0 : 1];
+    const input = document.getElementById('workGateEmail');
+    const err = document.getElementById('workGateError');
+    const btn = gateForm.querySelector('button');
+
+    const fail = (k) => {
+      err.textContent = t(k);
+      gateForm.classList.remove('shake'); void gateForm.offsetWidth; gateForm.classList.add('shake');
+      input.focus();
+    };
+    const unlock = () => {
+      try { localStorage.setItem('dzzWorkAccess', '1'); } catch (e) {}
+      workSec.classList.add('is-unlocking');
+      workSec.classList.remove('is-locked');
+      setTimeout(() => workSec.classList.remove('is-unlocking'), 1400);
+    };
+
+    input.addEventListener('input', () => { err.textContent = ''; });
+    gateForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = input.value.trim().toLowerCase();
+      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) return fail('invalid');
+      const domain = email.split('@')[1];
+      if (FREE.has(domain.split('.')[0])) return fail('free');
+      if (gateForm.elements._gotcha.value) return; // bot
+      err.textContent = '';
+      btn.disabled = true;
+      try {
+        await fetch('https://formspree.io/f/mwvdnzzk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ email, _subject: 'Dazzlea — accès aux références (email pro)', source: 'Homepage · Selected Work gate', page: location.href, language: isFr() ? 'fr' : 'en', domain }),
+        });
+      } catch (e2) { /* never block the visitor if the lead service is down */ }
+      btn.disabled = false;
+      unlock();
+    });
+  }
+
 })();
