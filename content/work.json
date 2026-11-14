@@ -14,8 +14,8 @@
       "en": "Institutional"
     },
     "categories": [
-      "institutionnel",
-      "events"
+      "events",
+      "innovation"
     ],
     "media": {
       "video": "https://assets.mixkit.co/videos/45907/45907-720.mp4",
@@ -198,7 +198,7 @@
     },
     "categories": [
       "events",
-      "institutionnel"
+      "innovation"
     ],
     "media": {
       "video": "assets/bridge-best-of.mp4",
@@ -380,7 +380,8 @@
       "en": "Activation"
     },
     "categories": [
-      "activation"
+      "marketing",
+      "events"
     ],
     "media": {
       "video": "https://assets.mixkit.co/videos/44545/44545-720.mp4",
@@ -591,7 +592,7 @@
       "en": "Scenography"
     },
     "categories": [
-      "scenographie"
+      "events"
     ],
     "media": {
       "video": "https://assets.mixkit.co/videos/22193/22193-720.mp4",
@@ -773,8 +774,7 @@
       "en": "VIP & Prestige"
     },
     "categories": [
-      "events",
-      "institutionnel"
+      "events"
     ],
     "media": {
       "video": "https://assets.mixkit.co/videos/5227/5227-720.mp4",

@@ -42,12 +42,97 @@
       }
     },
     {
-      "value": 98,
-      "suffix": "%",
+      "value": 3,
+      "suffix": "",
       "label": {
-        "fr": "Satisfaction client",
-        "en": "Satisfaction"
+        "fr": "Pôles d'expertise",
+        "en": "Business poles"
       }
+    }
+  ],
+  "clients": [
+    {
+      "group": {
+        "fr": "Trading & Finance",
+        "en": "Trading & Finance"
+      },
+      "icon": "fa-solid fa-chart-column",
+      "logos": [
+        {
+          "name": "Vantage",
+          "image": "/assets/clients/vantage.png"
+        },
+        {
+          "name": "Xlence",
+          "image": "/assets/clients/xlence.png"
+        },
+        {
+          "name": "VT Markets",
+          "image": "/assets/clients/vt-markets.png"
+        },
+        {
+          "name": "Bull Waves",
+          "image": "/assets/clients/bull-waves.png"
+        },
+        {
+          "name": "StarTrader",
+          "image": "/assets/clients/startrader.png"
+        },
+        {
+          "name": "Binance",
+          "image": "/assets/clients/binance.png"
+        }
+      ]
+    },
+    {
+      "group": {
+        "fr": "Gaming & Plateformes",
+        "en": "Gaming & Platforms"
+      },
+      "icon": "fa-solid fa-gamepad",
+      "logos": [
+        {
+          "name": "PUBG Mobile",
+          "image": "/assets/clients/pubg-mobile.png"
+        },
+        {
+          "name": "Free Fire",
+          "image": "/assets/clients/free-fire.png"
+        },
+        {
+          "name": "Kick",
+          "image": "/assets/clients/kick.png"
+        },
+        {
+          "name": "Carry1st",
+          "image": "/assets/clients/carry1st.png"
+        }
+      ]
+    },
+    {
+      "group": {
+        "fr": "Communauté & Institutions",
+        "en": "Community & Institutions"
+      },
+      "icon": "fa-solid fa-landmark",
+      "logos": [
+        {
+          "name": "The Bridge",
+          "image": "/assets/clients/the-bridge.png"
+        },
+        {
+          "name": "ENCG Casablanca",
+          "image": "/assets/clients/encg-casablanca.png"
+        },
+        {
+          "name": "CAF — Africa Cup of Nations Morocco 2025",
+          "image": "/assets/clients/caf-afcon-2025.png"
+        },
+        {
+          "name": "SNTL",
+          "image": "/assets/clients/sntl.png"
+        }
+      ]
     }
   ]
 }

@@ -40,8 +40,8 @@
   }
 
   // ------------------------------------------------------------------ schemas
-  const CATS = [['events', 'Events & Galas'], ['activation', 'Activation'], ['scenographie', 'Scenography & Booths'], ['institutionnel', 'Institutional']];
-  const ICATS = [['strategy', 'Strategy'], ['events', 'Events'], ['africa', 'Africa'], ['trends', 'Trends']];
+  const CATS = [['marketing', 'Marketing, Communication & Digital'], ['events', 'Events, Scenography, Logistics & Catering'], ['innovation', 'Innovation, Business Development & Consulting']];
+  const ICATS = [['morocco', 'Morocco'], ['strategy', 'Strategy'], ['events', 'Events'], ['africa', 'Africa'], ['trends', 'Trends']];
   const HTML_HELP = 'You can use <strong>bold</strong>, <em>italic</em> and <br> for a line break.';
 
   const WORK = [
@@ -50,7 +50,7 @@
       { key: 'slug', type: 'slug', label: 'Page address', from: 'name', prefix: '/case-' },
       { key: 'client', type: 'text', label: 'Client' },
       { key: 'featured', type: 'bool', label: 'Show on the homepage (Selected Work)' },
-      { key: 'categories', type: 'multi', label: 'Portfolio filters', options: CATS },
+      { key: 'categories', type: 'multi', label: 'Business poles (Work page filters)', options: CATS },
       { key: 'tag', type: 'i18n', label: 'Label on the portfolio card', help: 'e.g. Activation, Institutional' },
       { key: 'cardTitle', type: 'i18n', label: 'Homepage card title', help: HTML_HELP },
       { key: 'badge', type: 'text', label: 'Badge on the homepage card', help: 'Short client name in capitals, e.g. DACIA' },
@@ -145,6 +145,16 @@
         { key: 'label', type: 'i18n', label: 'Label' },
       ] } },
     ] },
+    { group: 'References (client logos)', fields: [
+      { key: 'clients', type: 'list', label: 'Sectors', itemLabel: 'Sector', of: { type: 'object', fields: [
+        { key: 'group', type: 'i18n', label: 'Sector name' },
+        { key: 'icon', type: 'text', label: 'Icon (Font Awesome class)', help: 'e.g. fa-solid fa-chart-column' },
+        { key: 'logos', type: 'list', label: 'Logos', itemLabel: 'Logo', of: { type: 'object', fields: [
+          { key: 'name', type: 'text', label: 'Client name' },
+          { key: 'image', type: 'image', label: 'Logo (white or light PNG with transparent background works best)' },
+        ] } },
+      ] } },
+    ] },
   ];
 
   const NEW = {
@@ -160,7 +170,8 @@
   const VIEWS = {
     work: { title: 'Work', hint: 'Case studies — homepage cards, portfolio and case pages.', list: true, schema: WORK },
     insights: { title: 'Insights', hint: 'Articles — Insights page and article pages.', list: true, schema: INSIGHTS },
-    site: { title: 'Site info', hint: 'Contact details (footer, contact page, menu) and homepage figures.', list: false, schema: SITE },
+    site: { title: 'Site info', hint: 'Contact details, homepage figures and client references.', list: false, schema: SITE },
+    leads: { title: 'Leads', hint: 'Mini CRM — contacts from the email gate, the contact form and the newsletter.', crm: true },
   };
 
   // ------------------------------------------------------------------ state
@@ -407,8 +418,93 @@
     state.store[name] = { data: d.data, sha: d.sha, dirty: false };
   }
 
+  // ------------------------------------------------------------------ mini CRM (leads)
+  const SOURCES = { gate: ['Email gate', 'fa-solid fa-lock'], contact: ['Contact form', 'fa-solid fa-envelope'], newsletter: ['Newsletter', 'fa-solid fa-paper-plane'] };
+  const STATUSES = [['new', 'New'], ['contacted', 'Contacted'], ['qualified', 'Qualified'], ['won', 'Won'], ['lost', 'Lost']];
+  const crm = { leads: [], filter: { source: '', status: '', q: '' }, open: null };
+  const fmtWhen = (iso) => { try { return new Date(iso).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); } catch { return iso; } };
+
+  async function loadLeads() {
+    $('#view').replaceChildren(h('div', { class: 'empty', text: 'Loading leads…' }));
+    const d = await api('/api/leads');
+    crm.leads = d.leads || [];
+  }
+
+  function renderLeads() {
+    const v = VIEWS.leads;
+    $('#viewTitle').textContent = v.title; $('#viewHint').textContent = v.hint;
+    document.querySelectorAll('.side-nav button').forEach((b) => b.classList.toggle('active', b.dataset.view === 'leads'));
+    $('#publish').hidden = true; $('#dirty').hidden = true;
+
+    const f = crm.filter;
+    const q = f.q.trim().toLowerCase();
+    const rows = crm.leads.filter((l) => (!f.source || l.source === f.source) && (!f.status || (l.status || 'new') === f.status)
+      && (!q || [l.email, l.name, l.company, l.message, l.notes].join(' ').toLowerCase().includes(q)));
+
+    const count = (k, val) => crm.leads.filter((l) => (l[k] || (k === 'status' ? 'new' : '')) === val).length;
+    const stat = (label, n, icon, onclick, active) => h('button', { class: 'crm-stat' + (active ? ' active' : ''), onclick }, icon ? icon : null, h('b', { text: String(n) }), h('span', { text: label }));
+    const stats = h('div', { class: 'crm-stats' },
+      stat('All leads', crm.leads.length, icon('fa-solid fa-users'), () => { f.source = ''; f.status = ''; renderLeads(); }, !f.source && !f.status),
+      ...Object.entries(SOURCES).map(([k, [label, ic]]) => stat(label, count('source', k), icon(ic), () => { f.source = f.source === k ? '' : k; renderLeads(); }, f.source === k)),
+      stat('New', count('status', 'new'), icon('fa-solid fa-circle'), () => { f.status = f.status === 'new' ? '' : 'new'; renderLeads(); }, f.status === 'new'));
+
+    const search = h('input', { type: 'text', placeholder: 'Search email, name, company, message…', value: f.q });
+    search.addEventListener('input', () => { f.q = search.value; const pos = search.selectionStart; renderLeads(); const s2 = document.querySelector('.crm-tools input'); s2.focus(); s2.setSelectionRange(pos, pos); });
+    const statusSel = h('select', { onchange: (e) => { f.status = e.target.value; renderLeads(); } }, h('option', { value: '', text: 'All statuses' }), STATUSES.map(([k, t]) => h('option', { value: k, text: t })));
+    statusSel.value = f.status;
+    const tools = h('div', { class: 'crm-tools' }, search, statusSel,
+      h('button', { class: 'btn btn-sm', onclick: async () => { try { await loadLeads(); renderLeads(); toast('Leads refreshed'); } catch (e) { handleErr(e); } } }, icon('fa-solid fa-rotate'), 'Refresh'),
+      h('a', { class: 'btn btn-sm', href: '/api/leads?format=csv' }, icon('fa-solid fa-file-csv'), 'Export CSV'));
+
+    const list = h('div', { class: 'crm-list' });
+    if (!rows.length) list.append(h('div', { class: 'empty', text: crm.leads.length ? 'No lead matches these filters.' : 'No leads yet. They will appear here as soon as someone uses the email gate, the contact form or the newsletter.' }));
+    rows.forEach((l) => {
+      const [srcLabel, srcIcon] = SOURCES[l.source] || [l.source, 'fa-solid fa-circle'];
+      const st = h('select', { class: 'crm-status s-' + (l.status || 'new'), onclick: (e) => e.stopPropagation(), onchange: async (e) => {
+        const val = e.target.value; e.target.className = 'crm-status s-' + val;
+        try { await api('/api/leads', { method: 'PATCH', body: JSON.stringify({ id: l.id, status: val }) }); l.status = val; toast('Status updated'); } catch (err) { toast(err.message, true); }
+      } }, STATUSES.map(([k, t]) => h('option', { value: k, text: t })));
+      st.value = l.status || 'new';
+      const isOpen = crm.open === l.id;
+      const row = h('div', { class: 'crm-row' + (isOpen ? ' open' : '') },
+        h('div', { class: 'crm-main', onclick: () => { crm.open = isOpen ? null : l.id; renderLeads(); } },
+          h('span', { class: 'crm-src src-' + l.source, title: srcLabel }, icon(srcIcon)),
+          h('div', { class: 'crm-who' }, h('b', { text: l.name || l.email }), h('small', { text: [l.name ? l.email : '', l.company].filter(Boolean).join(' · ') })),
+          h('span', { class: 'crm-when', text: fmtWhen(l.createdAt) + (l.hits > 1 ? `  ·  ${l.hits}×` : '') }),
+          st));
+      if (isOpen) {
+        const detail = (k, label, val) => val ? h('div', { class: 'crm-field' }, h('span', { text: label }), h('p', { text: val })) : null;
+        const notes = h('textarea', { placeholder: 'Internal notes (follow-up, budget, next step…)', value: l.notes || '' });
+        notes.addEventListener('change', async () => {
+          try { await api('/api/leads', { method: 'PATCH', body: JSON.stringify({ id: l.id, notes: notes.value }) }); l.notes = notes.value; toast('Notes saved'); } catch (err) { toast(err.message, true); }
+        });
+        row.append(h('div', { class: 'crm-detail' },
+          h('div', { class: 'crm-grid' },
+            detail('email', 'Email', l.email), detail('phone', 'Phone', l.phone), detail('company', 'Company / domain', l.company || l.domain),
+            detail('profile', 'Profile', l.profile), detail('service', 'Service', l.service), detail('source', 'Source', srcLabel + (l.page ? ` — ${l.page}` : '')),
+            detail('language', 'Language', l.language === 'fr' ? 'French' : 'English'), detail('last', 'Last activity', fmtWhen(l.lastSeenAt || l.createdAt))),
+          detail('message', 'Message', l.message),
+          h('div', { class: 'crm-field' }, h('span', { text: 'Notes' }), notes),
+          h('div', { class: 'crm-actions' },
+            h('a', { class: 'btn btn-sm btn-red', href: `mailto:${l.email}` }, icon('fa-solid fa-reply'), 'Email'),
+            l.phone ? h('a', { class: 'btn btn-sm', href: `https://wa.me/${l.phone.replace(/[^0-9]/g, '')}`, target: '_blank', rel: 'noopener' }, icon('fa-brands fa-whatsapp'), 'WhatsApp') : null,
+            h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+              if (!confirm(`Delete the lead ${l.email}? This cannot be undone.`)) return;
+              try { await api(`/api/leads?id=${encodeURIComponent(l.id)}`, { method: 'DELETE' }); crm.leads = crm.leads.filter((x) => x.id !== l.id); renderLeads(); toast('Lead deleted'); } catch (err) { toast(err.message, true); }
+            } }, icon('fa-solid fa-trash'), 'Delete'))));
+      }
+      list.append(row);
+    });
+    $('#view').replaceChildren(h('div', { class: 'crm' }, stats, tools, list));
+  }
+
   async function switchView(name) {
     state.view = name;
+    $('#publish').hidden = false;
+    if (name === 'leads') {
+      try { await loadLeads(); renderLeads(); } catch (e) { handleErr(e); }
+      return;
+    }
     try { await load(name); renderView(); } catch (e) { handleErr(e); }
   }
 

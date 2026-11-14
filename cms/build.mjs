@@ -68,6 +68,18 @@ function homeCards() {
 }
 
 function portfolioCards(keepHTML) {
+  if (!keepHTML.trim()) keepHTML = `
+        <div class="portfolio-card portfolio-card-cta" data-category="${POLES.map((p) => p.key).join(' ')}">
+          <a href="contact">
+            <div class="portfolio-card-img-wrap">
+              <div class="portfolio-card-overlay">
+                ${T(L('Votre projet', 'Your project'), 'span', 'class="portfolio-card-tag"')}
+                ${T(L('Le prochain projet ?', 'The next project?'), 'p', 'class="portfolio-card-title"')}
+              </div>
+            </div>
+          </a>
+        </div>`;
+  const poleNames = (w) => POLES.filter((p) => (w.categories || []).includes(p.key));
   return cases.map((w) => `
         <div class="portfolio-card" data-category="${esc((w.categories || []).join(' '))}">
           <a href="case-${w.slug}">
@@ -76,6 +88,7 @@ function portfolioCards(keepHTML) {
               <div class="portfolio-card-overlay">
                 ${T(w.tag, 'span', 'class="portfolio-card-tag"')}
                 <p class="portfolio-card-title">${esc(w.name)}</p>
+                <span class="portfolio-card-poles">${poleNames(w).map((p) => T(p.short, 'span')).join('')}</span>
               </div>
             </div>
           </a>
@@ -126,8 +139,91 @@ function insightsGrid() {
       `;
 }
 
-function megaRecent() {
-  return cases.slice(0, 5).map((w) => `\n                  <a href="case-${w.slug}" class="mega-link">${esc(w.name)}</a>`).join('') + '\n                ';
+// ---------------------------------------------------------------- the three business poles
+const POLES = [
+  { key: 'marketing', icon: 'fa-solid fa-bullhorn',
+    title: L('Marketing, Communication &amp; Digital', 'Marketing, Communication &amp; Digital'),
+    short: L('Marketing &amp; Communication', 'Marketing &amp; Communication'),
+    desc: L('Stratégie de marque, campagnes 360°, réseaux sociaux, contenus, influence et relations presse.', 'Brand strategy, 360° campaigns, social media, content, influence and press relations.'),
+    chips: [L('Branding', 'Branding'), L('Campagnes 360°', '360° campaigns'), L('Social media', 'Social media'), L('Contenu', 'Content'), L('RP', 'PR')] },
+  { key: 'events', icon: 'fa-solid fa-star',
+    title: L('Événementiel, Scénographie, Logistique &amp; Restauration', 'Events, Scenography, Logistics &amp; Catering'),
+    short: L('Événementiel &amp; Scénographie', 'Events &amp; Scenography'),
+    desc: L('Galas, conférences, activations, stands et pavillons, logistique, restauration, goodies et supports de vente.', 'Galas, conferences, activations, stands and pavilions, logistics, catering, goodies and sales devices.'),
+    chips: [L('Événements', 'Events'), L('Scénographie', 'Scenography'), L('Logistique', 'Logistics'), L('Restauration', 'Catering'), L('Goodies &amp; supports de vente', 'Goodies &amp; sales devices')] },
+  { key: 'innovation', icon: 'fa-solid fa-lightbulb',
+    title: L('Innovation, Business Development &amp; Conseil', 'Innovation, Business Development &amp; Consulting'),
+    short: L('Innovation &amp; Conseil', 'Innovation &amp; Consulting'),
+    desc: L('Accès aux marchés, partenariats, sponsoring, nouvelles initiatives et conseil stratégique.', 'Market entry, partnerships, sponsorship, new ventures and strategic consulting.'),
+    chips: [L('Accès marché', 'Market entry'), L('Partenariats', 'Partnerships'), L('Sponsoring', 'Sponsorship'), L('Conseil', 'Consulting')] },
+];
+const poleCount = (k) => cases.filter((w) => (w.categories || []).includes(k)).length;
+
+function polesHTML() {
+  return POLES.map((p, i) => `
+        <a class="pole-card" href="portfolio?filter=${p.key}#projects" data-pole="${p.key}">
+          <span class="pole-n">0${i + 1}</span>
+          <i class="${p.icon} pole-icon" aria-hidden="true"></i>
+          ${T(p.title, 'h3', 'class="pole-title"')}
+          ${T(p.desc, 'p', 'class="pole-desc"')}
+          <div class="pole-chips">${p.chips.map((c) => T(c, 'span')).join('')}</div>
+          <span class="pole-foot">${T(L(`${poleCount(p.key)} projet${poleCount(p.key) > 1 ? 's' : ''} référencé${poleCount(p.key) > 1 ? 's' : ''}`, `${poleCount(p.key)} referenced project${poleCount(p.key) > 1 ? 's' : ''}`))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>`).join('') + '\n      ';
+}
+function workFilters() {
+  return `
+          ${T(L('Tous', 'All'), 'button', 'class="filter-btn active" data-filter="all"')}
+          ${POLES.map((p) => T(p.short, 'button', `class="filter-btn" data-filter="${p.key}"`)).join('\n          ')}
+        `;
+}
+function clientsHTML() {
+  return (site.clients || []).map((g) => `
+          <div class="refs-group reveal-fade-up">
+            <div class="refs-label"><i class="${esc(g.icon || 'fa-solid fa-circle')}" aria-hidden="true"></i>${T(g.group, 'span')}</div>
+            <div class="refs-logos">${(g.logos || []).filter((l) => l.image).map((l) => `
+              <div class="ref-logo" title="${esc(l.name)}"><img src="${esc(l.image)}" alt="${esc(l.name)}" loading="lazy"></div>`).join('')}
+            </div>
+          </div>`).join('') + '\n        ';
+}
+function aboutStats() {
+  return statsHTML();
+}
+
+// ---------------------------------------------------------------- professional-email gate (homepage, Work page, case pages)
+function gateHTML(id) {
+  return `
+      <div class="work-gate" role="region" aria-labelledby="gateTitle-${id}">
+        <div class="work-gate-card">
+          <span class="work-gate-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
+          ${T(L('Accès privé', 'Private access'), 'span', 'class="work-gate-kicker"')}
+          ${T(L('Nos références sont réservées aux professionnels', 'Our references are reserved for professionals'), 'h3', `class="work-gate-title" id="gateTitle-${id}"`)}
+          ${T(L('Entrez votre email professionnel pour découvrir nos projets, clients et coulisses.', 'Enter your work email to unlock our projects, clients and behind-the-scenes.'), 'p', 'class="work-gate-text"')}
+          <form class="work-gate-form" novalidate>
+            <label for="gateEmail-${id}" class="visually-hidden">Email</label>
+            <input type="email" id="gateEmail-${id}" name="email" autocomplete="email" inputmode="email" required placeholder="name@company.com">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+            <button type="submit" class="work-gate-btn">${T(L('Voir les références', 'View references'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <p class="work-gate-error" role="alert" aria-live="polite"></p>
+          ${T(L('Emails professionnels uniquement (pas de Gmail, Hotmail, Yahoo…). Voir notre <a href="privacy-policy">politique de confidentialité</a>.', 'Work emails only (no Gmail, Hotmail, Yahoo…). See our <a href="privacy-policy">privacy policy</a>.'), 'p', 'class="work-gate-note"')}
+        </div>
+      </div>
+      <script>(function(){var s=document.currentScript.parentNode;try{if(localStorage.getItem('dzzWorkAccess')==='1')return}catch(e){}s.classList.add('is-locked')})()</script>`;
+}
+
+// mega menu: poles instead of project names
+function megaPoles() {
+  return POLES.map((p) => `\n                  ${T(p.short, 'a', `class="mega-link" href="portfolio?filter=${p.key}#projects"`)}`).join('') + '\n                ';
+}
+function megaFormats() {
+  const items = [
+    [L('Galas &amp; cérémonies', 'Galas &amp; ceremonies'), 'services#events'],
+    [L('Activations de marque', 'Brand activations'), 'services#events'],
+    [L('Stands &amp; pavillons', 'Stands &amp; pavilions'), 'services#events'],
+    [L('Goodies &amp; supports de vente', 'Goodies &amp; sales devices'), 'services#events'],
+    [L('Conseil &amp; business development', 'Consulting &amp; business development'), 'services#our-services'],
+  ];
+  return items.map(([t, h]) => `\n                  ${T(t, 'a', `class="mega-link" href="${h}"`)}`).join('') + '\n                ';
 }
 
 const waURL = `https://wa.me/${C.whatsapp}`;
@@ -234,6 +330,7 @@ function caseMain(w, i) {
       </div>
     </div>
 
+    <div class="gate-area gate-case" data-gate>
     <div class="case-intro">
       <div class="case-intro-grid">
         <div class="case-intro-text">
@@ -250,6 +347,7 @@ function caseMain(w, i) {
     <div class="case-sections">${rows}
     </div>
 ${kpis}
+    </div>
     <div class="next-project">
       <div class="next-project-inner">
         <div>
@@ -449,10 +547,17 @@ function render(page, lang) {
   if (page.name === 'insights') q('.insights-grid-inner')?.set_content(insightsGrid());
   if (page.name === 'contact') q('.contact-info-card')?.querySelectorAll('h3, .contact-detail').forEach((n, i) => (i === 0 ? n.replaceWith(contactDetails()) : n.remove()));
   root.querySelectorAll('.mega-col').forEach((col) => {
-    if (!col.querySelector('a.mega-link[href^="case-"]')) return;
-    const title = col.querySelector('.mega-col-title');
-    col.set_content((title ? title.toString() : '') + megaRecent());
+    if (col.querySelector('a.mega-link[href^="case-"]')) {
+      col.set_content(T(L('Nos savoir-faire', 'Signature formats'), 'span', 'class="mega-col-title"') + megaFormats());
+    } else if (col.querySelector('a.mega-link[href^="portfolio?filter="]')) {
+      col.set_content(T(L('Par pôle', 'By pole'), 'span', 'class="mega-col-title"') + megaPoles());
+    }
   });
+  if (page.name === 'about') q('.stats-section .stats-inner')?.set_content(aboutStats());
+  root.querySelectorAll('[data-cms="poles"]').forEach((n) => n.set_content(polesHTML()));
+  root.querySelectorAll('[data-cms="work-filters"]').forEach((n) => n.set_content(workFilters()));
+  root.querySelectorAll('[data-cms="clients"]').forEach((n) => n.set_content(clientsHTML()));
+  root.querySelectorAll('[data-gate]').forEach((n, i) => n.insertAdjacentHTML('beforeend', gateHTML(`${page.name}-${i}`)));
   root.querySelectorAll('ul.footer-contact-list').forEach((u) => u.set_content(footerContact()));
   root.querySelectorAll('.footer-about-col .social-icons, .mobile-nav-social').forEach((u) => u.set_content(socialIcons()));
   root.querySelectorAll('.mobile-nav-contact').forEach((u) => u.set_content(mobileContact()));

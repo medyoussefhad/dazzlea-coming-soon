@@ -1,7 +1,342 @@
 [
   {
-    "slug": "tendances-evenementiel",
+    "slug": "maroc-2030-economie-evenementielle",
     "featured": true,
+    "category": "morocco",
+    "tag": {
+      "fr": "Maroc",
+      "en": "Morocco"
+    },
+    "date": "2026-11-10",
+    "readMinutes": 6,
+    "title": {
+      "fr": "Maroc 2030 : comment la Coupe du Monde redessine l’économie de l’événementiel",
+      "en": "Morocco 2030: how the World Cup is reshaping the country’s event economy"
+    },
+    "excerpt": {
+      "fr": "Co-organisateur du Mondial 2030 avec l’Espagne et le Portugal, le Maroc entre dans une décennie de grands rendez-vous. Ce que cela change pour les marques et les organisateurs.",
+      "en": "As co-host of the 2030 World Cup with Spain and Portugal, Morocco is entering a decade of major events. What it changes for brands and organisers."
+    },
+    "image": "https://images.unsplash.com/photo-1538230575309-59dfc388ae36?q=80&w=800",
+    "heroImage": "https://images.unsplash.com/photo-1538230575309-59dfc388ae36?q=80&w=1400",
+    "imageAlt": "Hassan II Mosque esplanade, Casablanca",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "En décembre 2024, la FIFA a confirmé que la Coupe du Monde 2030 serait organisée conjointement par le Maroc, l’Espagne et le Portugal. Pour le Royaume, c’est l’aboutissement d’une stratégie de long terme — et le point de départ d’une décennie où les grands événements internationaux vont se succéder.",
+          "en": "In December 2024, FIFA confirmed that the 2030 World Cup would be co-hosted by Morocco, Spain and Portugal. For the Kingdom, it is the culmination of a long-term strategy — and the starting point of a decade of back-to-back international events."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Une décennie de grands rendez-vous",
+          "en": "A decade of major events"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Le Mondial ne vient pas seul. Après la Coupe d’Afrique des Nations 2025, le Maroc multiplie les congrès, salons et compétitions internationales. Stades, transports, hôtellerie et infrastructures de congrès se modernisent à un rythme rarement vu, avec en tête le projet du Grand Stade Hassan II près de Casablanca, annoncé parmi les plus grands stades au monde.",
+          "en": "The World Cup doesn’t come alone. After the 2025 Africa Cup of Nations, Morocco keeps adding international congresses, trade shows and competitions. Stadiums, transport, hospitality and conference infrastructure are being upgraded at a rarely seen pace, led by the Grand Stade Hassan II project near Casablanca, announced as one of the largest stadiums in the world."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "fr": "« Pour une marque, 2030 ne commence pas en 2030 : la visibilité se construit dès maintenant, événement après événement. »",
+          "en": "“For a brand, 2030 doesn’t start in 2030: visibility is built now, one event at a time.”"
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Ce que cela change pour les marques",
+          "en": "What it changes for brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Les annonceurs vont devoir être présents bien avant le coup d’envoi : fan zones, hospitalités, activations de sponsors, contenus digitaux et opérations terrain dans plusieurs villes. Les marques qui gagneront sont celles qui auront construit leur territoire d’expression et leurs partenariats locaux en amont.",
+          "en": "Advertisers will need to show up well before kick-off: fan zones, hospitality, sponsor activations, digital content and field operations across several cities. The winners will be the brands that build their territory and their local partnerships early."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Cela suppose aussi une capacité de production solide : scénographie, logistique multi-villes, restauration, goodies et supports de vente, accréditations — et une coordination fine avec les autorités et les organisateurs.",
+          "en": "It also takes solid production capacity: scenography, multi-city logistics, catering, goodies and sales devices, accreditations — and close coordination with authorities and organisers."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Comment s’y préparer dès aujourd’hui",
+          "en": "How to prepare today"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Notre recommandation : définir dès maintenant un calendrier de prises de parole (2026–2030), tester ses dispositifs sur les événements intermédiaires, mesurer systématiquement les résultats, et s’appuyer sur un partenaire local capable de gérer la communication, l’événementiel et le business development sous un même toit.",
+          "en": "Our recommendation: set a 2026–2030 activation calendar now, test your formats on the events along the way, measure results systematically, and work with a local partner able to handle communication, events and business development under one roof."
+        }
+      }
+    ],
+    "cta": {
+      "title": {
+        "fr": "Vous préparez votre présence au Maroc d’ici 2030 ?",
+        "en": "Planning your presence in Morocco ahead of 2030?"
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "button": {
+        "fr": "Parler à un expert",
+        "en": "Talk to an expert"
+      }
+    },
+    "seo": {
+      "description": {
+        "fr": "Mondial 2030 au Maroc : ce que la décennie des grands événements change pour les marques, sponsors et organisateurs, et comment s’y préparer dès maintenant.",
+        "en": "Morocco 2030 World Cup: what the decade of major events changes for brands, sponsors and organisers — and how to prepare now."
+      }
+    }
+  },
+  {
+    "slug": "can-2025-lecons-evenements",
+    "featured": false,
+    "category": "morocco",
+    "tag": {
+      "fr": "Maroc",
+      "en": "Morocco"
+    },
+    "date": "2026-11-03",
+    "readMinutes": 5,
+    "title": {
+      "fr": "Après la CAN 2025 : ce que le Maroc a appris sur l’accueil des grands événements",
+      "en": "After AFCON 2025: what Morocco learned about hosting major events"
+    },
+    "excerpt": {
+      "fr": "Six villes hôtes, des supporters venus de tout le continent et une forte exposition médiatique : les enseignements de la CAN pour les organisateurs et les marques.",
+      "en": "Six host cities, fans from across the continent and huge media exposure: the lessons of AFCON for organisers and brands."
+    },
+    "image": "https://images.unsplash.com/photo-1740602550091-0943d7cfb720?q=80&w=600",
+    "heroImage": "https://images.unsplash.com/photo-1740602550091-0943d7cfb720?q=80&w=1400",
+    "imageAlt": "Casablanca skyline seen from the Atlantic",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Organisée au Maroc de décembre 2025 à janvier 2026 dans six villes — Rabat, Casablanca, Marrakech, Tanger, Fès et Agadir —, la Coupe d’Afrique des Nations a servi de répétition générale grandeur nature avant 2030.",
+          "en": "Held in Morocco from December 2025 to January 2026 across six cities — Rabat, Casablanca, Marrakech, Tangier, Fes and Agadir — the Africa Cup of Nations served as a full-scale dress rehearsal for 2030."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "1. Penser multi-villes dès le départ",
+          "en": "1. Think multi-city from day one"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Un dispositif efficace ne se duplique pas à l’identique d’une ville à l’autre : publics, lieux et contraintes logistiques changent. Les meilleures opérations combinaient un concept commun et des déclinaisons locales.",
+          "en": "An effective set-up isn’t copy-pasted from one city to the next: audiences, venues and logistics change. The best operations combined one shared concept with local adaptations."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "2. Le digital prolonge le terrain",
+          "en": "2. Digital extends the field"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Les moments forts vécus dans les stades et les fan zones ont été démultipliés par les réseaux sociaux. Une activation pensée « contenu d’abord » touche bien plus de monde que les visiteurs présents.",
+          "en": "Highlights lived in stadiums and fan zones were multiplied on social media. An activation designed “content first” reaches far more people than the visitors on site."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "3. L’hospitalité est un levier business",
+          "en": "3. Hospitality is a business lever"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Loges, dîners, rencontres B2B : pour beaucoup d’entreprises, l’événement sportif est surtout une occasion de recevoir clients et partenaires. La qualité de l’accueil, de la restauration et des goodies fait la différence.",
+          "en": "Boxes, dinners, B2B meetings: for many companies, a sporting event is above all a chance to host clients and partners. The quality of hospitality, catering and goodies makes the difference."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "fr": "« Les grands événements récompensent la préparation : ceux qui avaient anticipé la logistique ont pu se concentrer sur l’expérience. »",
+          "en": "“Major events reward preparation: those who had anticipated logistics could focus on the experience.”"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Pour les marques, la leçon est claire : les prochains rendez-vous se préparent dès aujourd’hui, avec des partenaires capables d’allier communication, production et relations institutionnelles.",
+          "en": "For brands the lesson is clear: the next major events are prepared now, with partners able to combine communication, production and institutional relations."
+        }
+      }
+    ],
+    "cta": {
+      "title": {
+        "fr": "Vous préparez une activation autour d’un grand événement ?",
+        "en": "Planning an activation around a major event?"
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "button": {
+        "fr": "Parler à un expert",
+        "en": "Talk to an expert"
+      }
+    },
+    "seo": {
+      "description": {
+        "fr": "CAN 2025 au Maroc : les leçons pour les organisateurs et les marques — multi-villes, digital, hospitalité — avant la Coupe du Monde 2030.",
+        "en": "AFCON 2025 in Morocco: lessons for organisers and brands — multi-city, digital, hospitality — ahead of the 2030 World Cup."
+      }
+    }
+  },
+  {
+    "slug": "choisir-ville-evenement-maroc",
+    "featured": false,
+    "category": "morocco",
+    "tag": {
+      "fr": "Maroc",
+      "en": "Morocco"
+    },
+    "date": "2026-10-27",
+    "readMinutes": 6,
+    "title": {
+      "fr": "Casablanca, Rabat, Marrakech, Tanger : quelle ville pour votre événement au Maroc ?",
+      "en": "Casablanca, Rabat, Marrakech, Tangier: which city for your event in Morocco?"
+    },
+    "excerpt": {
+      "fr": "Affaires, institutions, incentive ou industrie : chaque ville marocaine a ses atouts. Notre guide pour choisir la bonne destination.",
+      "en": "Business, institutions, incentives or industry: each Moroccan city has its strengths. Our guide to picking the right destination."
+    },
+    "image": "https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=600",
+    "heroImage": "https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1400",
+    "imageAlt": "Koutoubia minaret and the Atlas Mountains, Marrakech",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Le choix de la ville conditionne tout : accès, hébergement, image, coûts et publics. Voici comment nous conseillons nos clients.",
+          "en": "The choice of city drives everything: access, accommodation, image, costs and audiences. Here is how we advise our clients."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Casablanca, la capitale économique",
+          "en": "Casablanca, the economic capital"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Sièges sociaux, banques, Casablanca Finance City et hub aérien de l’aéroport Mohammed V : c’est la ville naturelle des conférences d’affaires, lancements de produits et événements corporate.",
+          "en": "Headquarters, banks, Casablanca Finance City and the Mohammed V airport hub: it is the natural city for business conferences, product launches and corporate events."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Rabat, la ville des institutions",
+          "en": "Rabat, the city of institutions"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Ministères, ambassades et organisations internationales : Rabat s’impose pour les événements institutionnels, les cérémonies officielles et les rencontres avec les décideurs publics.",
+          "en": "Ministries, embassies and international organisations: Rabat is the choice for institutional events, official ceremonies and meetings with public decision-makers."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Marrakech, l’incontournable de l’incentive",
+          "en": "Marrakech, the incentive favourite"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Capacité hôtelière, lieux d’exception et notoriété internationale font de Marrakech la référence pour les séminaires, incentives, galas et grands congrès — la ville accueille notamment GITEX Africa depuis 2023.",
+          "en": "Hotel capacity, exceptional venues and global fame make Marrakech the reference for seminars, incentives, galas and large congresses — the city has hosted GITEX Africa since 2023."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "fr": "Tanger, la porte industrielle",
+          "en": "Tangier, the industrial gateway"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Avec le port de Tanger Med et ses zones industrielles, notamment automobiles, Tanger est idéale pour les événements industriels, les visites de sites et les rencontres B2B tournées vers l’Europe.",
+          "en": "With the Tanger Med port and its industrial zones, including automotive, Tangier is ideal for industrial events, site visits and Europe-facing B2B meetings."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "fr": "« La bonne ville, c’est celle où se trouvent vos publics — puis celle qui raconte le mieux votre histoire. »",
+          "en": "“The right city is where your audiences are — then the one that best tells your story.”"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "fr": "Quelle que soit la destination, une même règle : anticiper la logistique, les autorisations, la restauration et les supports de vente, et confier la coordination à une équipe qui connaît le terrain.",
+          "en": "Whatever the destination, one rule applies: anticipate logistics, permits, catering and sales devices, and hand coordination to a team that knows the ground."
+        }
+      }
+    ],
+    "cta": {
+      "title": {
+        "fr": "Besoin d’aide pour choisir et organiser ?",
+        "en": "Need help choosing and organising?"
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "button": {
+        "fr": "Parler à un expert",
+        "en": "Talk to an expert"
+      }
+    },
+    "seo": {
+      "description": {
+        "fr": "Casablanca, Rabat, Marrakech ou Tanger : notre guide pour choisir la meilleure ville marocaine pour un événement corporate, institutionnel ou incentive.",
+        "en": "Casablanca, Rabat, Marrakech or Tangier: our guide to choosing the best Moroccan city for a corporate, institutional or incentive event."
+      }
+    }
+  },
+  {
+    "slug": "tendances-evenementiel",
+    "featured": false,
     "category": "trends",
     "tag": {
       "fr": "Tendances",

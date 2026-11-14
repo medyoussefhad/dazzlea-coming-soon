@@ -543,57 +543,106 @@
     });
   });
 
-  /* ── Selected Work gate: professional email only ── */
-  const workSec = document.getElementById('work');
-  const gateForm = document.getElementById('workGateForm');
-  if (workSec && gateForm) {
-    const FREE = new Set(('gmail googlemail yahoo ymail rocketmail hotmail outlook live msn passport icloud me mac aol gmx mail email yandex ya '
-      + 'protonmail proton pm tutanota tuta tutamail zoho yopmail mailinator guerrillamail sharklasers 10minutemail tempmail temp-mail '
-      + 'trashmail dispostable getnada maildrop laposte orange wanadoo free sfr neuf bbox numericable caramail club-internet aliceadsl '
-      + 'libero virgilio tiscali web t-online freenet menara iam inwi qq 163 126 sina naver daum hanmail rediffmail fastmail hushmail '
-      + 'mail2world inbox lycos excite seznam wp o2 interia onet btinternet sky virginmedia talktalk comcast verizon att sbcglobal cox').split(' '));
-    const isFr = () => document.documentElement.getAttribute('lang') === 'fr';
+  /* ── Leads: one helper for the email gate, newsletter and contact form → /api/lead (mini CRM) ── */
+  const isFrPage = () => document.documentElement.getAttribute('lang') === 'fr';
+  window.dzzLead = function (payload) {
+    const body = JSON.stringify({ ...payload, page: location.pathname, language: isFrPage() ? 'fr' : 'en' });
+    try {
+      return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true }).catch(() => {});
+    } catch (e) { return Promise.resolve(); }
+  };
+
+  const FREE_MAIL = new Set(('gmail googlemail yahoo ymail rocketmail hotmail outlook live msn passport icloud me mac aol gmx mail email yandex ya '
+    + 'protonmail proton pm tutanota tuta tutamail zoho yopmail mailinator guerrillamail sharklasers 10minutemail tempmail temp-mail '
+    + 'trashmail dispostable getnada maildrop laposte orange wanadoo free sfr neuf bbox numericable caramail club-internet aliceadsl '
+    + 'libero virgilio tiscali web t-online freenet menara iam inwi qq 163 126 sina naver daum hanmail rediffmail fastmail hushmail '
+    + 'mail2world inbox lycos excite seznam wp o2 interia onet btinternet sky virginmedia talktalk comcast verizon att sbcglobal cox').split(' '));
+  window.dzzIsWorkEmail = (email) => /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !FREE_MAIL.has(email.split('@')[1].split('.')[0].toLowerCase());
+
+  /* ── References gate: professional email only (homepage, Work page, case studies) ── */
+  const gateAreas = document.querySelectorAll('.gate-area');
+  if (gateAreas.length) {
     const msg = {
       invalid: ['Entrez une adresse email valide.', 'Please enter a valid email address.'],
       free: ['Merci d’utiliser votre email professionnel (pas Gmail, Hotmail, Yahoo…).', 'Please use your work email (not Gmail, Hotmail, Yahoo…).'],
     };
-    const t = (k) => msg[k][isFr() ? 0 : 1];
-    const input = document.getElementById('workGateEmail');
-    const err = document.getElementById('workGateError');
-    const btn = gateForm.querySelector('button');
-
-    const fail = (k) => {
-      err.textContent = t(k);
-      gateForm.classList.remove('shake'); void gateForm.offsetWidth; gateForm.classList.add('shake');
-      input.focus();
-    };
-    const unlock = () => {
+    const t = (k) => msg[k][isFrPage() ? 0 : 1];
+    const unlockAll = () => {
       try { localStorage.setItem('dzzWorkAccess', '1'); } catch (e) {}
-      workSec.classList.add('is-unlocking');
-      workSec.classList.remove('is-locked');
-      setTimeout(() => workSec.classList.remove('is-unlocking'), 1400);
+      gateAreas.forEach((area) => {
+        area.classList.add('is-unlocking');
+        area.classList.remove('is-locked');
+        setTimeout(() => area.classList.remove('is-unlocking'), 1400);
+      });
     };
+    document.querySelectorAll('.work-gate-form').forEach((form) => {
+      const input = form.querySelector('input[type=email]');
+      const err = form.parentElement.querySelector('.work-gate-error');
+      const btn = form.querySelector('button');
+      const fail = (k) => {
+        err.textContent = t(k);
+        form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
+        input.focus();
+      };
+      input.addEventListener('input', () => { err.textContent = ''; });
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = input.value.trim().toLowerCase();
+        if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) return fail('invalid');
+        if (!window.dzzIsWorkEmail(email)) return fail('free');
+        if (form.elements._gotcha && form.elements._gotcha.value) return; // bot
+        err.textContent = '';
+        btn.disabled = true;
+        const domain = email.split('@')[1];
+        await Promise.race([
+          Promise.all([
+            window.dzzLead({ source: 'gate', email, company: domain }),
+            fetch('https://formspree.io/f/mwvdnzzk', {
+              method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+              body: JSON.stringify({ email, _subject: 'Dazzlea — accès aux références (email pro)', source: 'References gate', page: location.href, domain }),
+            }).catch(() => {}),
+          ]),
+          new Promise((r) => setTimeout(r, 4000)), // never keep the visitor waiting
+        ]);
+        btn.disabled = false;
+        unlockAll();
+      });
+    });
+  }
 
-    input.addEventListener('input', () => { err.textContent = ''; });
-    gateForm.addEventListener('submit', async (e) => {
+  /* ── Newsletter ── */
+  document.querySelectorAll('.newsletter-form').forEach((form) => {
+    const input = form.querySelector('input[type=email]');
+    const note = form.parentElement.querySelector('.newsletter-msg');
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = input.value.trim().toLowerCase();
-      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) return fail('invalid');
-      const domain = email.split('@')[1];
-      if (FREE.has(domain.split('.')[0])) return fail('free');
-      if (gateForm.elements._gotcha.value) return; // bot
-      err.textContent = '';
-      btn.disabled = true;
-      try {
-        await fetch('https://formspree.io/f/mwvdnzzk', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ email, _subject: 'Dazzlea — accès aux références (email pro)', source: 'Homepage · Selected Work gate', page: location.href, language: isFr() ? 'fr' : 'en', domain }),
-        });
-      } catch (e2) { /* never block the visitor if the lead service is down */ }
-      btn.disabled = false;
-      unlock();
+      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) {
+        note.textContent = isFrPage() ? 'Entrez une adresse email valide.' : 'Please enter a valid email address.';
+        note.className = 'newsletter-msg is-error';
+        return;
+      }
+      if (form.elements._gotcha && form.elements._gotcha.value) return;
+      form.querySelector('button').disabled = true;
+      await window.dzzLead({ source: 'newsletter', email, company: window.dzzIsWorkEmail(email) ? email.split('@')[1] : '' });
+      form.reset();
+      form.querySelector('button').disabled = false;
+      note.textContent = isFrPage() ? 'Merci ! Vous êtes inscrit(e). Rendez-vous dans votre boîte mail.' : 'Thank you! You’re subscribed — see you in your inbox.';
+      note.className = 'newsletter-msg is-ok';
     });
+  });
+
+  /* ── Contact form → also copied into the CRM (Formspree still sends the email) ── */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+      const v = (n) => (contactForm.elements[n] ? String(contactForm.elements[n].value || '').trim() : '');
+      if (!contactForm.checkValidity() || !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v('email'))) return;
+      window.dzzLead({
+        source: 'contact', email: v('email').toLowerCase(), name: `${v('firstname')} ${v('lastname')}`.trim(), phone: v('phone'),
+        company: v('organization'), profile: v('profile'), service: v('service'), message: v('message'),
+      });
+    }, true);
   }
 
 })();

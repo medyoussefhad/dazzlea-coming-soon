@@ -7,8 +7,11 @@
     "build": "node cms/build.mjs",
     "dev": "node cms/dev-server.mjs"
   },
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "node-html-parser": "6.1.13"
+    "node-html-parser": "6.1.13",
+    "mongodb": "6.12.0"
   }
 }

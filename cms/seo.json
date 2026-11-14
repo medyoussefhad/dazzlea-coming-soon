@@ -1,6 +1,17 @@
 {
   "googleSiteVerification": "dlc6dhu7AjrPGnh01CfTtr2Sjv-Y7iYplrdNsmy4TQE",
   "pages": {
+    "404": {
+      "noindex": true,
+      "title": {
+        "en": "Page not found | Dazzlea",
+        "fr": "Page introuvable | Dazzlea"
+      },
+      "description": {
+        "en": "This page doesn't exist. Head back to Dazzlea, the experience marketing agency in Casablanca.",
+        "fr": "Cette page n'existe pas. Retournez à l'accueil de Dazzlea, agence de marketing expérientiel à Casablanca."
+      }
+    },
     "index": {
       "title": {
         "en": "Dazzlea | Event & Experience Marketing Agency in Casablanca, Morocco",
@@ -12,7 +23,10 @@
       }
     },
     "services": {
-      "crumb": { "en": "Services", "fr": "Services" },
+      "crumb": {
+        "en": "Services",
+        "fr": "Services"
+      },
       "title": {
         "en": "Services — Events, Communication & Brand Activation | Dazzlea Casablanca",
         "fr": "Services — Événementiel, Communication & Activation de Marque | Dazzlea"
@@ -23,7 +37,10 @@
       }
     },
     "about": {
-      "crumb": { "en": "About", "fr": "À propos" },
+      "crumb": {
+        "en": "About",
+        "fr": "À propos"
+      },
       "title": {
         "en": "About Dazzlea — Experience Marketing Agency in Casablanca",
         "fr": "À propos de Dazzlea — Agence de Marketing Expérientiel à Casablanca"
@@ -34,18 +51,24 @@
       }
     },
     "portfolio": {
-      "crumb": { "en": "Work", "fr": "Réalisations" },
+      "crumb": {
+        "en": "Work",
+        "fr": "Réalisations"
+      },
       "title": {
-        "en": "Our Work — Events, Activations & Scenography | Dazzlea",
-        "fr": "Nos Réalisations — Événements, Activations & Scénographie | Dazzlea"
+        "en": "Our Work — Marketing, Events & Business Development | Dazzlea",
+        "fr": "Nos Réalisations — Marketing, Événementiel & Business Development | Dazzlea"
       },
       "description": {
-        "en": "Case studies by Dazzlea: corporate events, galas, brand activations, pavilions and scenography produced in Morocco and across Africa.",
-        "fr": "Les réalisations de Dazzlea : événements corporate, soirées de gala, activations de marque, pavillons et scénographies au Maroc et en Afrique."
+        "en": "Dazzlea references across 3 poles: marketing, communication & digital; events, scenography, logistics & catering; innovation, business development & consulting — Morocco, MENA, Africa.",
+        "fr": "Les références de Dazzlea sur 3 pôles : marketing, communication & digital ; événementiel, scénographie, logistique & restauration ; innovation, business development & conseil — Maroc, MENA, Afrique."
       }
     },
     "insights": {
-      "crumb": { "en": "Insights", "fr": "Insights" },
+      "crumb": {
+        "en": "Insights",
+        "fr": "Insights"
+      },
       "title": {
         "en": "News & Insights — Events & Experience Marketing | Dazzlea",
         "fr": "Actualités & Insights — Événementiel et Marketing Expérientiel | Dazzlea"
@@ -56,7 +79,10 @@
       }
     },
     "contact": {
-      "crumb": { "en": "Contact", "fr": "Contact" },
+      "crumb": {
+        "en": "Contact",
+        "fr": "Contact"
+      },
       "title": {
         "en": "Contact Dazzlea — Event Agency in Casablanca | Start a Project",
         "fr": "Contact — Agence Événementielle à Casablanca | Dazzlea"
@@ -66,18 +92,16 @@
         "fr": "Parlez-nous de votre événement ou de votre projet de marque. Dazzlea, B Living Offices, Rond-Point Bachkou, Casablanca — +212 6 61 51 22 83 · contact@dazzlea.ma."
       }
     },
-    "404": {
-      "noindex": true,
-      "title": { "en": "Page not found | Dazzlea", "fr": "Page introuvable | Dazzlea" },
-      "description": {
-        "en": "This page doesn't exist. Head back to Dazzlea, the experience marketing agency in Casablanca.",
-        "fr": "Cette page n'existe pas. Retournez à l'accueil de Dazzlea, agence de marketing expérientiel à Casablanca."
-      }
-    },
     "privacy-policy": {
       "noindex": true,
-      "crumb": { "en": "Privacy Policy", "fr": "Politique de confidentialité" },
-      "title": { "en": "Privacy Policy | Dazzlea", "fr": "Politique de confidentialité | Dazzlea" },
+      "crumb": {
+        "en": "Privacy Policy",
+        "fr": "Politique de confidentialité"
+      },
+      "title": {
+        "en": "Privacy Policy | Dazzlea",
+        "fr": "Politique de confidentialité | Dazzlea"
+      },
       "description": {
         "en": "How Dazzlea collects and uses data on this website, and how to exercise your rights.",
         "fr": "Quelles données Dazzlea collecte sur ce site, pourquoi, et comment exercer vos droits."
@@ -85,8 +109,14 @@
     },
     "cookie-policy": {
       "noindex": true,
-      "crumb": { "en": "Cookie Policy", "fr": "Politique cookies" },
-      "title": { "en": "Cookie Policy | Dazzlea", "fr": "Politique cookies | Dazzlea" },
+      "crumb": {
+        "en": "Cookie Policy",
+        "fr": "Politique cookies"
+      },
+      "title": {
+        "en": "Cookie Policy | Dazzlea",
+        "fr": "Politique cookies | Dazzlea"
+      },
       "description": {
         "en": "Which cookies this website uses and how to manage them.",
         "fr": "Quels cookies ce site utilise et comment les gérer."
@@ -94,8 +124,14 @@
     },
     "terms-of-use": {
       "noindex": true,
-      "crumb": { "en": "Terms of Use", "fr": "Conditions d'utilisation" },
-      "title": { "en": "Terms of Use | Dazzlea", "fr": "Conditions d'utilisation | Dazzlea" },
+      "crumb": {
+        "en": "Terms of Use",
+        "fr": "Conditions d'utilisation"
+      },
+      "title": {
+        "en": "Terms of Use | Dazzlea",
+        "fr": "Conditions d'utilisation | Dazzlea"
+      },
       "description": {
         "en": "Terms of use of the Dazzlea website.",
         "fr": "Conditions générales d'utilisation du site Dazzlea."
