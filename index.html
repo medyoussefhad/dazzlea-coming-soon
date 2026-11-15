@@ -63,7 +63,7 @@
     <div class="intro-loc">Casablanca · MENA · Africa</div>
     <div class="intro-count"><span>00</span></div>
   </div>
-  <script>try{if(sessionStorage.getItem('dzzIntro')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches){document.getElementById('intro').style.display='none'}else{document.documentElement.classList.add('intro-lock')}}catch(e){}</script>
+  <script>try{var dzzNav=performance.getEntriesByType('navigation')[0],dzzIn=document.referrer&&new URL(document.referrer).host===location.host&&!(dzzNav&&dzzNav.type==='reload');if(dzzIn||matchMedia('(prefers-reduced-motion: reduce)').matches){document.getElementById('intro').style.display='none'}else{document.documentElement.classList.add('intro-lock')}}catch(e){}</script>
 
   <header class="banner" id="mainHeader">
     <div class="navbar-container">

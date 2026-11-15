@@ -436,8 +436,14 @@
     const intro = document.getElementById('intro');
     const root = document.documentElement;
     const startHero = () => hx.classList.add('is-in');
+    // Play the curtain every time the site is opened (new visit or refresh);
+    // skip it only when coming back to the homepage from another page of the site.
     let seen = false;
-    try { seen = sessionStorage.getItem('dzzIntro') === '1'; } catch (e) {}
+    try {
+      const nav = performance.getEntriesByType('navigation')[0];
+      const fromSite = document.referrer && new URL(document.referrer).host === location.host;
+      seen = !!fromSite && !(nav && nav.type === 'reload');
+    } catch (e) {}
 
     if (!intro || seen || prefersReduced.matches) {
       if (intro) intro.remove();
