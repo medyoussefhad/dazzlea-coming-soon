@@ -4035,3 +4035,9 @@ h1, h2, h3, h4 { overflow-wrap: break-word; }
 .newsletter-fine { font-size: .74rem; color: rgba(255,255,255,.6); margin: 6px 4px 0; }
 @media (max-width: 860px) { .newsletter-card { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .newsletter-promise { grid-template-columns: 1fr; } .newsletter-form { flex-direction: column; border-radius: 18px; } }
+
+/* client logos: crisp white PNGs; give tall/square marks more room */
+.ref-logo img { max-height: 52px; max-width: 88%; filter: none; }
+.ref-logo.ref-logo-lg img { max-height: 76px; }
+.refs-compact .ref-logo.ref-logo-lg img { max-height: 64px; }
+@media (max-width: 520px) { .ref-logo img { max-height: 40px; } .ref-logo.ref-logo-lg img { max-height: 58px; } }

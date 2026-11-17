@@ -152,6 +152,7 @@
         { key: 'logos', type: 'list', label: 'Logos', itemLabel: 'Logo', of: { type: 'object', fields: [
           { key: 'name', type: 'text', label: 'Client name' },
           { key: 'image', type: 'image', label: 'Logo (white or light PNG with transparent background works best)' },
+          { key: 'size', type: 'select', label: 'Display size', options: [['', 'Normal (wide logos)'], ['lg', 'Larger (tall or square logos)']] },
         ] } },
       ] } },
     ] },

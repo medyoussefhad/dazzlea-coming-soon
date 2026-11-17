@@ -181,7 +181,7 @@ function clientsHTML() {
           <div class="refs-group reveal-fade-up">
             <div class="refs-label"><i class="${esc(g.icon || 'fa-solid fa-circle')}" aria-hidden="true"></i>${T(g.group, 'span')}</div>
             <div class="refs-logos">${(g.logos || []).filter((l) => l.image).map((l) => `
-              <div class="ref-logo" title="${esc(l.name)}"><img src="${esc(l.image)}" alt="${esc(l.name)}" loading="lazy"></div>`).join('')}
+              <div class="ref-logo${l.size === 'lg' ? ' ref-logo-lg' : ''}" title="${esc(l.name)}"><img src="${esc(l.image)}" alt="${esc(l.name)}" loading="lazy"></div>`).join('')}
             </div>
           </div>`).join('') + '\n        ';
 }

@@ -60,27 +60,27 @@
       "logos": [
         {
           "name": "Vantage",
-          "image": "/assets/clients/vantage.png"
+          "image": "/assets/clients/vantage.png?v=2"
         },
         {
           "name": "Xlence",
-          "image": "/assets/clients/xlence.png"
+          "image": "/assets/clients/xlence.png?v=2"
         },
         {
           "name": "VT Markets",
-          "image": "/assets/clients/vt-markets.png"
+          "image": "/assets/clients/vt-markets.png?v=2"
         },
         {
           "name": "Bull Waves",
-          "image": "/assets/clients/bull-waves.png"
+          "image": "/assets/clients/bull-waves.png?v=2"
         },
         {
           "name": "StarTrader",
-          "image": "/assets/clients/startrader.png"
+          "image": "/assets/clients/startrader.png?v=2"
         },
         {
           "name": "Binance",
-          "image": "/assets/clients/binance.png"
+          "image": "/assets/clients/binance.png?v=2"
         }
       ]
     },
@@ -93,19 +93,20 @@
       "logos": [
         {
           "name": "PUBG Mobile",
-          "image": "/assets/clients/pubg-mobile.png"
+          "image": "/assets/clients/pubg-mobile.png?v=2",
+          "size": "lg"
         },
         {
           "name": "Free Fire",
-          "image": "/assets/clients/free-fire.png"
+          "image": "/assets/clients/free-fire.png?v=2"
         },
         {
           "name": "Kick",
-          "image": "/assets/clients/kick.png"
+          "image": "/assets/clients/kick.png?v=2"
         },
         {
           "name": "Carry1st",
-          "image": "/assets/clients/carry1st.png"
+          "image": "/assets/clients/carry1st.png?v=2"
         }
       ]
     },
@@ -117,20 +118,23 @@
       "icon": "fa-solid fa-landmark",
       "logos": [
         {
-          "name": "The Bridge",
-          "image": "/assets/clients/the-bridge.png"
-        },
-        {
           "name": "ENCG Casablanca",
-          "image": "/assets/clients/encg-casablanca.png"
+          "image": "/assets/clients/encg-casablanca.png?v=2",
+          "size": "lg"
         },
         {
           "name": "CAF — Africa Cup of Nations Morocco 2025",
-          "image": "/assets/clients/caf-afcon-2025.png"
+          "image": "/assets/clients/caf-afcon-2025.png?v=2",
+          "size": "lg"
         },
         {
           "name": "SNTL",
-          "image": "/assets/clients/sntl.png"
+          "image": "/assets/clients/sntl.png?v=2"
+        },
+        {
+          "name": "ENSIAS — École Nationale Supérieure d'Informatique et d'Analyse des Systèmes",
+          "image": "/assets/clients/ensias.png?v=2",
+          "size": "lg"
         }
       ]
     }
