@@ -603,7 +603,7 @@
         await Promise.race([
           Promise.all([
             window.dzzLead({ source: 'gate', email, company: domain }),
-            fetch('https://formspree.io/f/mwvdnzzk', {
+            fetch('https://formspree.io/f/mgakdreb', {
               method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
               body: JSON.stringify({ email, _subject: 'Dazzlea — accès aux références (email pro)', source: 'References gate', page: location.href, domain }),
             }).catch(() => {}),
