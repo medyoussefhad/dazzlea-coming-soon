@@ -136,6 +136,17 @@
         "en": "Terms of use of the Dazzlea website.",
         "fr": "Conditions générales d'utilisation du site Dazzlea."
       }
+    },
+    "espace-client": {
+      "noindex": true,
+      "title": {
+        "en": "Client area | Dazzlea",
+        "fr": "Espace client | Dazzlea"
+      },
+      "description": {
+        "en": "Private client area: Dazzlea brochures and sales presentations.",
+        "fr": "Espace client privé : brochures et présentations commerciales Dazzlea."
+      }
     }
   }
 }

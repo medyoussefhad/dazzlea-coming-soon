@@ -172,6 +172,7 @@
     work: { title: 'Work', hint: 'Case studies — homepage cards, portfolio and case pages.', list: true, schema: WORK },
     insights: { title: 'Insights', hint: 'Articles — Insights page and article pages.', list: true, schema: INSIGHTS },
     site: { title: 'Site info', hint: 'Contact details, homepage figures and client references.', list: false, schema: SITE },
+    portal: { title: 'Client area', portal: true },
     leads: { title: 'Leads', hint: 'Mini CRM — contacts from the email gate, the contact form and the newsletter.', crm: true },
   };
 
@@ -499,9 +500,161 @@
     $('#view').replaceChildren(h('div', { class: 'crm' }, stats, tools, list));
   }
 
+  // ------------------------------------------------------------------ client area (private brochures & presentations)
+  const PCATS = [['brochure', 'Brochure'], ['presentation', 'Sales presentation'], ['case-study', 'Case study'], ['offer', 'Offer & pricing'], ['other', 'Other']];
+  const portal = { data: null, tab: 'clients', uploading: null };
+  const fmtSize = (b) => (!b ? '—' : b > 1048576 ? `${(b / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1024))} KB`);
+  const linkFor = (c, lang) => `${location.origin}${lang === 'fr' ? '/fr' : ''}/espace-client/${c.key}`;
+  const pAPI = (action, body) => api('/api/portal-admin', { method: 'POST', body: JSON.stringify({ action, ...body }) });
+
+  async function loadPortal() {
+    $('#view').replaceChildren(h('div', { class: 'empty', text: 'Loading client area…' }));
+    portal.data = await api('/api/portal-admin');
+  }
+  async function refreshPortal(msg) { await loadPortal(); renderPortal(); if (msg) toast(msg); }
+
+  function loadUploader() {
+    if (window.DzBlob) return Promise.resolve(window.DzBlob);
+    return new Promise((res, rej) => { const s = document.createElement('script'); s.src = '/admin/blob-upload.js'; s.onload = () => res(window.DzBlob); s.onerror = () => rej(new Error('Could not load the uploader')); document.head.append(s); });
+  }
+
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); toast('Link copied — paste it in your email or WhatsApp to the client.'); }
+    catch { prompt('Copy this link:', text); }
+  }
+
+  function clientsPanel() {
+    const { clients, docs } = portal.data;
+    const name = h('input', { type: 'text', placeholder: 'Client name (e.g. OCP Group)' });
+    const note = h('textarea', { placeholder: 'Optional welcome message shown on their page (e.g. “Here is the proposal for your 2027 convention.”)', rows: 2 });
+    const create = h('form', { class: 'portal-new', onsubmit: async (e) => {
+      e.preventDefault();
+      if (!name.value.trim()) return toast('Enter the client name', true);
+      try { await pAPI('createClient', { name: name.value.trim(), note: note.value.trim() }); await refreshPortal('Client created — copy their private link below.'); } catch (err) { toast(err.message, true); }
+    } }, h('div', { class: 'field-label', text: 'New client' }), name, note, h('button', { class: 'btn btn-red', type: 'submit' }, icon('fa-solid fa-plus'), 'Create client & link'));
+
+    const cards = clients.map((c) => {
+      const assigned = docs.filter((d) => d.audience === 'clients' && (d.clientIds || []).includes(c.id)).length;
+      const shared = docs.filter((d) => d.audience !== 'clients').length;
+      const nm = h('input', { type: 'text', value: c.name });
+      const nt = h('textarea', { rows: 2, value: c.note || '', placeholder: 'Welcome message (optional)' });
+      return h('div', { class: 'portal-client-card' + (c.active ? '' : ' off') },
+        h('div', { class: 'pc-head' },
+          h('b', { text: c.name }),
+          h('span', { class: 'badge' + (c.active ? '' : ' grey'), text: c.active ? 'Active' : 'Disabled' }),
+          h('small', { class: 'muted', text: `${c.visits || 0} visit${(c.visits || 0) === 1 ? '' : 's'}${c.lastVisitAt ? ' · last ' + fmtWhen(c.lastVisitAt) : ' · never opened'} · ${shared} shared + ${assigned} personal document${assigned === 1 ? '' : 's'}` })),
+        h('div', { class: 'pc-link' },
+          h('input', { type: 'text', readonly: true, value: linkFor(c, 'fr'), onfocus: (e) => e.target.select() }),
+          h('button', { class: 'btn btn-sm btn-red', onclick: () => copy(linkFor(c, 'fr')) }, icon('fa-regular fa-copy'), 'Copy FR link'),
+          h('button', { class: 'btn btn-sm', onclick: () => copy(linkFor(c, 'en')) }, icon('fa-regular fa-copy'), 'EN link'),
+          h('a', { class: 'btn btn-sm', href: linkFor(c, 'fr'), target: '_blank', rel: 'noopener noreferrer' }, icon('fa-solid fa-eye'), 'Preview')),
+        h('details', { class: 'pc-edit' }, h('summary', { text: 'Edit name & message' }), nm, nt,
+          h('button', { class: 'btn btn-sm', onclick: async () => { try { await pAPI('updateClient', { id: c.id, name: nm.value, note: nt.value }); await refreshPortal('Saved'); } catch (err) { toast(err.message, true); } } }, 'Save')),
+        h('div', { class: 'pc-actions' },
+          h('button', { class: 'btn btn-sm', onclick: async () => { try { await pAPI('updateClient', { id: c.id, active: !c.active }); await refreshPortal(c.active ? 'Link disabled — the client can no longer open the area.' : 'Link enabled again.'); } catch (err) { toast(err.message, true); } } },
+            icon(c.active ? 'fa-solid fa-ban' : 'fa-solid fa-check'), c.active ? 'Disable link' : 'Enable link'),
+          h('button', { class: 'btn btn-sm', onclick: async () => {
+            if (!confirm(`Create a new link for ${c.name}? The current link will stop working immediately.`)) return;
+            try { await pAPI('updateClient', { id: c.id, regenerate: true }); await refreshPortal('New link created — send it to the client.'); } catch (err) { toast(err.message, true); }
+          } }, icon('fa-solid fa-rotate'), 'New link'),
+          h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+            if (!confirm(`Delete ${c.name}? Their link stops working. Documents stay in the library.`)) return;
+            try { await pAPI('deleteClient', { id: c.id }); await refreshPortal('Client deleted'); } catch (err) { toast(err.message, true); }
+          } }, icon('fa-solid fa-trash'), 'Delete')));
+    });
+    return h('div', { class: 'portal-panel' }, create,
+      clients.length ? h('div', { class: 'portal-list' }, cards) : h('div', { class: 'empty', text: 'No client yet. Create one above to get their private link.' }));
+  }
+
+  function docsPanel() {
+    const { docs, clients, storage } = portal.data;
+    const file = h('input', { type: 'file', hidden: true, accept: '.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.zip,.jpg,.jpeg,.png,.webp,.mp4' });
+    const bar = h('div', { class: 'portal-progress', hidden: true }, h('span'));
+    const status = h('div', { class: 'help' });
+    const drop = h('div', { class: 'portal-drop', onclick: () => file.click() },
+      icon('fa-solid fa-cloud-arrow-up'), h('b', { text: 'Upload a brochure or presentation' }),
+      h('span', { class: 'muted', text: 'PDF, PowerPoint, Word, Excel, images, video or ZIP — up to 500 MB. Click or drop a file here.' }), bar, status);
+    ['dragover', 'dragenter'].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add('over'); }));
+    ['dragleave', 'drop'].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove('over'); }));
+    drop.addEventListener('drop', (e) => { if (e.dataTransfer.files[0]) doUpload(e.dataTransfer.files[0]); });
+    file.addEventListener('change', () => { if (file.files[0]) doUpload(file.files[0]); file.value = ''; });
+
+    async function doUpload(f) {
+      if (storage === 'missing') return toast('File storage is not connected yet (see the message above).', true);
+      if (f.size > 500 * 1024 * 1024) return toast('This file is larger than 500 MB.', true);
+      const safe = f.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z0-9._ -]+/g, '-').replace(/-+/g, '-').slice(-120) || 'document';
+      bar.hidden = false; bar.firstChild.style.width = '0%'; status.textContent = `Uploading ${f.name}…`;
+      try {
+        const B = await loadUploader();
+        const res = await B.uploadPresigned(`portal/${safe}`, f, {
+          access: 'private', handleUploadUrl: '/api/portal-upload', contentType: f.type || undefined, multipart: f.size > 40 * 1024 * 1024,
+          onUploadProgress: (p) => { bar.firstChild.style.width = `${Math.round(p.percentage)}%`; },
+        });
+        const base = f.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').trim();
+        const cat = /ppt|key|presentation/i.test(f.name + f.type) ? 'presentation' : 'brochure';
+        await pAPI('createDoc', { pathname: res.pathname, filename: f.name, size: f.size, contentType: f.type || res.contentType || '', title: { fr: base, en: base }, description: { fr: '', en: '' }, category: cat, audience: 'all', clientIds: [] });
+        await refreshPortal('Uploaded — check the title and who can see it below, then click Save.');
+      } catch (err) { bar.hidden = true; status.textContent = ''; toast(err.message || 'Upload failed', true); }
+    }
+
+    const items = docs.map((d) => {
+      const t = { fr: h('input', { type: 'text', value: d.title?.fr || '' }), en: h('input', { type: 'text', value: d.title?.en || '' }) };
+      const ds = { fr: h('textarea', { rows: 2, value: d.description?.fr || '', placeholder: 'Description (FR, optional)' }), en: h('textarea', { rows: 2, value: d.description?.en || '', placeholder: 'Description (EN, optional)' }) };
+      const cat = h('select', {}, PCATS.map(([v, l]) => h('option', { value: v, text: l }))); cat.value = d.category || 'other';
+      const aud = h('select', {}, h('option', { value: 'all', text: 'All clients (shared library)' }), h('option', { value: 'clients', text: 'Only selected clients (personal)' })); aud.value = d.audience || 'all';
+      const picks = h('div', { class: 'chips' + (aud.value === 'clients' ? '' : ' hidden-chips') }, clients.length ? clients.map((c) => h('label', {},
+        h('input', { type: 'checkbox', value: c.id, checked: (d.clientIds || []).includes(c.id) }), c.name)) : h('span', { class: 'muted', text: 'Create clients first (Clients tab).' }));
+      aud.addEventListener('change', () => picks.classList.toggle('hidden-chips', aud.value !== 'clients'));
+      return h('div', { class: 'portal-doc' },
+        h('div', { class: 'pd-head' }, icon(/pdf/i.test(d.contentType + d.filename) ? 'fa-solid fa-file-pdf' : /ppt|presentation/i.test(d.contentType + d.filename) ? 'fa-solid fa-file-powerpoint' : 'fa-solid fa-file-lines'),
+          h('div', {}, h('b', { text: d.filename || 'Document' }), h('small', { class: 'muted', text: `${fmtSize(d.size)} · added ${fmtWhen(d.createdAt)} · opened ${d.downloads || 0}×` }))),
+        h('div', { class: 'field' }, h('span', { class: 'field-label', text: 'Title' }), h('div', { class: 'i18n' }, h('div', {}, t.en, h('span', { class: 'lang', text: 'EN' })), h('div', {}, t.fr, h('span', { class: 'lang', text: 'FR' })))),
+        h('div', { class: 'field' }, h('span', { class: 'field-label', text: 'Description' }), h('div', { class: 'i18n' }, ds.en, ds.fr)),
+        h('div', { class: 'pd-row' }, h('div', { class: 'field' }, h('span', { class: 'field-label', text: 'Type' }), cat), h('div', { class: 'field' }, h('span', { class: 'field-label', text: 'Who can see it' }), aud)),
+        picks,
+        h('div', { class: 'pc-actions' },
+          h('button', { class: 'btn btn-sm btn-red', onclick: async () => {
+            const ids = [...picks.querySelectorAll('input:checked')].map((x) => x.value);
+            if (aud.value === 'clients' && !ids.length) return toast('Tick at least one client, or choose “All clients”.', true);
+            try { await pAPI('updateDoc', { id: d.id, title: { fr: t.fr.value, en: t.en.value }, description: { fr: ds.fr.value, en: ds.en.value }, category: cat.value, audience: aud.value, clientIds: ids }); await refreshPortal('Document saved'); } catch (err) { toast(err.message, true); }
+          } }, icon('fa-solid fa-check'), 'Save'),
+          h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+            if (!confirm(`Delete “${d.title?.en || d.filename}”? The file is removed for every client. This cannot be undone.`)) return;
+            try { await pAPI('deleteDoc', { id: d.id }); await refreshPortal('Document deleted'); } catch (err) { toast(err.message, true); }
+          } }, icon('fa-solid fa-trash'), 'Delete')));
+    });
+    return h('div', { class: 'portal-panel' }, drop, file, docs.length ? h('div', { class: 'portal-list' }, items) : h('div', { class: 'empty', text: 'No document yet. Upload your first brochure above.' }));
+  }
+
+  function activityPanel() {
+    const ev = portal.data.events;
+    if (!ev.length) return h('div', { class: 'empty', text: 'No activity yet. Visits and opened documents will appear here.' });
+    return h('div', { class: 'crm-list' }, ev.map((e) => h('div', { class: 'crm-row' }, h('div', { class: 'crm-main', style: 'cursor:default' },
+      h('span', { class: 'crm-src ' + (e.type === 'open' ? 'src-contact' : 'src-gate') }, icon(e.type === 'open' ? 'fa-solid fa-file-arrow-down' : 'fa-solid fa-door-open')),
+      h('div', { class: 'crm-who' }, h('b', { text: e.clientName || 'Client' }), h('small', { text: e.type === 'open' ? `opened “${e.docTitle}”` : 'visited the client area' })),
+      h('span', { class: 'crm-when', text: fmtWhen(e.at) }), h('span')))));
+  }
+
+  function renderPortal() {
+    $('#viewTitle').textContent = 'Client area'; $('#viewHint').textContent = 'Private brochures & sales presentations — each client opens them with their own secret link.';
+    document.querySelectorAll('.side-nav button').forEach((b) => b.classList.toggle('active', b.dataset.view === 'portal'));
+    $('#publish').hidden = true; $('#dirty').hidden = true;
+    const { storage } = portal.data;
+    const warn = storage === 'missing' ? h('div', { class: 'deploy err' }, icon('fa-solid fa-triangle-exclamation'), ' File storage is not connected yet: clients and links work, but uploading documents needs the private Vercel Blob store to be connected to the project.') : null;
+    const tabs = h('div', { class: 'portal-tabs' }, [['clients', 'Clients', 'fa-solid fa-user-tie'], ['docs', 'Documents', 'fa-solid fa-folder-open'], ['activity', 'Activity', 'fa-solid fa-clock-rotate-left']].map(([k, l, ic]) =>
+      h('button', { class: 'btn btn-sm' + (portal.tab === k ? ' btn-red' : ''), onclick: () => { portal.tab = k; renderPortal(); } }, icon(ic), l,
+        k === 'clients' ? ` (${portal.data.clients.length})` : k === 'docs' ? ` (${portal.data.docs.length})` : '')));
+    const panel = portal.tab === 'docs' ? docsPanel() : portal.tab === 'activity' ? activityPanel() : clientsPanel();
+    $('#view').replaceChildren(h('div', { class: 'crm' }, warn, tabs, panel));
+  }
+
   async function switchView(name) {
     state.view = name;
     $('#publish').hidden = false;
+    if (name === 'portal') {
+      try { await loadPortal(); renderPortal(); } catch (e) { handleErr(e); }
+      return;
+    }
     if (name === 'leads') {
       try { await loadLeads(); renderLeads(); } catch (e) { handleErr(e); }
       return;

@@ -10,14 +10,17 @@ const LOCAL_FILE = path.resolve(__dirname, '..', '.data', 'leads.json');
 const useMongo = () => !!process.env.MONGODB_URI;
 
 let clientPromise = null;
-async function collection() {
+async function getDb() {
   if (!clientPromise) {
     const { MongoClient } = require('mongodb');
     const client = new MongoClient(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 6000, maxPoolSize: 5 });
     clientPromise = client.connect().catch((e) => { clientPromise = null; throw e; });
   }
   const client = await clientPromise;
-  const col = client.db(process.env.MONGODB_DB || undefined).collection(COLLECTION);
+  return client.db(process.env.MONGODB_DB || undefined);
+}
+async function collection() {
+  const col = (await getDb()).collection(COLLECTION);
   if (!collection._indexed) {
     collection._indexed = true;
     col.createIndex({ createdAt: -1 }).catch(() => {});
@@ -88,4 +91,4 @@ async function health() {
   return { storage: process.env.CMS_LOCAL === '1' ? 'local' : 'none', ok: process.env.CMS_LOCAL === '1' };
 }
 
-module.exports = { addLead, listLeads, updateLead, deleteLead, health };
+module.exports = { addLead, listLeads, updateLead, deleteLead, health, getDb, useMongo };

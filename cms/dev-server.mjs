@@ -43,6 +43,8 @@ http.createServer(async (req, res) => {
   let p = decodeURIComponent(url.pathname);
   const candidates = [];
   if (p === '/admin' || p === '/admin/') p = '/admin/index.html';
+  const portalMatch = p.match(/^(\/fr)?\/espace-client\/[^/]+$/); // mirrors the vercel.json rewrite
+  if (portalMatch) p = `${portalMatch[1] || ''}/espace-client.html`;
   if (p.startsWith('/admin/')) candidates.push(path.join(ROOT, p)); // live-edit the admin without rebuilding
   const base = path.join(DIST, p);
   if (p.endsWith('/')) candidates.push(path.join(base, 'index.html'));

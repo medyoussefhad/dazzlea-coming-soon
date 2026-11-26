@@ -651,4 +651,98 @@
     }, true);
   }
 
+
+  /* ── Client area (/espace-client/<key>): private brochures & presentations ── */
+  const portal = document.getElementById('portalApp');
+  if (portal) {
+    const fr = isFrPage();
+    const parts = location.pathname.split('/').filter(Boolean);
+    const key = parts[parts.length - 1] !== 'espace-client' ? parts[parts.length - 1] : '';
+    const state = document.getElementById('portalState');
+    const T = (frTxt, enTxt) => (fr ? frTxt : enTxt);
+    const pick = (o) => (o && (o[fr ? 'fr' : 'en'] || o[fr ? 'en' : 'fr'])) || '';
+    const CAT = {
+      brochure: T('Brochure', 'Brochure'), presentation: T('Présentation commerciale', 'Sales presentation'),
+      'case-study': T('Étude de cas', 'Case study'), offer: T('Offre & tarifs', 'Offer & pricing'), other: T('Document', 'Document'),
+    };
+    const icon = (d) => {
+      const t = `${d.contentType || ''} ${d.filename || ''}`.toLowerCase();
+      if (/pdf/.test(t)) return 'fa-file-pdf';
+      if (/powerpoint|presentation|\.pptx?\b|\.key\b/.test(t)) return 'fa-file-powerpoint';
+      if (/word|\.docx?\b/.test(t)) return 'fa-file-word';
+      if (/excel|sheet|\.xlsx?\b/.test(t)) return 'fa-file-excel';
+      if (/image|\.(jpe?g|png|webp)\b/.test(t)) return 'fa-file-image';
+      if (/video|\.mp4\b/.test(t)) return 'fa-file-video';
+      if (/zip/.test(t)) return 'fa-file-zipper';
+      return 'fa-file-lines';
+    };
+    const size = (b) => (!b ? '' : b > 1048576 ? `${(b / 1048576).toFixed(1)} ${T('Mo', 'MB')}` : `${Math.max(1, Math.round(b / 1024))} ${T('Ko', 'KB')}`);
+    const when = (iso) => { try { return new Date(iso).toLocaleDateString(fr ? 'fr-FR' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return ''; } };
+    const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+
+    // keep the secret key when switching language
+    if (key) document.querySelectorAll('.lang-btn[data-href]').forEach((b) => { b.dataset.href = b.dataset.href.replace(/\/?$/, '/') + encodeURIComponent(key); });
+
+    const card = (d) => {
+      const a = el('a', 'portal-card');
+      a.href = `/api/portal-file?k=${encodeURIComponent(key)}&id=${encodeURIComponent(d.id)}`;
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      const ic = el('span', 'portal-card-icon'); const i = el('i', `fa-solid ${icon(d)}`); i.setAttribute('aria-hidden', 'true'); ic.append(i);
+      const body = el('span', 'portal-card-body');
+      body.append(el('span', 'portal-card-cat', CAT[d.category] || CAT.other), el('span', 'portal-card-title', pick(d.title) || d.filename));
+      if (pick(d.description)) body.append(el('span', 'portal-card-desc', pick(d.description)));
+      body.append(el('span', 'portal-card-meta', [size(d.size), when(d.date)].filter(Boolean).join(' · ')));
+      const go = el('span', 'portal-card-go'); go.append(el('span', '', T('Ouvrir', 'Open'))); const gi = el('i', 'fa-solid fa-arrow-up-right-from-square'); gi.setAttribute('aria-hidden', 'true'); go.append(gi);
+      a.append(ic, body, go);
+      return a;
+    };
+
+    const fail = (title, text) => {
+      state.className = 'portal-state portal-state-error';
+      state.replaceChildren();
+      const i = el('i', 'fa-solid fa-lock'); i.setAttribute('aria-hidden', 'true');
+      state.append(i, el('strong', '', title), el('span', '', text));
+    };
+
+    if (!key) {
+      fail(T('Accès par lien privé', 'Private link required'), T('Cet espace est accessible uniquement via le lien personnel que nous vous avons envoyé. Contactez-nous pour le recevoir.', 'This area is only accessible through the personal link we sent you. Contact us to receive it.'));
+    } else {
+      fetch(`/api/portal?k=${encodeURIComponent(key)}`, { credentials: 'omit', referrerPolicy: 'no-referrer' })
+        .then((r) => r.json().then((d) => ({ ok: r.ok, status: r.status, d })))
+        .then(({ ok, status, d }) => {
+          if (!ok) {
+            if (status === 404) return fail(T('Lien invalide ou expiré', 'Invalid or expired link'), T('Ce lien n’est plus actif. Contactez votre interlocuteur Dazzlea pour en recevoir un nouveau.', 'This link is no longer active. Contact your Dazzlea contact to receive a new one.'));
+            return fail(T('Espace momentanément indisponible', 'Temporarily unavailable'), T('Merci de réessayer dans quelques minutes.', 'Please try again in a few minutes.'));
+          }
+          document.getElementById('portalClient').textContent = d.client.name;
+          if (d.client.note) document.getElementById('portalNote').textContent = d.client.note;
+          document.title = `${T('Espace client', 'Client area')} — ${d.client.name} | Dazzlea`;
+          state.hidden = true;
+          const personal = d.docs.filter((x) => x.personal);
+          const shared = d.docs.filter((x) => !x.personal);
+          if (personal.length) {
+            const g = document.getElementById('portalPersonal'); g.hidden = false;
+            g.querySelector('.portal-grid').append(...personal.map(card));
+          }
+          if (shared.length) {
+            const g = document.getElementById('portalShared'); g.hidden = false;
+            const grid = g.querySelector('.portal-grid');
+            const cats = [...new Set(shared.map((x) => x.category || 'other'))];
+            const draw = (c) => { grid.replaceChildren(...shared.filter((x) => !c || (x.category || 'other') === c).map(card)); };
+            if (cats.length > 1) {
+              const bar = g.querySelector('.portal-filters');
+              const mk = (c, label) => { const b = el('button', 'portal-filter' + (c ? '' : ' active'), label); b.type = 'button'; b.addEventListener('click', () => { bar.querySelectorAll('button').forEach((x) => x.classList.toggle('active', x === b)); draw(c); }); return b; };
+              bar.append(mk('', T('Tout', 'All')), ...cats.map((c) => mk(c, CAT[c] || CAT.other)));
+            }
+            draw('');
+          }
+          if (!personal.length && !shared.length) {
+            state.hidden = false; state.className = 'portal-state';
+            state.replaceChildren(el('span', '', T('Vos documents arrivent bientôt.', 'Your documents are coming soon.')));
+          }
+        })
+        .catch(() => fail(T('Espace momentanément indisponible', 'Temporarily unavailable'), T('Merci de réessayer dans quelques minutes.', 'Please try again in a few minutes.')));
+    }
+  }
+
 })();
